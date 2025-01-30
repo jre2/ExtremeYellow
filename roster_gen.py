@@ -234,7 +234,7 @@ def load_db_from_human( path ):
 
     buf = open( path ).read()
     for line in buf.split('\n'):
-        if not line: continue
+        if not line or line.startswith(';'): continue
         tclass = re.match( r'^(\w+)$', line )
         tid = re.match( r'^\s*(\d+)\s*(?:;\s*(.*))?$', line )
         tpkmn = re.match( r'^\s*(\d+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)$', line ) # like "  5 BULBASAUR TACKLE GROWL LEECHSEED None"
@@ -267,6 +267,13 @@ def load_db_from_human( path ):
 
 def save_db_to_human( path, trainer_db, skip_repeat_region=True, indenter='    ' ):
     buf = ''
+    # Enums for text editor completion aid
+    buf += f'; TrainerClassIDs = {" ".join(legal_trainer_class_ids)}\n'
+    buf += f'; PokemonIDs = {" ".join(legal_pokemon_ids)}\n'
+    buf += f'; MoveIDs = {" ".join(legal_move_ids)}\n'
+    buf += '\n'
+
+    # Trainer data
     last_region = None
     for trainer_class in trainer_db:
         depth = 0
