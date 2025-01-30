@@ -296,8 +296,8 @@ def save_db_to_human( path, trainer_db, skip_repeat_region=True, indenter='    '
     with open( path, 'w' ) as f: f.write( buf )
     return buf
 
-# Test asm serialization
-if 1:
+# Tests
+def test_asm_serialization():
     db = load_parties_asm( 'data/trainers/parties.asm' )
     db = load_special_moves_asm( 'data/trainers/special_moves.asm', db )
     save_parties_asm( '/tmp/test_parties.asm', db )
@@ -305,8 +305,8 @@ if 1:
     db2 = load_parties_asm( '/tmp/test_parties.asm' )
     db2 = load_special_moves_asm( '/tmp/test_special_moves.asm', db2 )
     assert db == db2, 'Test ASM round trip failed'
-# Test human serialization
-if 1:
+
+def test_human_serialization():
     db = load_db_from_human( 'data/trainers/trainers.human' )
     save_db_to_human( '/tmp/test_trainers.human', db )
     db2 = load_db_from_human( '/tmp/test_trainers.human' )
@@ -319,20 +319,17 @@ if 1:
             assert db[trainer_class][trainer_id] == db2[trainer_class][trainer_id], f'Test Human {trainer_class} {trainer_id} round trip failed'
     assert db == db2, 'Test Human round trip failed'
 
-# Generate human file from asm
-if 0:
+# Commands
+def generate_human_from_asm():
     db = load_parties_asm( 'data/trainers/parties.asm' )
     db = load_special_moves_asm( 'data/trainers/special_moves.asm', db )
     save_db_to_human( 'data/trainers/trainers.human', db )
 
-# Generate asm files from human file
-if 0:
+def generate_asm_from_human():
     db = load_db_from_human( 'data/trainers/trainers.human' )
     save_parties_asm( 'data/trainers/parties_new.asm', db )
     save_special_moves_asm( 'data/trainers/special_moves_new.asm', db )
 
-# Debugging
-if 0:
-    pprint( db )
-    pprint( db['BROCK'][1], compact=True )
-    pprint( db, compact=True )
+test_asm_serialization()
+test_human_serialization()
+generate_human_from_asm()
