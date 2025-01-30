@@ -5,6 +5,7 @@
 
 SpecialTrainerMoves:
 	db BUG_CATCHER, 15 ; updated
+	; PINSIR
 	db 1, 1, TACKLE
 	db 1, 2, WRAP
 	db $FE
@@ -21,6 +22,7 @@ SpecialTrainerMoves:
 	db $FE
 
 	db YOUNGSTER, 14
+	; SANDSHREW
 	db 6, 1, SLASH
 	db 6, 2, DIG
 	db 6, 3, DEFENSE_CURL
@@ -255,10 +257,10 @@ SpecialTrainerMoves:
 	db 3, 3, SLEEP_POWDER
 ;	db 3, 4, STOMP
 	; HAUNTER
-	db 2, 1, HYPNOSIS
-;	db 2, 2, INFESTATION
-;	db 2, 3, SHADOW_PUNCH
-;	db 2, 4, NIGHT_SHADE
+	db 4, 1, HYPNOSIS
+;	db 4, 2, INFESTATION
+;	db 4, 3, SHADOW_PUNCH
+;	db 4, 4, NIGHT_SHADE
 	db $FE
 
 ; GYM LEADERS ===================================================
@@ -485,10 +487,10 @@ SpecialTrainerMoves:
 	db 4, 3, SHADOW_CLAW
 	db 4, 4, BODY_PRESS
 	; KLEAVOR
-	db 6, 1, AIR_SLASH
-	db 6, 2, STONE_EDGE
-	db 6, 3, CLOSE_COMBAT
-	db 6, 4, X_SCISSOR
+	db 5, 1, AIR_SLASH
+	db 5, 2, STONE_EDGE
+	db 5, 3, CLOSE_COMBAT
+	db 5, 4, X_SCISSOR
 	; AERODACTYL
 	db 6, 1, AIR_CUTTER
 	db 6, 2, ROOST
@@ -518,10 +520,10 @@ SpecialTrainerMoves:
 	db 4, 3, HYPER_BEAM
 	db 4, 4, BODY_PRESS
 	; KLEAVOR
-	db 6, 1, AIR_SLASH
-	db 6, 2, STONE_EDGE
-	db 6, 3, CLOSE_COMBAT
-	db 6, 4, X_SCISSOR
+	db 5, 1, AIR_SLASH
+	db 5, 2, STONE_EDGE
+	db 5, 3, CLOSE_COMBAT
+	db 5, 4, X_SCISSOR
 	; AERODACTYL
 	db 6, 1, AIR_CUTTER
 	db 6, 2, ROOST
@@ -551,11 +553,11 @@ SpecialTrainerMoves:
 	db 4, 3, HYPER_BEAM
 	db 4, 4, BODY_PRESS
 	; KLEAVOR
-	db 6, 1, AIR_SLASH
-	db 6, 2, STONE_EDGE
-	db 6, 3, CLOSE_COMBAT
-	db 6, 4, X_SCISSOR
-	; MAERODACTYL
+	db 5, 1, AIR_SLASH
+	db 5, 2, STONE_EDGE
+	db 5, 3, CLOSE_COMBAT
+	db 5, 4, X_SCISSOR
+	; MARODACTYL
 	db 6, 1, AIR_CUTTER
 	db 6, 2, ROOST
 	db 6, 3, STONE_EDGE
@@ -700,10 +702,10 @@ SpecialTrainerMoves:
 
 	db LT_SURGE, 1
 	; VOLTORB
-	db 2, 1, THUNDERSHOCK
-	db 2, 2, TACKLE
-	db 2, 3, SCREECH
-	db 2, 4, NO_MOVE
+	db 1, 1, THUNDERSHOCK
+	db 1, 2, TACKLE
+	db 1, 3, SCREECH
+	db 1, 4, NO_MOVE
 	; MAGNEMITE
 	db 2, 1, THUNDERSHOCK
 	db 2, 2, TACKLE
@@ -733,10 +735,10 @@ SpecialTrainerMoves:
 
 	db LT_SURGE, 2
 	; VOLTORB
-	db 2, 1, SONICBOOM
-	db 2, 2, THUNDER_WAVE
-	db 2, 3, SELFDESTRUCT
-	db 2, 4, THUNDERSHOCK
+	db 1, 1, SONICBOOM
+	db 1, 2, THUNDER_WAVE
+	db 1, 3, SELFDESTRUCT
+	db 1, 4, THUNDERSHOCK
 	; MAGNEMITE
 	db 2, 1, THUNDERSHOCK
 	db 2, 2, THUNDER_WAVE
@@ -2235,7 +2237,7 @@ SpecialTrainerMoves:
 	db 1, 1, FOCUS_ENERGY
 	db 1, 2, STONE_EDGE
 	db 1, 3, EARTHQUAKE
-	db 1, 3, HI_JUMP_KICK
+	db 1, 4, HI_JUMP_KICK
 	; HITMONCHAN
 	db 2, 1, DRAIN_PUNCH
 	db 2, 2, SHADOW_PUNCH
@@ -2268,7 +2270,7 @@ SpecialTrainerMoves:
 	db 1, 1, HI_JUMP_KICK
 	db 1, 2, EARTHQUAKE
 	db 1, 3, BULLET_PUNCH
-	db 1, 3, STONE_EDGE
+	db 1, 4, STONE_EDGE
 	; POLIWRATH
 	db 2, 1, ROCK_SLIDE
 	db 2, 2, CLOSE_COMBAT
@@ -2526,7 +2528,7 @@ SpecialTrainerMoves:
 	; NINETALES
 	db 5, 1, FIRE_SPIN
 	db 5, 2, CONFUSE_RAY
-	db 5, 4, WILL_O_WISP
+	db 5, 3, WILL_O_WISP
 	db 5, 4, HYPNOSIS
 	; UMBREON
 	db 6, 1, DARK_PULSE

@@ -236,7 +236,7 @@ PokemaniacData:
 ; Ochre Gym
 	db 44, CLEFABLE, WIGGLYTUFF, MR_MIME, SYLVEON, 0 ; new
 ; Victory Road 3F
-	db $FF, 60, CHARIZARD, 50, PIKACHU, 25, VAPOREON, 42, BLISSEY, 47, DRAGONITE, 33, DITTO ; new, 9
+	db $FF, 60, CHARIZARD, 50, PIKACHU, 25, VAPOREON, 42, BLISSEY, 47, DRAGONITE, 33, DITTO, 0 ; new, 9
 
 SuperNerdData:
 ; Mt. Moon 1F
@@ -1012,3 +1012,4 @@ BFTrainerData:
 MissingNoTData:
 	db 50, BLUESDAD, BLUESMOM, DAD, 0 ; new
 ;	db 1, DAD, 0 ; for testing
+:q!
