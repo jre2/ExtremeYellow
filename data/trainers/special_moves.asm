@@ -393,7 +393,7 @@ SpecialTrainerMoves:
 	db 5, 3, FLAMETHROWER
 	db 5, 4, DARK_PULSE
 	; ONIX
-	db 6, 1, EARTHBADGE
+	db 6, 1, EARTHQUAKE
 	db 6, 2, BODY_PRESS
 	db 6, 3, EXPLOSION
 	db 6, 4, ROCK_SLIDE
