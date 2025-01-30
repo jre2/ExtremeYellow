@@ -1,0 +1,2740 @@
+YOUNGSTER
+    1 ; Route 3
+        11 RATTATA None None None None
+        11 EKANS None None None None
+    2
+        14 SPEAROW None None None None
+    3 ; Mt. Moon 1F
+        10 RATTATA None None None None
+        10 RATTATA None None None None
+        10 ZUBAT None None None None
+    4 ; Route 24
+        14 RATTATA None None None None
+        14 EKANS None None None None
+        14 ZUBAT None None None None
+    5 ; Route 25
+        15 RATTATA None None None None
+        15 SPEAROW None None None None
+    6
+        17 SLOWPOKE None None None None
+    7
+        14 EKANS None None None None
+        14 SANDSHREW None None None None
+    8 ; SS Anne 1F Rooms
+        21 NIDORAN_M None None None None
+    9 ; Route 11
+        21 EKANS None None None None
+    10
+        19 SANDSHREW None None None None
+        19 ZUBAT None None None None
+    11
+        17 RATTATA None None None None
+        17 RATTATA None None None None
+        17 RATICATE None None None None
+    12
+        18 NIDORAN_M None None None None
+        18 NIDORINO None None None None
+    13 ; Unused
+        17 SPEAROW None None None None
+        17 RATTATA None None None None
+        17 RATTATA None None None None
+        17 SPEAROW None None None None
+    14 ; Route 9
+        19 RATTATA None None None None
+        19 RATTATA None None None None
+        19 RATTATA None None None None
+        20 BEEDRILL None None None None
+        20 BUTTERFREE None None None None
+        21 SANDSHREW SLASH DIG DEFENSE_CURL FISSURE
+    15 ; Obsidian Wood
+        35 FEAROW None None None None
+        35 RATICATE None None None None
+        35 ARBOK None None None None
+        35 GOLBAT None None None None
+        35 SANDSLASH None None None None
+BUG_CATCHER
+    1 ; Viridian Forest
+        7 CATERPIE None None None None
+        7 CATERPIE None None None None
+    2
+        6 METAPOD None None None None
+        6 CATERPIE None None None None
+        6 METAPOD None None None None
+    3
+        10 BUTTERFREE None TACKLE STRING_SHOT HARDEN
+        10 BEEDRILL None POISON_STING STRING_SHOT HARDEN
+    4 ; Route 3 ; edited
+        10 CATERPIE None None None None
+        10 METAPOD None None None None
+        10 BUTTERFREE None None None None
+    5
+        9 KAKUNA None None None None
+        9 BEEDRILL None None None None
+        9 METAPOD None None None None
+        9 BUTTERFREE None None None None
+    6
+        10 WEEDLE None None None None
+        10 KAKUNA None None None None
+        10 BEEDRILL None None None None
+    7 ; Mt. Moon 1F
+        11 WEEDLE None None None None
+        11 KAKUNA None None None None
+    8
+        11 CATERPIE None None None None
+        11 METAPOD None None None None
+        11 BUTTERFREE None None None None
+    9 ; Route 24 (Nugget Bridge)
+        14 BUTTERFREE None None None None
+        14 BEEDRILL None None None None
+    10 ; Route 6
+        16 BEEDRILL None None None None
+        16 BUTTERFREE None None None None
+        16 BEEDRILL None None None None
+    11
+        20 BUTTERFREE None None None None
+    12 ; Obsidian Wood ; new
+        39 BUTTERFREE None None None None
+        39 BEEDRILL None None None None
+        39 SCYTHER None None None None
+        39 PARASECT None None None None
+    13 ; Route 9
+        19 BEEDRILL None None None None
+        19 BEEDRILL None None None None
+    14
+        20 CATERPIE None None None None
+        20 WEEDLE None None None None
+        20 VENONAT None None None None
+    15 ; Viridian Forest
+        7 PINSIR TACKLE WRAP None None
+        7 METAPOD None None None None
+    16 ; Ochre Gym ; new
+        43 SCIZOR None None None None
+        43 BUTTERFREE None None None None
+        43 BEEDRILL None None None None
+        43 VENOMOTH None None None None
+        43 KLEAVOR None None None None
+        43 PINSIR None None None None
+    17 ; Victory Road 3F ; new
+        55 SCIZOR None None None None
+        55 KLEAVOR None None None None
+        55 PINSIR None None None None
+        55 VENOMOTH None None None None
+        55 BUTTERFREE None None None None
+        55 BEEDRILL None None None None
+LASS
+    1 ; Route 3
+        9 PIDGEY None None None None
+        9 PIDGEY None None None None
+    2
+        10 RATTATA None None None None
+        10 NIDORAN_M None None None None
+    3
+        14 JIGGLYPUFF None None None None
+    4 ; Route 4 ; unused
+        31 PARAS None None None None
+        31 PARASECT None None None None
+        31 PARASECT None None None None
+    5 ; Mt. Moon 1F
+        11 ODDISH None None None None
+        11 BELLSPROUT None None None None
+    6
+        14 CLEFAIRY None None None None
+    7 ; Route 24
+        16 PIDGEY None None None None
+        16 NIDORAN_F None None None None
+    8
+        15 PIDGEY None None None None
+        15 NIDORAN_F None None None None
+    9 ; Route 25
+        15 NIDORAN_M None None None None
+        15 NIDORAN_F None None None None
+    10
+        13 ODDISH None None None None
+        13 PIDGEY None None None None
+        13 ODDISH None None None None
+    11 ; SS Anne 1F Rooms
+        18 PIDGEOTTO None None None None
+        18 NIDORAN_F None None None None
+    12 ; SS Anne 2F Rooms
+        20 JIGGLYPUFF None None None None
+    13 ; Route 8
+        23 NIDORAN_F None None None None
+        23 NIDORINA None None None None
+    14
+        24 MEOWTH None None None None
+        24 MEOWTH None None None None
+        24 MEOWTH None None None None
+    15
+        19 PIDGEOTTO None None None None
+        19 RATTATA None None None None
+        19 NIDORAN_F None None None None
+        19 MEOWTH None None None None
+        19 NIDORAN_M None None None None
+    16
+        22 CLEFAIRY None None None None
+        22 CLEFAIRY None None None None
+    17 ; Celadon Gym
+        27 BELLSPROUT None None None None
+        27 WEEPINBELL None None None None
+        27 VICTREEBEL None None None None
+    18
+        26 ODDISH None None None None
+        26 GLOOM None None None None
+        26 VILEPLUME None None None None
+        26 BELLOSSOM None None None None
+    19 ; Viridian Forest
+        6 NIDORAN_F None None None None
+        6 NIDORAN_M None None None None
+SAILOR
+    1 ; SS Anne Stern
+        18 MACHOP None None None None
+        18 SHELLDER None None None None
+    2
+        17 MACHOP None None None None
+        17 TENTACOOL None None None None
+    3 ; SS Anne B1F Rooms
+        21 SHELLDER None None None None
+    4
+        17 HORSEA None None None None
+        17 SHELLDER None None None None
+        17 TENTACOOL None None None None
+    5
+        18 TENTACOOL None None None None
+        18 STARYU None None None None
+    6
+        17 HORSEA None None None None
+        17 HORSEA None None None None
+        17 HORSEA None None None None
+    7
+        20 MACHOP None None None None
+    8 ; Vermilion Gym
+        23 ELEKID None None None None
+        23 PIKACHU None None None None
+        23 PIKACHU None None None None
+        23 RAICHU None None None None
+JR_TRAINER
+    1 ; Cerulean Gym
+        19 GOLDEEN None None None None
+        19 KRABBY None None None None
+        19 PSYDUCK None None None None
+    2 ; Route 6
+        16 ODDISH None None None None
+        16 BELLSPROUT None None None None
+    3
+        16 PIDGEY None None None None
+        16 PIDGEY None None None None
+        16 PIDGEY None None None None
+    4 ; Unused
+        22 BULBASAUR None None None None
+    5 ; Route 9
+        18 ODDISH None None None None
+        18 BELLSPROUT None None None None
+        18 ODDISH None None None None
+        18 BELLSPROUT None None None None
+    6
+        23 MEOWTH None None None None
+    7 ; Route 10
+        20 JIGGLYPUFF None None None None
+        20 CLEFAIRY None None None None
+    8
+        21 PIDGEY None None None None
+        21 PIDGEOTTO None None None None
+    9 ; Rock Tunnel B1F
+        21 JIGGLYPUFF None None None None
+        21 PIDGEOTTO None None None None
+        21 MEOWTH None None None None
+    10
+        22 ODDISH None None None None
+        22 BULBASAUR None None None None
+    11 ; Celadon Gym
+        26 BULBASAUR None None None None
+        26 IVYSAUR None None None None
+        26 EXEGGCUTE None None None None
+        26 EXEGGUTOR None None None None
+    12 ; Route 13
+        24 PIDGEOTTO None None None None
+        24 MEOWTH None None None None
+        24 RATTATA None None None None
+        24 PIDGEOTTO None None None None
+        24 MEOWTH None None None None
+    13
+        30 POLIWAG None None None None
+        30 POLIWHIRL None None None None
+    14
+        27 PIDGEY None None None None
+        27 MEOWTH None None None None
+        27 PIDGEOTTO None None None None
+        27 PIDGEOTTO None None None None
+    15
+        28 GOLDEEN None None None None
+        28 POLIWHIRL None None None None
+        28 HORSEA None None None None
+    16 ; Route 20 ; updated
+        41 SEAKING None None None None
+        41 POLITOED None None None None
+    17 ; Rock Tunnel 1F
+        22 BELLSPROUT None None None None
+        22 CLEFAIRY None None None None
+    18
+        20 MEOWTH None None None None
+        20 ODDISH None None None None
+        20 PIDGEOTTO None None None None
+    19
+        19 PIDGEOTTO None None None None
+        19 RATTATA None None None None
+        19 RATICATE None None None None
+        19 BELLSPROUT None None None None
+    20 ; Route 15
+        28 GLOOM None None None None
+        28 ODDISH None None None None
+        28 GLOOM None None None None
+    21
+        29 PIDGEY None None None None
+        29 PIDGEOTTO None None None None
+    22
+        33 CLEFAIRY None None None None
+    23
+        29 WEEPINBELL None None None None
+        29 GLOOM None None None None
+        29 TANGELA None None None None
+    24 ; Route 20 ; updated
+        40 TENTACRUEL None None None None
+        40 SEADRA None None None None
+        40 DEWGONG None None None None
+    25 ; Route 6
+        20 CHARMANDER None None None None
+    26 ; Pewter Gym
+        8 GEODUDE None None None None
+        8 ONIX None None None None
+    27 ; Route 24/Route 25
+        14 RATTATA None None None None
+        14 EKANS None None None None
+    28 ; Route 24
+        18 MANKEY None None None None
+    29 ; Route 6
+        20 SQUIRTLE None None None None
+    30
+        16 SPEAROW None None None None
+        16 RATICATE None None None None
+    31 ; Unused
+        18 DIGLETT None None None None
+        18 DIGLETT None None None None
+        18 SANDSHREW None None None None
+    32 ; Route 9
+        21 GROWLITHE None None None None
+        21 CHARMANDER None None None None
+    33
+        19 RATTATA None None None None
+        19 DIGLETT None None None None
+        19 EKANS None None None None
+        19 SANDSHREW None None None None
+    34 ; Route 12
+        29 NIDORAN_M None None None None
+        29 NIDORINO None None None None
+    35
+        16 WEEPINBELL None None None None
+    36 ; Obsidian Wood ; new
+        37 POLITOED None None None None
+        37 DUGTRIO None None None None
+        37 BELLOSSOM None None None None
+        37 CHARMELEON None None None None
+        37 PIDGEOT None None None None
+POKEMANIAC
+    1 ; Route 10
+        30 RHYHORN None None None None
+        30 LICKITUNG None None None None
+    2
+        20 SANDSHREW None None None None
+        20 SLOWPOKE None None None None
+    3 ; Rock Tunnel B1F
+        21 SLOWPOKE None None None None
+        21 SLOWPOKE None None None None
+        21 SLOWPOKE None None None None
+    4
+        20 CHARMELEON None None None None
+        20 WARTORTLE None None None None
+        20 IVYSAUR None None None None
+    5
+        25 SLOWPOKE None None None None
+    6 ; Victory Road 2F
+        60 PICHU None None None None
+        60 CLEFFA None None None None
+        60 IGGLYBUFF None None None None
+        60 SMOOCHUM None None None None
+        60 TYROGUE None None None None
+        60 HAPPINY None None None None
+    7 ; Rock Tunnel 1F
+        23 SANDSLASH None None None None
+        23 SLOWPOKE None None None None
+    8 ; Ochre Gym
+        44 CLEFABLE None None None None
+        44 WIGGLYTUFF None None None None
+        44 MR_MIME None None None None
+        44 SYLVEON None None None None
+    9 ; Victory Road 3F
+        60 CHARIZARD None None None None
+        50 PIKACHU None None None None
+        25 VAPOREON None None None None
+        42 BLISSEY None None None None
+        47 DRAGONITE None None None None
+        33 DITTO None None None None
+SUPER_NERD
+    1 ; Mt. Moon 1F
+        11 MAGNEMITE None None None None
+        11 VOLTORB None None None None
+    2 ; Mt. Moon B2F
+        12 GRIMER None None None None
+        12 VOLTORB None None None None
+        12 KOFFING None None None None
+    3 ; Route 8
+        20 VOLTORB None None None None
+        20 KOFFING None None None None
+        20 VOLTORB None None None None
+        20 MAGNEMITE None None None None
+    4
+        22 GRIMER None None None None
+        22 MUK None None None None
+        22 GRIMER None None None None
+    5
+        26 KOFFING None None None None
+    6 ; Unused
+        22 KOFFING None None None None
+        22 MAGNEMITE None None None None
+        22 WEEZING None None None None
+    7
+        20 MAGNEMITE None None None None
+        20 MAGNEMITE None None None None
+        20 KOFFING None None None None
+        20 MAGNEMITE None None None None
+    8
+        24 MAGNEMITE None None None None
+        24 VOLTORB None None None None
+    9 ; Cinnabar Gym
+        47 RAPIDASH None None None None
+        47 NINETALES None None None None
+        47 MAGBY None None None None
+        47 MAGMAR None None None None
+        47 MAGMORTAR None None None None
+    10
+        47 MAGBY None None None None
+        47 MAGMAR None None None None
+        47 MAGMORTAR None None None None
+        47 CHARMANDER None None None None
+        47 CHARMELEON None None None None
+        47 CHARIZARD None None None None
+    11
+        50 MAGMORTAR None None None None
+        50 CHARIZARD None None None None
+        50 ARCANINE None None None None
+    12 ; Ochre Gym
+        43 PERSIAN None None None None
+        43 KANGASKHAN None None None None
+        43 BLISSEY None None None None
+        43 TAUROS None None None None
+        43 SNORLAX None None None None
+        43 PORYGONZ None None None None
+HIKER
+    1 ; Mt. Moon 1F
+        43 STEELIX None None None None
+        43 MACHAMP None None None None
+        43 DUGTRIO None None None None
+    2 ; Route 25
+        15 MACHOP None None None None
+        15 GEODUDE None None None None
+    3
+        13 GEODUDE None None None None
+        13 GEODUDE None None None None
+        13 MACHOP None None None None
+        13 GEODUDE None None None None
+    4
+        17 ONIX None None None None
+    5 ; Route 9
+        21 GEODUDE None None None None
+        21 ONIX None None None None
+    6
+        20 GEODUDE None None None None
+        20 MACHOP None None None None
+        20 GEODUDE None None None None
+    7 ; Route 10
+        21 GEODUDE None None None None
+        21 ONIX None None None None
+    8
+        19 ONIX None None None None
+        19 GRAVELER None None None None
+    9 ; Rock Tunnel B1F
+        21 GEODUDE None None None None
+        21 GEODUDE None None None None
+        21 GRAVELER None None None None
+    10
+        25 GRAVELER None None None None
+    11 ; Route 9/Rock Tunnel B1F
+        20 MACHOP None None None None
+        20 ONIX None None None None
+    12 ; Rock Tunnel 1F
+        19 GEODUDE None None None None
+        19 MACHOP None None None None
+        19 GEODUDE None None None None
+        19 GEODUDE None None None None
+    13
+        20 ONIX None None None None
+        20 ONIX None None None None
+        20 GEODUDE None None None None
+    14
+        21 GEODUDE None None None None
+        21 GRAVELER None None None None
+    15 ; Route 26
+        6 ONIX None None None None
+        7 ONIX None None None None
+        8 ONIX None None None None
+        9 ONIX None None None None
+        10 ONIX None None None None
+    16 ; Obsidian Mines
+        38 GOLEM None None None None
+        38 ONIX None None None None
+        38 RHYHORN None None None None
+        38 MACHOKE None None None None
+    17 ; Route 29 ; new
+        41 STEELIX None None None None
+        41 GOLEM None None None None
+        41 RHYPERIOR None None None None
+        41 MACHAMP None None None None
+    18
+        41 KLEAVOR None None None None
+        41 ANNIHILAPE None None None None
+        41 SNORLAX None None None None
+        41 GOLEM None None None None
+BIKER
+    1 ; Route 13
+        28 KOFFING None None None None
+        28 KOFFING None None None None
+        28 KOFFING None None None None
+    2 ; Route 14
+        29 KOFFING None None None None
+        29 GRIMER None None None None
+    3 ; Route 15
+        25 KOFFING None None None None
+        25 KOFFING None None None None
+        25 WEEZING None None None None
+        25 KOFFING None None None None
+        25 GRIMER None None None None
+    4
+        28 KOFFING None None None None
+        28 GRIMER None None None None
+        28 WEEZING None None None None
+    5 ; Route 16
+        29 GRIMER None None None None
+        29 KOFFING None None None None
+    6
+        33 WEEZING None None None None
+    7
+        26 GRIMER None None None None
+        26 GRIMER None None None None
+        26 GRIMER None None None None
+        26 GRIMER None None None None
+    8 ; Route 17
+        28 WEEZING None None None None
+        28 KOFFING None None None None
+        28 WEEZING None None None None
+    9
+        33 MUK None None None None
+    10
+        29 VOLTORB None None None None
+        29 VOLTORB None None None None
+    11
+        29 WEEZING None None None None
+        29 MUK None None None None
+    12
+        25 KOFFING None None None None
+        25 WEEZING None None None None
+        25 KOFFING None None None None
+        25 KOFFING None None None None
+        25 WEEZING None None None None
+    13 ; Route 14
+        26 KOFFING None None None None
+        26 KOFFING None None None None
+        26 GRIMER None None None None
+        26 KOFFING None None None None
+    14
+        28 GRIMER None None None None
+        28 GRIMER None None None None
+        28 KOFFING None None None None
+    15
+        29 KOFFING None None None None
+        29 MUK None None None None
+BURGLAR
+    1 ; Unused
+        29 GROWLITHE None None None None
+        29 VULPIX None None None None
+    2
+        33 GROWLITHE None None None None
+    3
+        28 VULPIX None None None None
+        28 CHARMANDER None None None None
+        28 PONYTA None None None None
+    4 ; Cinnabar Gym
+        50 ARCANINE None None None None
+        50 NINETALES None None None None
+        50 RAPIDASH None None None None
+    5
+        49 PONYTA None None None None
+        49 RAPIDASH None None None None
+        49 GROWLITHE None None None None
+        49 ARCANINE None None None None
+    6
+        51 MAGMORTAR None None None None
+        51 CHARIZARD None None None None
+    7 ; Mansion 2F
+        44 ARCANINE None None None None
+        44 CHARIZARD None None None None
+        44 MAGMORTAR None None None None
+    8 ; Mansion 3F
+        48 NINETALES None None None None
+    9 ; Mansion B1F
+        46 ARCANINE None None None None
+        46 RAPIDASH None None None None
+FISHER
+    1 ; SS Anne 2F Rooms
+        17 GOLDEEN None None None None
+        17 TENTACOOL None None None None
+        17 GOLDEEN None None None None
+    2 ; SS Anne B1F Rooms
+        17 TENTACOOL None None None None
+        17 STARYU None None None None
+        17 SHELLDER None None None None
+    3 ; Route 12
+        22 GOLDEEN None None None None
+        22 POLIWAG None None None None
+        22 GOLDEEN None None None None
+    4
+        24 TENTACOOL None None None None
+        24 GOLDEEN None None None None
+    5
+        27 GOLDEEN None None None None
+    6
+        21 POLIWAG None None None None
+        21 SHELLDER None None None None
+        21 GOLDEEN None None None None
+        21 HORSEA None None None None
+    7 ; Route 21 ; updated
+        40 SEAKING None None None None
+        40 SEAKING None None None None
+        40 SEAKING None None None None
+        40 SEAKING None None None None
+    8
+        42 CLOYSTER None None None None
+        42 CLOYSTER None None None None
+    9
+        39 MAGIKARP None None None None
+        39 GYARADOS None None None None
+        39 GYARADOS None None None None
+        39 GYARADOS None None None None
+        39 GYARADOS None None None None
+        39 GYARADOS None None None None
+    10
+        42 SEAKING None None None None
+        42 STARMIE None None None None
+    11 ; Route 12
+        24 MAGIKARP None None None None
+        24 GYARADOS None None None None
+        24 GYARADOS None None None None
+    12 ; Route 28, new
+        43 SEAKING None None None None
+        43 POLITOED None None None None
+        43 CLOYSTER None None None None
+        43 KINGDRA None None None None
+        43 GYARADOS None None None None
+SWIMMER
+    1 ; Cerulean Gym
+        16 HORSEA None None None None
+        16 SHELLDER None None None None
+        16 SEEL None None None None
+    2 ; Route 19 ; updated
+        42 TENTACRUEL None None None None
+        42 CLOYSTER None None None None
+    3
+        41 SEAKING None None None None
+        41 KINGDRA None None None None
+        41 STARMIE None None None None
+    4
+        42 POLIWRATH None None None None
+        42 POLITOED None None None None
+    5
+        40 SEADRA None None None None
+        40 TENTACRUEL None None None None
+        40 TENTACRUEL None None None None
+        40 SEAKING None None None None
+    6
+        41 SEAKING None None None None
+        41 SHELLDER None None None None
+        41 SEAKING None None None None
+    7
+        42 HORSEA None None None None
+        42 HORSEA None None None None
+    8
+        39 TENTACRUEL None None None None
+        39 TENTACRUEL None None None None
+        39 STARMIE None None None None
+        39 SEADRA None None None None
+        39 TENTACRUEL None None None None
+    9 ; Route 20 ; updated
+        42 CLOYSTER None None None None
+        42 CLOYSTER None None None None
+    10
+        44 STARMIE None None None None
+    11
+        40 HORSEA None None None None
+        40 SEADRA None None None None
+        40 KINGDRA None None None None
+        40 KINGDRA None None None None
+    12 ; Route 21 ; updated
+        42 KINGDRA None None None None
+        42 TENTACRUEL None None None None
+    13
+        45 STARMIE None None None None
+    14
+        42 STARMIE None None None None
+        42 BLASTOISE None None None None
+    15
+        41 POLIWRATH None None None None
+        41 TENTACRUEL None None None None
+        41 KINGDRA None None None None
+    16 ; Route 29 ; new
+        41 POLITOED None None None None
+        41 VAPOREON None None None None
+        41 KINGDRA None None None None
+        41 BLASTOISE None None None None
+    17
+        41 POLIWRATH None None None None
+        41 STARMIE None None None None
+        41 TENTACRUEL None None None None
+        41 LAPRAS None None None None
+    18 ; Route 28, new
+        43 POLIWRATH None None None None
+        43 LAPRAS None None None None
+        43 TENTACRUEL None None None None
+        43 VAPOREON None None None None
+        43 STARMIE None None None None
+CUE_BALL
+    1 ; Route 16
+        28 MACHOKE None None None None
+        28 PRIMEAPE None None None None
+        28 MACHOKE None None None None
+    2
+        29 PRIMEAPE None None None None
+        29 MACHOKE None None None None
+    3
+        33 MACHOKE None None None None
+    4 ; Route 17
+        29 PRIMEAPE None None None None
+        29 PRIMEAPE None None None None
+    5
+        29 MACHOKE None None None None
+        29 MACHOKE None None None None
+    6
+        33 MACHOKE None None None None
+    7
+        26 MANKEY None None None None
+        26 MANKEY None None None None
+        26 MACHOKE None None None None
+        26 MACHOP None None None None
+    8
+        29 PRIMEAPE None None None None
+        29 MACHOKE None None None None
+    9 ; Route 21 ; updated
+        40 TENTACRUEL None None None None
+        40 TENTACRUEL None None None None
+        40 TENTACRUEL None None None None
+GAMBLER
+    1 ; Route 11
+        18 POLIWAG None None None None
+        18 HORSEA None None None None
+    2
+        18 BELLSPROUT None None None None
+        18 ODDISH None None None None
+    3
+        18 VOLTORB None None None None
+        18 MAGNEMITE None None None None
+    4
+        18 GROWLITHE None None None None
+        18 VULPIX None None None None
+    5 ; Route 8
+        22 POLIWAG None None None None
+        22 POLIWAG None None None None
+        22 POLIWHIRL None None None None
+    6 ; Unused
+        22 ONIX None None None None
+        22 GEODUDE None None None None
+        22 GRAVELER None None None None
+    7 ; Route 8
+        24 GROWLITHE None None None None
+        24 VULPIX None None None None
+BEAUTY
+    1 ; Celadon Gym
+        26 GLOOM None None None None
+        26 WEEPINBELL None None None None
+        26 PARASECT None None None None
+        26 TANGELA None None None None
+    2
+        28 VICTREEBEL None None None None
+        28 VILEPLUME None None None None
+    3
+        29 TANGROWTH None None None None
+    4 ; Route 13
+        27 RATICATE None None None None
+        27 VULPIX None None None None
+        27 RATICATE None None None None
+    5
+        29 CLEFAIRY None None None None
+        29 MEOWTH None None None None
+    6 ; Route 20 ; updated
+        44 SEAKING None None None None
+    7
+        41 CLOYSTER None None None None
+        41 CLOYSTER None None None None
+        41 CLOYSTER None None None None
+    8
+        42 POLITOED None None None None
+        42 SEAKING None None None None
+    9 ; Route 15
+        29 PIDGEOTTO None None None None
+        29 WIGGLYTUFF None None None None
+    10
+        29 BULBASAUR None None None None
+        29 IVYSAUR None None None None
+    11 ; Unused
+        33 WEEPINBELL None None None None
+        33 BELLSPROUT None None None None
+        33 WEEPINBELL None None None None
+    12 ; Route 19 ; updated
+        39 POLIWRATH None None None None
+        39 SEAKING None None None None
+        39 STARMIE None None None None
+        39 SEAKING None None None None
+        39 POLITOED None None None None
+    13
+        42 STARMIE None None None None
+        42 KINGDRA None None None None
+    14
+        41 STARMIE None None None None
+        41 STARMIE None None None None
+        41 STARMIE None None None None
+    15 ; Route 20 ; updated
+        41 HORSEA None None None None
+        41 SEADRA None None None None
+        41 KINGDRA None None None None
+PSYCHIC_TR
+    1 ; Saffron Gym
+        45 JYNX None None None None
+        45 SLOWBRO None None None None
+        45 EXEGGUTOR None None None None
+        45 MR_MIME None None None None
+    2
+        46 EXEGGUTOR None None None None
+        46 ALAKAZAM None None None None
+        46 STARMIE None None None None
+    3
+        45 ALAKAZAM None None None None
+        45 SLOWKING None None None None
+        45 STARMIE None None None None
+        45 JYNX None None None None
+    4
+        45 SLOWKING None None None None
+        45 HYPNO None None None None
+        45 MR_MIME None None None None
+        45 SLOWBRO None None None None
+    5 ; Proxy for COPYCAT
+        50 MIME_JR None None None None
+        50 MR_MIME None None None None
+        50 DITTO None None None None
+    6 ; Victory Road 3F ; new
+        55 ESPEON None None None None
+        55 JYNX None None None None
+        55 EXEGGUTOR None None None None
+        55 SLOWKING None None None None
+        55 STARMIE None None None None
+        55 ALAKAZAM None None None None
+ROCKER
+    1 ; Vermilion Gym
+        23 ELEKID None None None None
+        23 VOLTORB None None None None
+        23 VOLTORB None None None None
+        23 ELECTRODE None None None None
+    2 ; Route 12
+        29 VOLTORB None None None None
+        29 ELECTRODE None None None None
+    3 ; Route 28 ; new
+        43 ELECTRODE None None None None
+        43 MUK None None None None
+        43 ELECTIVIRE None None None None
+        43 MACHAMP None None None None
+        43 WIGGLYTUFF None None None None
+        43 CROBAT None None None None
+ENGINEER
+    1 ; Ochre Gym
+        45 MAGNEZONE None None None None
+        45 STEELIX None None None None
+        45 SCIZOR None None None None
+    2 ; Route 11
+        21 MAGNEMITE None None None None
+    3
+        18 MAGNEMITE None None None None
+        18 MAGNEMITE None None None None
+        18 MAGNETON None None None None
+    4 ; Route 27 ; new
+        43 MAGNEZONE None None None None
+        43 SCIZOR None None None None
+        43 ELECTIVIRE None None None None
+        43 STEELIX None None None None
+        43 JOLTEON None None None None
+JUGGLER
+    1 ; Silph Co. 5F
+        29 KADABRA None None None None
+        29 MR_MIME None None None None
+    2 ; Victory Road 2F
+        55 ELECTRODE None None None None
+        55 GOLEM None None None None
+        55 CLOYSTER None None None None
+        55 DITTO None None None None
+        55 GENGAR None None None None
+        55 ALAKAZAM None None None None
+    3 ; Fuchsia Gym
+        38 MUK None None None None
+        38 WEEZING None None None None
+        38 ARBOK None None None None
+        38 HAUNTER None None None None
+    4
+        37 WEEZING EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        37 ELECTRODE EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        37 GOLEM EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        37 CLOYSTER EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        37 LICKILICKY EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        37 SNORLAX SELFDESTRUCT NO_MOVE NO_MOVE NO_MOVE
+    5 ; Victory Road 2F
+        55 MIME_JR None None None None
+        55 HYPNO None None None None
+        55 SLOWBRO None None None None
+        55 SLOWKING None None None None
+        55 JYNX None None None None
+        55 MR_MIME None None None None
+    6 ; Unused
+        33 HYPNO None None None None
+    7 ; Fuchsia Gym
+        38 BEEDRILL None None None None
+        38 TENTACRUEL None None None None
+        38 GOLBAT None None None None
+        38 VENUSAUR None None None None
+    8
+        38 HYPNO None None None None
+        38 KADABRA None None None None
+        38 HAUNTER None None None None
+        38 VENUSAUR None None None None
+    9 ; Victory Road 3F ; new
+        55 HYPNO METRONOME NO_MOVE NO_MOVE NO_MOVE
+        55 CLEFAIRY METRONOME NO_MOVE NO_MOVE NO_MOVE
+        55 ALAKAZAM METRONOME NO_MOVE NO_MOVE NO_MOVE
+        55 WIGGLYTUFF METRONOME NO_MOVE NO_MOVE NO_MOVE
+        55 MR_MIME METRONOME NO_MOVE NO_MOVE NO_MOVE
+        55 GENGAR METRONOME NO_MOVE NO_MOVE NO_MOVE
+TAMER
+    1 ; Fuchsia Gym
+        38 NIDOQUEEN None None None None
+        38 VICTREEBEL None None None None
+        38 VILEPLUME None None None None
+        38 NIDOKING None None None None
+    2
+        33 ARBOK None None None None
+        33 MUK None None None None
+        33 WEEZING None None None None
+        33 VENOMOTH None None None None
+    3 ; Viridian Gym
+        51 STEELIX None None None None
+        51 RHYPERIOR None None None None
+        51 NIDOKING None None None None
+    4
+        51 RHYHORN None None None None
+        51 RHYDON None None None None
+        51 RHYPERIOR None None None None
+        51 TAUROS None None None None
+    5 ; Victory Road 2F
+        55 HITMONTOP None None None None
+        55 KINGDRA None None None None
+        55 POLITOED None None None None
+        55 LICKILICKY None None None None
+        55 RHYPERIOR None None None None
+        55 SYLVEON None None None None
+    6 ; Unused
+        42 RHYHORN None None None None
+        42 PRIMEAPE None None None None
+        42 ARBOK None None None None
+        42 TAUROS None None None None
+BIRD_KEEPER
+    1 ; Route 13
+        29 PIDGEOTTO None None None None
+        29 PIDGEOTTO None None None None
+    2
+        25 FEAROW None None None None
+        25 PIDGEOTTO None None None None
+        25 PIDGEOTTO None None None None
+        25 FEAROW None None None None
+        25 FEAROW None None None None
+    3
+        26 PIDGEY None None None None
+        26 PIDGEOTTO None None None None
+        26 SPEAROW None None None None
+        26 FEAROW None None None None
+    4 ; Route 14
+        33 FARFETCHD None None None None
+    5
+        29 FEAROW None None None None
+        29 FEAROW None None None None
+    6 ; Route 15
+        26 PIDGEOTTO None None None None
+        26 FARFETCHD None None None None
+        26 DODUO None None None None
+        26 PIDGEOTTO None None None None
+    7
+        28 DODRIO None None None None
+        28 DODUO None None None None
+        28 DODUO None None None None
+    8 ; Route 18
+        29 FEAROW None None None None
+        29 FEAROW None None None None
+    9
+        34 DODRIO None None None None
+        34 STARMIE None None None None
+    10
+        26 SPEAROW None None None None
+        26 FEAROW None None None None
+        26 FEAROW None None None None
+        26 FEAROW None None None None
+    11 ; Route 20 ; updated
+        41 FEAROW None None None None
+        41 FEAROW None None None None
+        41 PIDGEOT None None None None
+    12 ; Unused
+        39 PIDGEOTTO None None None None
+        39 PIDGEOTTO None None None None
+        39 PIDGEOTTO None None None None
+        39 PIDGEOTTO None None None None
+    13
+        42 FARFETCHD None None None None
+        42 FEAROW None None None None
+    14 ; Route 14
+        28 PIDGEOTTO None None None None
+        28 DODUO None None None None
+        28 PIDGEOTTO None None None None
+    15
+        26 PIDGEOTTO None None None None
+        26 FEAROW None None None None
+        26 PIDGEOTTO None None None None
+        26 FEAROW None None None None
+    16
+        29 PIDGEOTTO None None None None
+        29 FEAROW None None None None
+    17
+        31 FEAROW None None None None
+        31 DODRIO None None None None
+        31 FEAROW None None None None
+    18 ; Ochre Gym ; new
+        43 FEAROW None None None None
+        43 BUTTERFREE None None None None
+        43 FARFETCHD None None None None
+        43 PIDGEOT None None None None
+        43 SCYTHER None None None None
+        43 DODRIO None None None None
+    19 ; Victory Road 3F ; new
+        55 PIDGEOT None None None None
+        55 CHARIZARD None None None None
+        55 CROBAT None None None None
+        55 GYARADOS None None None None
+        55 AERODACTYL None None None None
+        55 DRAGONITE None None None None
+    20 ; Route 29 ; new
+        41 FEAROW None None None None
+        41 BUTTERFREE None None None None
+        41 FARFETCHD None None None None
+        41 SCYTHER None None None None
+    21
+        41 PIDGEOT None None None None
+        41 CROBAT None None None None
+        41 AERODACTYL None None None None
+        41 DODRIO None None None None
+    22 ; Route 28 ; new
+        43 PIDGEOT None None None None
+        43 FEAROW None None None None
+        43 DODRIO None None None None
+        43 FARFETCHD None None None None
+        43 AERODACTYL None None None None
+BLACKBELT
+    1 ; Fighting Dojo ; all updated
+        37 HITMONLEE None None None None
+        37 HITMONCHAN None None None None
+        37 HITMONTOP None None None None
+    2
+        32 MANKEY None None None None
+        32 PRIMEAPE None None None None
+        32 ANNIHILAPE None None None None
+    3
+        32 MACHOP None None None None
+        32 MACHOKE None None None None
+        32 MACHAMP None None None None
+    4
+        36 POLIWRATH None None None None
+    5
+        35 POLIWRATH None None None None
+        35 MACHOKE None None None None
+        35 PRIMEAPE None None None None
+    6 ; Viridian Gym
+        52 MACHAMP None None None None
+        52 NIDOKING None None None None
+    7
+        51 MACHAMP None None None None
+        51 RHYPERIOR None None None None
+        51 NIDOKING None None None None
+    8
+        49 MACHAMP None None None None
+        49 RHYDON None None None None
+        49 NIDOQUEEN None None None None
+        49 RHYPERIOR None None None None
+        49 NIDOKING None None None None
+        49 GOLEM None None None None
+    9 ; Victory Road 2F
+        69 MACHAMP None None None None
+SCIENTIST
+    1 ; Mansion 1F ; edited, previously unused
+        46 ELECTRODE None None None None
+        46 WEEZING None None None None
+    2 ; Silph Co. 2F
+        26 GRIMER None None None None
+        26 WEEZING None None None None
+        26 KOFFING None None None None
+        26 WEEZING None None None None
+    3
+        28 MAGNEMITE None None None None
+        28 VOLTORB None None None None
+        28 MAGNETON None None None None
+    4 ; Silph Co. 3F ; edited, previously was also for Mansion 1F
+        29 ELECTRODE None None None None
+        29 WEEZING None None None None
+    5 ; Silph Co. 4F
+        33 ELECTRODE None None None None
+    6 ; Silph Co. 5F
+        26 MAGNETON None None None None
+        26 KOFFING None None None None
+        26 WEEZING None None None None
+        26 MAGNEMITE None None None None
+    7 ; Silph Co. 6F
+        25 VOLTORB None None None None
+        25 KOFFING None None None None
+        25 MAGNETON None None None None
+        25 MAGNEMITE None None None None
+        25 KOFFING None None None None
+    8 ; Silph Co. 7F
+        29 ELECTRODE None None None None
+        29 MUK None None None None
+    9 ; Silph Co. 8F
+        29 GRIMER None None None None
+        29 ELECTRODE None None None None
+    10 ; Silph Co. 9F
+        28 VOLTORB None None None None
+        28 KOFFING None None None None
+        28 MAGNETON None None None None
+    11 ; Silph Co. 10F
+        29 MAGNEMITE None None None None
+        29 KOFFING None None None None
+    12 ; Mansion 3F
+        44 MAGNEZONE None None None None
+        44 MAGNEZONE None None None None
+        44 ELECTRODE None None None None
+    13 ; Mansion B1F
+        46 MAGNEZONE None None None None
+        46 ELECTRODE None None None None
+GENTLEMAN
+    1 ; SS Anne 1F Rooms
+        18 GROWLITHE None None None None
+        18 GROWLITHE None None None None
+    2
+        19 NIDORAN_M None None None None
+        19 NIDORAN_F None None None None
+    3 ; Vermilion Gym
+        23 ELEKID None None None None
+        23 MAGNEMITE None None None None
+        23 MAGNEMITE None None None None
+        23 MAGNETON None None None None
+    4 ; SS Anne 2F Rooms, edited
+        21 ELEKID None None None None
+        21 SMOOCHUM None None None None
+        21 MAGBY None None None None
+        21 IGGLYBUFF None None None None
+        21 CLEFFA None None None None
+        21 MUNCHLAX None None None None
+    5 ; SS Anne 2F Rooms
+        17 GROWLITHE None None None None
+        17 PONYTA None None None None
+    6 ; new, SS Anne Captain
+        75 SCYTHER CUT AIR_SLASH X_SCISSOR AIR_CUTTER
+        75 KABUTOPS CUT SLASH STONE_EDGE SWORDS_DANCE
+        75 SCIZOR CUT SLASH X_SCISSOR PSYCHO_CUT
+        75 SANDSLASH CUT SLASH STONE_EDGE NIGHT_SLASH
+        75 KLEAVOR CUT SLASH STONE_EDGE X_SCISSOR
+        75 FARFETCHD CUT SLASH SWORDS_DANCE NIGHT_SLASH
+CHANNELER
+    1 ; Unused
+        22 GASTLY None None None None
+    2
+        24 GASTLY None None None None
+    3
+        23 GASTLY None None None None
+        23 GASTLY None None None None
+    4
+        24 GASTLY None None None None
+    5 ; Pokémon Tower 3F
+        23 GASTLY None None None None
+    6
+        24 GASTLY None None None None
+    7 ; Unused
+        24 HAUNTER None None None None
+    8 ; Pokémon Tower 3F
+        22 GASTLY None None None None
+    9 ; Pokémon Tower 4F
+        24 GASTLY None None None None
+    10
+        23 GASTLY None None None None
+        23 GASTLY None None None None
+    11 ; Unused
+        24 GASTLY None None None None
+    12 ; Pokémon Tower 4F
+        22 GASTLY None None None None
+    13 ; Unused
+        24 GASTLY None None None None
+    14 ; Pokémon Tower 5F
+        23 HAUNTER None None None None
+    15 ; Unused
+        24 GASTLY None None None None
+    16 ; Pokémon Tower 5F
+        22 GASTLY None None None None
+    17
+        24 GASTLY None None None None
+    18
+        22 HAUNTER None None None None
+    19 ; Pokémon Tower 6F
+        22 GASTLY None None None None
+        22 GASTLY None None None None
+        22 GASTLY None None None None
+    20
+        24 GASTLY None None None None
+    21
+        24 GASTLY None None None None
+    22 ; Saffron Gym
+        45 GASTLY None None None None
+        45 HAUNTER None None None None
+        45 GENGAR None None None None
+        45 ANNIHILAPE None None None None
+    23
+        47 GENGAR None None None None
+        47 ANNIHILAPE None None None None
+    24
+        44 GASTLY None None None None
+        44 GASTLY None None None None
+        44 GASTLY None None None None
+        44 HAUNTER None None None None
+        44 HAUNTER None None None None
+        44 GENGAR None None None None
+    25 ; Ochre Gym
+        47 UMBREON None None None None
+ROCKET
+    1 ; Mt. Moon B2F
+        13 RATTATA None None None None
+        13 ZUBAT None None None None
+    2
+        11 SANDSHREW None None None None
+        11 RATTATA None None None None
+        11 ZUBAT None None None None
+    3
+        12 ZUBAT None None None None
+        12 EKANS None None None None
+    4
+        16 RATICATE None None None None
+    5 ; Cerulean City
+        17 MACHOP None None None None
+        17 DROWZEE None None None None
+    6 ; Route 24
+        15 EKANS None None None None
+        15 ZUBAT None None None None
+    7 ; Game Corner
+        22 RATICATE None None None None
+        22 GOLBAT None None None None
+    8 ; Rocket Hideout B1F
+        21 DROWZEE None None None None
+        21 MACHOP None None None None
+    9
+        21 RATICATE None None None None
+        21 RATICATE None None None None
+    10
+        20 GRIMER None None None None
+        20 KOFFING None None None None
+        20 KOFFING None None None None
+    11
+        19 RATTATA None None None None
+        19 RATICATE None None None None
+        19 RATICATE None None None None
+        19 RATTATA None None None None
+    12
+        22 GRIMER None None None None
+        22 KOFFING None None None None
+    13 ; Rocket Hideout B2F
+        17 ZUBAT None None None None
+        17 KOFFING None None None None
+        17 GRIMER None None None None
+        17 ZUBAT None None None None
+        17 RATICATE None None None None
+    14 ; Rocket Hideout B3F
+        20 RATTATA None None None None
+        20 RATICATE None None None None
+        20 DROWZEE None None None None
+    15
+        21 MACHOP None None None None
+        21 MACHOP None None None None
+    16 ; Rocket Hideout B4F
+        23 SANDSHREW None None None None
+        23 ARBOK None None None None
+        23 SANDSLASH None None None None
+    17
+        23 ARBOK None None None None
+        23 SANDSLASH None None None None
+        23 ARBOK None None None None
+    18
+        21 KOFFING None None None None
+        21 GOLBAT None None None None
+    19 ; Pokémon Tower 7F
+        25 ZUBAT None None None None
+        25 GOLBAT None None None None
+        25 GOLBAT None None None None
+    20
+        26 KOFFING None None None None
+        26 HYPNO None None None None
+    21
+        23 ZUBAT None None None None
+        23 RATTATA None None None None
+        23 RATICATE None None None None
+        23 GOLBAT None None None None
+    22 ; Unused
+        26 HYPNO None None None None
+        26 KOFFING None None None None
+    23 ; Silph Co. 2F
+        27 CUBONE None None None None
+        27 GOLBAT None None None None
+        27 RATICATE None None None None
+    24
+        25 GOLBAT None None None None
+        25 GOLBAT None None None None
+        25 GOLBAT None None None None
+        25 RATICATE None None None None
+        25 GOLBAT None None None None
+    25 ; Silph Co. 3F
+        28 RATICATE None None None None
+        28 HYPNO None None None None
+        28 RATICATE None None None None
+    26 ; Silph Co. 4F
+        29 MACHOKE None None None None
+        29 HYPNO None None None None
+    27
+        27 ARBOK None None None None
+        27 GOLBAT None None None None
+        27 CUBONE None None None None
+        27 KOFFING None None None None
+    28 ; Silph Co. 5F
+        33 ARBOK None None None None
+    29
+        33 HYPNO None None None None
+    30 ; Silph Co. 6F
+        29 MACHOP None None None None
+        29 MACHOKE None None None None
+    31
+        28 ZUBAT None None None None
+        28 GOLBAT None None None None
+        28 GOLBAT None None None None
+    32 ; Silph Co. 7F
+        26 RATICATE None None None None
+        26 ARBOK None None None None
+        26 KOFFING None None None None
+        26 GOLBAT None None None None
+    33
+        27 CUBONE None None None None
+        27 MACHOKE None None None None
+    34
+        29 SANDSLASH None None None None
+        29 SANDSLASH None None None None
+    35 ; Silph Co. 8F
+        26 RATICATE None None None None
+        26 GOLBAT None None None None
+        26 GOLBAT None None None None
+        26 RATICATE None None None None
+    36
+        28 WEEZING None None None None
+        28 GOLBAT None None None None
+        28 KOFFING None None None None
+    37 ; Silph Co. 9F
+        28 HYPNO None None None None
+        28 GRIMER None None None None
+        28 MACHOKE None None None None
+    38
+        28 GOLBAT None None None None
+        28 HYPNO None None None None
+        28 HYPNO None None None None
+    39 ; Silph Co. 10F
+        33 MACHOKE None None None None
+    40 ; Silph Co. 11F
+        25 RATICATE None None None None
+        25 RATICATE None None None None
+        25 GOLBAT None None None None
+        25 RATICATE None None None None
+        25 ARBOK None None None None
+    41
+        32 MACHOKE None None None None
+        32 HYPNO None None None None
+        32 SANDSLASH None None None None
+    42 ; Obsidian Warehouse, grunts
+        27 CUBONE None None None None
+    43
+        37 RATICATE None None None None
+        37 HYPNO None None None None
+        37 GOLBAT None None None None
+    44
+        37 MUK None None None None
+        37 SANDSLASH None None None None
+        37 ARBOK None None None None
+    45
+        38 MACHOKE None None None None
+        38 WEEZING None None None None
+    46 ; Jessie & James ; updated
+        14 EKANS WRAP POISON_STING BITE GLARE
+        14 KOFFING TACKLE SMOG SMOKESCREEN INFESTATION
+        14 MEOWTH SCRATCH LEER DEFENSE_CURL BITE
+    47
+        25 ARBOK GLARE SCREECH ACID WRAP
+        25 WEEZING SMOKESCREEN HEADBUTT SLUDGE INFESTATION
+        25 MEOWTH PAY_DAY MUD_SLAP SWIFT HEADBUTT
+    48
+        32 ARBOK GLARE CRUNCH SLUDGE HEADBUTT
+        32 LICKITUNG SLAM LICK WRAP ROCK_TOMB
+        32 WEEZING SMOKESCREEN INFESTATION SELFDESTRUCT SLUDGE_WAVE
+        32 WEEPINBELL WRAP ACID STUN_SPORE MAGICAL_LEAF
+        32 MEOWTH FURY_SWIPES PAY_DAY CRUNCH WATER_PULSE
+    49
+        36 ARBOK DARK_PULSE EARTHQUAKE GIGA_DRAIN SLUDGE_WAVE
+        36 LICKILICKY ICE_BEAM THUNDERBOLT FIRE_BLAST AMNESIA
+        36 WEEZING SHADOW_BALL EXPLOSION SLUDGE_WAVE HEAT_WAVE
+        36 VICTREEBEL TOXIC GROWTH GIGA_DRAIN LEECH_LIFE
+        36 MEOWTH PAY_DAY SLASH SING DREAM_EATER
+    50
+        39 ARBOK DARK_PULSE EARTHQUAKE GIGA_DRAIN SLUDGE_WAVE
+        39 LICKILICKY ICE_BEAM THUNDERBOLT FIRE_BLAST AMNESIA
+        39 WEEZING SHADOW_BALL EXPLOSION SLUDGE_WAVE HEAT_WAVE
+        39 VICTREEBEL TOXIC GROWTH GIGA_DRAIN LEECH_LIFE
+        39 MEOWTH PAY_DAY SLASH SING BUBBLEBEAM
+    51 ; Obsidian Warehouse, executives
+        40 CROBAT None None None None
+        40 WEEZING None None None None
+    52
+        39 KOFFING EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        39 KOFFING EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        39 KOFFING EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        39 KOFFING EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        39 KOFFING EXPLOSION NO_MOVE NO_MOVE NO_MOVE
+        41 WEEZING EXPLOSION SHADOW_BALL SLUDGE_WAVE HEAT_WAVE
+    53
+        42 ARBOK None None None None
+        42 VILEPLUME None None None None
+        42 UMBREON None None None None
+    54
+        43 WEEZING None None None None
+        43 ELECTRODE None None None None
+        43 CROBAT None None None None
+        43 MAGMORTAR None None None None
+        43 UMBREON None None None None
+    55 ; Lunar Shrine, Rocket siblings ambush
+        45 PARASECT SPORE INFESTATION GIGA_DRAIN LEECH_SEED
+        45 VENOMOTH TOXIC SLEEP_POWDER PSYCHIC_M LEECH_LIFE
+        45 ARBOK GLARE WRAP TOXIC GUNK_SHOT
+        45 CLOYSTER CLAMP BLIZZARD EXPLOSION NO_MOVE
+        45 WEEZING WILL_O_WISP TOXIC FIRE_BLAST SHADOW_BALL
+    56
+        45 DUGTRIO EARTHQUAKE STONE_EDGE SHADOW_CLAW HYPER_BEAM
+        45 PERSIAN SLASH NIGHT_SLASH PLAY_ROUGH IRON_TAIL
+        45 CROBAT SUPER_FANG GUNK_SHOT AIR_SLASH HEAT_WAVE
+        45 ALAKAZAM PSYCHO_CUT ENERGY_BALL ICE_PUNCH THUNDERPUNCH
+        45 TAUROS BODY_SLAM HYPER_BEAM EARTHQUAKE BLIZZARD
+    57
+        45 ELECTRODE EXPLOSION THUNDERBOLT NO_MOVE NO_MOVE
+        45 WEEZING EXPLOSION GUNK_SHOT NO_MOVE NO_MOVE
+        45 GOLEM EXPLOSION STONE_EDGE EARTHQUAKE NO_MOVE
+        45 CLOYSTER EXPLOSION BLIZZARD HYDRO_PUMP NO_MOVE
+        45 LICKILICKY EXPLOSION SHADOW_BALL NO_MOVE NO_MOVE
+    58
+        45 MUK MINIMIZE REST SUBSTITUTE FLAMETHROWER
+        45 VILEPLUME LEECH_SEED REST PETAL_DANCE GUNK_SHOT
+        45 BLISSEY REFLECT SOFTBOILED ICE_BEAM PSYCHIC_M
+        45 STEELIX REST DOUBLE_TEAM FLASH_CANNON EARTHQUAKE
+        45 UMBREON DOUBLE_TEAM SUBSTITUTE REST DARK_PULSE
+COOLTRAINER
+    1 ; Pewter Gym: GEODUDE, RHYHORN, ONIX, KABUTO, OMANYTE, AERODACTYL, KLEAVOR
+        9 GEODUDE None None None None
+        9 GEODUDE None None None None
+        9 RHYHORN None None None None
+        9 ONIX None None None None
+        9 KABUTO None None None None
+    2
+        19 GEODUDE None None None None
+        19 RHYHORN None None None None
+        19 ONIX None None None None
+        19 KABUTO None None None None
+        19 OMANYTE None None None None
+    3
+        26 GRAVELER None None None None
+        26 RHYHORN None None None None
+        26 KABUTO None None None None
+        26 OMANYTE None None None None
+        26 KLEAVOR None None None None
+    4
+        30 GRAVELER None None None None
+        30 RHYHORN None None None None
+        30 KABUTOPS None None None None
+        30 OMASTAR None None None None
+        30 KLEAVOR None None None None
+    5
+        41 GOLEM None None None None
+        41 RHYDON None None None None
+        41 KABUTOPS None None None None
+        41 OMASTAR None None None None
+        41 KLEAVOR None None None None
+    6
+        48 GOLEM None None None None
+        48 KABUTOPS None None None None
+        48 OMASTAR None None None None
+        48 KLEAVOR None None None None
+        48 AERODACTYL None None None None
+    7
+        52 RHYPERIOR None None None None
+        52 KABUTOPS None None None None
+        52 OMASTAR None None None None
+        52 KLEAVOR None None None None
+        52 AERODACTYL None None None None
+    8
+        53 RHYPERIOR None None None None
+        53 KABUTOPS None None None None
+        53 OMASTAR None None None None
+        53 KLEAVOR None None None None
+        53 AERODACTYL None None None None
+    9 ; Cerulean Gym: SQUIRTLE, SLOWPOKE, HORSEA, SEEL, KRABBY, TENTACOOL, PSYDUCK, MAGIKARP, VAPOREON, GOLDEEN, STARYU, POLIWAG
+        9 SQUIRTLE None None None None
+        9 GOLDEEN None None None None
+        9 HORSEA None None None None
+        9 SEEL None None None None
+        9 KRABBY METAL_CLAW MUD_SHOT LEER CRABHAMMER
+    10
+        19 WARTORTLE None None None None
+        19 SLOWPOKE None None None None
+        19 SEAKING None None None None
+        19 KRABBY None None None None
+        19 TENTACOOL None None None None
+    11
+        26 WARTORTLE None None None None
+        26 SLOWBRO None None None None
+        26 KINGLER None None None None
+        26 POLITOED None None None None
+        26 STARMIE None None None None
+    12
+        1 DITTO None None None None
+    13
+        1 DITTO None None None None
+    14
+        1 DITTO None None None None
+    15
+        1 DITTO None None None None
+    16
+        1 DITTO None None None None
+    17 ; Vermilion Gym: VOLTORB, MAGNEMITE, ELEKID, JOLTEON, PICHU
+        9 PICHU VOLT_TACKLE FLY SURF PSYCHIC_M
+        9 ELEKID IRON_TAIL THUNDERBOLT KARATE_CHOP CLOSE_COMBAT
+        9 VOLTORB None None None None
+        9 MAGNEMITE None None None None
+        9 MAGNEMITE None None None None
+    18
+        19 PIKACHU None None None None
+        19 ELECTABUZZ None None None None
+        19 VOLTORB None None None None
+        19 MAGNEMITE None None None None
+        19 JOLTEON None None None None
+    19
+        26 RAICHU None None None None
+        26 ELECTABUZZ None None None None
+        26 ELECTRODE None None None None
+        26 MAGNETON None None None None
+        26 JOLTEON None None None None
+    20
+        30 RAICHU None None None None
+        30 ELECTABUZZ None None None None
+        30 ELECTRODE None None None None
+        30 MAGNETON None None None None
+        30 JOLTEON None None None None
+    21
+        41 RAICHU None None None None
+        41 ELECTRODE None None None None
+        41 MAGNETON None None None None
+        41 JOLTEON None None None None
+        41 ELECTIVIRE None None None None
+    22
+        48 RAICHU None None None None
+        48 ELECTRODE None None None None
+        48 JOLTEON None None None None
+        48 ELECTIVIRE None None None None
+        48 MAGNEZONE None None None None
+    23
+        52 RAICHU None None None None
+        52 ELECTRODE None None None None
+        52 JOLTEON None None None None
+        52 ELECTIVIRE None None None None
+        52 MAGNEZONE None None None None
+    24
+        53 RAICHU None None None None
+        53 ELECTRODE None None None None
+        53 JOLTEON None None None None
+        53 ELECTIVIRE None None None None
+        53 MAGNEZONE None None None None
+    25 ; Celadon Gym: BULBASAUR, PARAS, ODDISH, BELLSPROUT, EXEGGCUTE, TANGELA, LEAFEON
+        1 DITTO None None None None
+    26
+        19 IVYSAUR None None None None
+        19 PARASECT None None None None
+        19 BELLOSSOM None None None None
+        19 VICTREEBEL None None None None
+        19 EXEGGUTOR None None None None
+    27
+        26 TANGROWTH None None None None
+        26 PARASECT None None None None
+        26 BELLOSSOM None None None None
+        26 VICTREEBEL None None None None
+        26 EXEGGUTOR None None None None
+    28
+        30 TANGROWTH None None None None
+        30 PARASECT None None None None
+        30 LEAFEON None None None None
+        30 VICTREEBEL None None None None
+        30 EXEGGUTOR None None None None
+    29
+        41 VENUSAUR None None None None
+        41 TANGROWTH None None None None
+        41 VILEPLUME None None None None
+        41 LEAFEON None None None None
+        41 EXEGGUTOR None None None None
+    30
+        48 VENUSAUR None None None None
+        48 VICTREEBEL None None None None
+        48 BELLOSSOM None None None None
+        48 LEAFEON None None None None
+        48 EXEGGUTOR None None None None
+    31
+        52 VENUSAUR None None None None
+        52 VILEPLUME None None None None
+        52 BELLOSSOM None None None None
+        52 LEAFEON None None None None
+        52 EXEGGUTOR None None None None
+    32
+        53 VENUSAUR None None None None
+        53 TANGROWTH None None None None
+        53 VICTREEBEL None None None None
+        53 LEAFEON None None None None
+        53 EXEGGUTOR None None None None
+    33 ; Fuchsia Gym: BULBASAUR, WEEDLE, EKANS, NIDORAN_F, NIDORAN_M, ZUBAT, ODDISH, VENONAT, BELLSPROUT, TENTACOOL, GRIMER, GASTLY, KOFFING
+        1 DITTO None None None None
+    34
+        19 VENONAT None None None None
+        19 KOFFING None None None None
+        19 BEEDRILL None None None None
+        19 GRIMER None None None None
+        19 GOLBAT None None None None
+    35
+        26 VENOMOTH None None None None
+        26 KOFFING None None None None
+        26 GRIMER None None None None
+        26 TENTACOOL None None None None
+        26 ARBOK None None None None
+    36
+        30 ARBOK None None None None
+        30 VENOMOTH None None None None
+        30 WEEZING None None None None
+        30 TENTACRUEL None None None None
+        30 HAUNTER None None None None
+    37
+        41 CROBAT None None None None
+        41 NIDOQUEEN None None None None
+        41 NIDOKING None None None None
+        41 TENTACRUEL None None None None
+        41 GENGAR None None None None
+    38
+        48 CROBAT None None None None
+        48 WEEZING None None None None
+        48 MUK None None None None
+        48 TENTACRUEL None None None None
+        48 GENGAR None None None None
+    39
+        52 CROBAT None None None None
+        52 MUK None None None None
+        52 TENTACRUEL None None None None
+        52 NIDOQUEEN None None None None
+        52 GENGAR None None None None
+    40
+        53 CROBAT None None None None
+        53 TENTACRUEL None None None None
+        53 VENUSAUR None None None None
+        53 NIDOKING None None None None
+        53 GENGAR None None None None
+    41 ; Saffron Gym: ABRA, SLOWPOKE, DROWZEE, EXEGGCUTE, STARMIE, MR_MIME, JYNX, ESPEON
+        1 DITTO None None None None
+    42
+        19 JYNX None None None None
+        19 EXEGGCUTE None None None None
+        19 DROWZEE None None None None
+        19 HAUNTER None None None None
+        19 STARMIE None None None None
+    43
+        26 HAUNTER None None None None
+        26 EXEGGUTOR None None None None
+        26 SLOWPOKE None None None None
+        26 SLOWBRO None None None None
+        26 SLOWKING None None None None
+    44
+        30 HYPNO None None None None
+        30 JYNX LOVELY_KISS None None None
+        30 EXEGGUTOR None None SLEEP_POWDER None
+        30 HAUNTER HYPNOSIS None None None
+        30 STARMIE None None None None
+    45
+        41 JYNX None None None None
+        41 MR_MIME None None None None
+        41 HYPNO None None None None
+        41 EXEGGUTOR None None None None
+        41 GENGAR None None None None
+    46
+        48 ESPEON None None None None
+        48 EXEGGUTOR None None None None
+        48 STARMIE None None None None
+        48 ALAKAZAM None None None None
+        48 GENGAR None None None None
+    47
+        52 ESPEON None None None None
+        52 EXEGGUTOR None None None None
+        52 SLOWKING None None None None
+        52 ALAKAZAM None None None None
+        52 GENGAR None None None None
+    48
+        53 JYNX None None None None
+        53 EXEGGUTOR None None None None
+        53 STARMIE None None None None
+        53 ALAKAZAM None None None None
+        53 GENGAR None None None None
+    49 ; Cinnabar Gym: CHARMANDER, VULPIX, GROWLITHE, PONYTA, MAGBY, FLAREON
+        1 DITTO None None None None
+    50
+        1 DITTO None None None None
+    51
+        26 GROWLITHE None None None None
+        26 MAGBY None None None None
+        26 VULPIX None None None None
+        26 PONYTA None None None None
+        26 CHARMELEON None None None None
+    52
+        30 ARCANINE None None None None
+        30 MAGMORTAR None None None None
+        30 NINETALES None None None None
+        30 RAPIDASH None None None None
+        30 FLAREON None None None None
+    53
+        41 ARCANINE None None None None
+        41 MAGMORTAR None None None None
+        41 NINETALES None None None None
+        41 FLAREON None None None None
+        41 CHARIZARD None None None None
+    54
+        48 ARCANINE None None None None
+        48 MAGMORTAR None None None None
+        48 NINETALES None None None None
+        48 FLAREON None None None None
+        48 CHARIZARD None None None None
+    55
+        52 ARCANINE None None None None
+        52 MAGMORTAR None None None None
+        52 NINETALES None None None None
+        52 FLAREON None None None None
+        52 CHARIZARD None None None None
+    56
+        53 ARCANINE None None None None
+        53 MAGMORTAR None None None None
+        53 NINETALES None None None None
+        53 FLAREON None None None None
+        53 CHARIZARD None None None None
+    57 ; Unused
+        100 DITTO None None None None
+    58 ; Ochre Gym
+        45 KLEAVOR None None None None
+        45 UMBREON None None None None
+        45 FEAROW None None None None
+        45 CLEFABLE None None None None
+        45 STEELIX None None None None
+        45 SNORLAX None None None None
+    59 ; Viridian Gym
+        53 MACHAMP None None None None
+        53 SANDSLASH None None None None
+        53 TAUROS None None None None
+        53 GOLEM None None None None
+        53 STEELIX None None None None
+    60
+        50 DUGTRIO None None None None
+        50 GOLEM None None None None
+        50 RHYDON None None None None
+        50 STEELIX None None None None
+    61
+        50 NIDOQUEEN None None None None
+        50 NIDOKING None None None None
+        50 SANDSLASH None None None None
+        50 DUGTRIO None None None None
+    62
+        52 GOLEM None None None None
+        52 RHYPERIOR None None None None
+    63 ; Celadon Gym
+        29 EXEGGUTOR None None None None
+        29 IVYSAUR None None None None
+        29 TANGROWTH None None None None
+    64 ; Victory Road 1F
+        55 JIGGLYPUFF SING DISABLE DOUBLE_EDGE DEFENSE_CURL
+        55 ALAKAZAM THUNDERPUNCH ICE_PUNCH FIRE_PUNCH PSYCHIC_M
+        55 DITTO None None None None
+        55 CLEFABLE MOONBLAST LIGHT_SCREEN REFLECT METRONOME
+        55 NIDOQUEEN CRUNCH DOUBLE_KICK ROCK_TOMB SLUDGE_WAVE
+        60 BLASTOISE HYDRO_CANNON FLASH_CANNON ICE_BEAM EARTHQUAKE
+    65
+        55 POLIWRATH CLOSE_COMBAT SCALD ICE_BEAM HYPNOSIS
+        60 VENUSAUR SLUDGE_WAVE FRENZY_PLANT SLEEP_POWDER LEECH_SEED
+        55 PIKACHU TOXIC IRON_TAIL SURF VOLT_TACKLE
+        55 SNORLAX AMNESIA CRUNCH REST BODY_SLAM
+        55 GYARADOS HYDRO_PUMP HYPER_BEAM DRAGON_DANCE CRUNCH
+        55 AERODACTYL FLY HEAD_SMASH DRAGON_CLAW HYPER_BEAM
+    66
+        55 SCIZOR SLASH STEEL_WING X_SCISSOR ROOST
+        60 CHARIZARD BLAST_BURN FLY REFLECT FIRE_SPIN
+        55 GOLDUCK HYDRO_PUMP CONFUSION DIG IRON_TAIL
+        55 MACHAMP KARATE_CHOP HYPER_BEAM FOCUS_ENERGY EARTHQUAKE
+        55 PORYGON2 TRI_ATTACK CONVERSION ZAP_CANNON PSYBEAM
+        55 RHYPERIOR EARTHQUAKE HEAD_SMASH MEGAHORN HORN_DRILL
+    67
+        55 RATICATE None None None None
+        55 DODRIO None None None None
+        55 GOLEM None None None None
+        55 OMASTAR None None None None
+        55 BUTTERFREE None None None None
+        60 PIKACHU None None None None
+    68 ; Victory Road 3F
+        55 ELECTIVIRE None None None None
+        55 CLOYSTER None None None None
+        55 VICTREEBEL None None None None
+        55 NINETALES None None None None
+        55 POLIWRATH None None None None
+        55 PORYGONZ None None None None
+    69
+        55 STEELIX None None None None
+        55 SLOWKING None None None None
+        55 BLISSEY None None None None
+        55 SCIZOR None None None None
+        55 KLEAVOR None None None None
+        55 MAGNEZONE None None None None
+    70
+        55 ARCANINE None None None None
+        55 EXEGGUTOR None None None None
+        55 MAGNEZONE None None None None
+        55 TANGROWTH None None None None
+        55 STARMIE None None None None
+        55 GLACEON None None None None
+    71
+        55 CROBAT None None None None
+        55 PORYGONZ None None None None
+        55 BELLOSSOM None None None None
+        55 MAGMORTAR None None None None
+        55 ANNIHILAPE None None None None
+        55 JOLTEON None None None None
+    72 ; Route 4
+        45 GENGAR None None None None
+        45 TAUROS None None None None
+        45 EXEGGUTOR None None None None
+        45 CHANSEY None None None None
+        45 STARMIE None None None None
+        45 SNORLAX None None None None
+    73 ; Obsidian Wood
+        40 PORYGON2 None None None None
+        40 ESPEON None None None None
+        40 KINGDRA None None None None
+        40 TANGROWTH None None None None
+        40 LEAFEON None None None None
+        40 MAGNEZONE None None None None
+    74 ; Route 29
+        42 GLACEON None None None None
+        42 PORYGON2 None None None None
+        42 ELECTIVIRE None None None None
+        42 HITMONTOP None None None None
+        42 TANGROWTH None None None None
+    75
+        42 JOLTEON None None None None
+        42 BELLOSSOM None None None None
+        42 LICKILICKY None None None None
+        42 MAGMORTAR None None None None
+        42 ANNIHILAPE None None None None
+    76
+        42 FLAREON None None None None
+        42 MAGNEZONE None None None None
+        42 KINGDRA None None None None
+        42 CROBAT None None None None
+        42 BLISSEY None None None None
+    77 ; Route 28
+        43 PORYGONZ None None None None
+        43 KINGDRA None None None None
+        43 MAGMORTAR None None None None
+        43 ANNIHILAPE None None None None
+        43 RHYPERIOR None None None None
+BROCK
+    1 ; None
+        10 GEODUDE TACKLE DEFENSE_CURL MUD_SLAP ROCK_THROW
+        10 OMANYTE WATER_GUN DEFENSE_CURL WRAP SAND_ATTACK
+        10 KABUTO SCRATCH HARDEN WATER_GUN ABSORB
+        10 RHYHORN HORN_ATTACK BIDE MUD_SLAP LEER
+        10 VULPIX EMBER LEER DISABLE QUICK_ATTACK
+        11 ONIX WRAP SCREECH BIDE MUD_SLAP
+    2
+        20 GEODUDE MUD_SLAP ROCK_THROW SELFDESTRUCT CURSE
+        20 OMANYTE WRAP SAND_ATTACK WATER_GUN SUPERSONIC
+        20 KABUTO AQUA_JET ROCK_THROW CONFUSE_RAY MEGA_DRAIN
+        20 RHYHORN HORN_ATTACK MUD_SLAP SAND_ATTACK ROCK_THROW
+        20 VULPIX EMBER DISABLE CONFUSE_RAY WILL_O_WISP
+        21 ONIX MUD_SLAP BODY_PRESS WRAP ROCK_SLIDE
+    3
+        27 GRAVELER ROCK_SLIDE MUD_SLAP FIRE_BLAST SELFDESTRUCT
+        27 OMANYTE BUBBLEBEAM SUPERSONIC MUD_SHOT ROCK_TOMB
+        27 KABUTO GIGA_DRAIN BUBBLEBEAM ROCK_THROW CONFUSE_RAY
+        27 RHYHORN ROCK_THROW IRON_TAIL DIG BODY_SLAM
+        27 NINETALES CONFUSE_RAY HYPNOSIS FLAMETHROWER DARK_PULSE
+        28 ONIX DIG BODY_PRESS BODY_SLAM ROCK_SLIDE
+    4
+        31 GRAVELER ROCK_SLIDE EARTHQUAKE FIRE_BLAST SELFDESTRUCT
+        31 OMASTAR BUBBLEBEAM ICE_BEAM BITE ROCK_SLIDE
+        31 KABUTOPS GIGA_DRAIN BODY_SLAM ROCK_SLIDE CONFUSE_RAY
+        31 RHYDON MEGA_PUNCH MEGAHORN DIG ROCK_SLIDE
+        31 NINETALES CONFUSE_RAY HYPNOSIS FLAMETHROWER DARK_PULSE
+        32 ONIX EARTHBADGE BODY_PRESS EXPLOSION ROCK_SLIDE
+    5
+        42 GOLEM EARTHQUAKE EXPLOSION BODY_PRESS GYRO_BALL
+        42 OMASTAR SURF ICE_BEAM SUPERSONIC ROCK_SLIDE
+        42 KABUTOPS LEECH_LIFE SLASH ROCK_SLIDE CONFUSE_RAY
+        42 RHYDON EARTHQUAKE MEGAHORN IRON_TAIL ROCK_SLIDE
+        42 NINETALES CONFUSE_RAY WILL_O_WISP DARK_PULSE SUBSTITUTE
+        43 KLEAVOR AIR_SLASH SLASH SWORDS_DANCE X_SCISSOR
+    6
+        49 GOLEM EARTHQUAKE CURSE BODY_PRESS GYRO_BALL
+        49 OMASTAR SURF ICE_BEAM HYPER_BEAM ROCK_SLIDE
+        49 KABUTOPS LEECH_LIFE SLASH ROCK_SLIDE CONFUSE_RAY
+        49 RHYDON EARTHQUAKE MEGAHORN IRON_TAIL STONE_EDGE
+        49 NINETALES CONFUSE_RAY WILL_O_WISP FIRE_BLAST DOUBLE_TEAM
+        50 KLEAVOR AIR_SLASH ROOST CLOSE_COMBAT X_SCISSOR
+    7
+        53 GOLEM EARTHQUAKE EXPLOSION SUPERPOWER GYRO_BALL
+        53 OMASTAR HYDRO_PUMP BLIZZARD HYPER_BEAM STONE_EDGE
+        53 KABUTOPS LEECH_LIFE SLASH STONE_EDGE PSYCHO_CUT
+        53 RHYPERIOR EARTHQUAKE STONE_EDGE SHADOW_CLAW BODY_PRESS
+        53 KLEAVOR AIR_SLASH STONE_EDGE CLOSE_COMBAT X_SCISSOR
+        54 AERODACTYL AIR_CUTTER ROOST STONE_EDGE EARTHQUAKE
+    8
+        54 GOLEM EARTHQUAKE EXPLOSION BODY_PRESS STONE_EDGE
+        54 OMASTAR HYDRO_PUMP BLIZZARD HYPER_BEAM STONE_EDGE
+        54 KABUTOPS LEECH_LIFE SLASH STONE_EDGE PSYCHO_CUT
+        54 RHYPERIOR EARTHQUAKE STONE_EDGE HYPER_BEAM BODY_PRESS
+        54 KLEAVOR AIR_SLASH STONE_EDGE CLOSE_COMBAT X_SCISSOR
+        55 AERODACTYL AIR_CUTTER ROOST STONE_EDGE EARTHQUAKE
+    9
+        70 GOLEM EARTHQUAKE GYRO_BALL BODY_PRESS STONE_EDGE
+        70 OMASTAR HYDRO_PUMP BLIZZARD HYPER_BEAM STONE_EDGE
+        70 KABUTOPS LEECH_LIFE SLASH STONE_EDGE PSYCHO_CUT
+        70 RHYPERIOR EARTHQUAKE STONE_EDGE HYPER_BEAM BODY_PRESS
+        70 KLEAVOR AIR_SLASH STONE_EDGE CLOSE_COMBAT X_SCISSOR
+        70 MARODACTYL AIR_CUTTER ROOST STONE_EDGE EARTHQUAKE
+MISTY
+    1
+        10 GOLDEEN PECK SUPERSONIC LEER WATER_PULSE
+        10 HORSEA BUBBLE SMOKESCREEN TWISTER NO_MOVE
+        10 PSYDUCK LEER WATER_GUN CONFUSION FURY_SWIPES
+        10 POLIWAG BUBBLE POUND DEFENSE_CURL MUD_SHOT
+        10 SQUIRTLE TACKLE LEER BUBBLE BITE
+        11 STARYU TACKLE WATER_GUN CONFUSE_RAY MINIMIZE
+    2
+        20 STARYU CONFUSE_RAY BUBBLEBEAM MINIMIZE SWIFT
+        20 PSYDUCK AMNESIA DISABLE ZEN_HEADBUTT HEADBUTT
+        20 POLIWHIRL MUD_SHOT HYPNOSIS LOW_KICK BUBBLEBEAM
+        20 GYARADOS BITE TWISTER BUBBLEBEAM LEER
+        20 VAPOREON ACID_ARMOR REST WATER_PULSE AURORA_BEAM
+        21 STARMIE RECOVER BUBBLEBEAM MINIMIZE PSYBEAM
+    3
+        27 WARTORTLE HEADBUTT MUD_SLAP WATER_PULSE CRUNCH
+        27 GOLDUCK AMNESIA DISABLE ZEN_HEADBUTT HEADBUTT
+        27 POLIWRATH BODY_SLAM HYPNOSIS SUBMISSION BUBBLEBEAM
+        27 GYARADOS FOCUS_ENERGY FLAIL BUBBLEBEAM WRAP
+        27 VAPOREON AMNESIA REST WATER_PULSE AURORA_BEAM
+        28 STARMIE RECOVER BUBBLEBEAM MINIMIZE LIGHT_SCREEN
+    4
+        1 DITTO None None None None
+    5
+        1 DITTO None None None None
+    6
+        1 DITTO None None None None
+    7
+        1 DITTO None None None None
+    8
+        1 DITTO None None None None
+    9
+        70 GYARADOS DRAGON_DANCE HURRICANE STONE_EDGE HYDRO_PUMP
+        70 LAPRAS HYDRO_PUMP FREEZE_DRY CONFUSE_RAY THUNDERBOLT
+        70 POLITOED AMNESIA LOVELY_KISS SCALD PSYCHIC_M
+        70 VAPOREON SAND_ATTACK ACID_ARMOR HYDRO_PUMP REST
+        70 STARMIE PSYCHO_CUT MINIMIZE HYDRO_PUMP RECOVER
+        70 MBLASTOISE FLASH_CANNON BULLET_SEED HYDRO_CANNON OUTRAGE
+LT_SURGE
+    1
+        10 VOLTORB THUNDERSHOCK TACKLE SCREECH NO_MOVE
+        10 MAGNEMITE THUNDERSHOCK TACKLE THUNDER_WAVE NO_MOVE
+        10 ELEKID CHARM SWIFT MUD_SLAP SHOCK_WAVE
+        10 POLIWAG BUBBLE POUND DEFENSE_CURL MUD_SHOT
+        10 PICHU CHARM THUNDER_WAVE DOUBLE_TEAM LEER
+        11 PIKACHU CHARM THUNDER_WAVE DOUBLE_TEAM QUICK_ATTACK
+    2
+        20 VOLTORB SONICBOOM THUNDER_WAVE SELFDESTRUCT THUNDERSHOCK
+        20 MAGNEMITE THUNDERSHOCK THUNDER_WAVE LIGHT_SCREEN SONICBOOM
+        20 ELECTABUZZ FIRE_PUNCH ICE_PUNCH ROCK_TOMB THUNDERSHOCK
+        20 POLIWHIRL MUD_SHOT HYPNOSIS BUBBLEBEAM LOW_KICK
+        20 JOLTEON THUNDERSHOCK THUNDER_WAVE DIG BITE
+        21 PIKACHU FLY SURF SING VOLT_TACKLE
+    3
+        27 ELECTRODE SONICBOOM THUNDER_WAVE SELFDESTRUCT THUNDERBOLT
+        27 MAGNETON SONICBOOM FLASH_CANNON SUPERSONIC THUNDERBOLT
+        27 ELECTABUZZ THUNDER_WAVE BARRIER THUNDERPUNCH SEISMIC_TOSS
+        27 TANGELA LEECH_SEED INFESTATION GIGA_DRAIN POISONPOWDER
+        27 JOLTEON THUNDERBOLT THUNDER_WAVE DIG BITE
+        28 RAICHU ZAP_CANNON MEGA_PUNCH IRON_TAIL SUBMISSION
+    4
+        31 ELECTRODE SONICBOOM THUNDER_WAVE EXPLOSION THUNDERBOLT
+        31 MAGNETON REFLECT FLASH_CANNON SUPERSONIC THUNDERBOLT
+        31 ELECTABUZZ IRON_TAIL THUNDERBOLT KARATE_CHOP FLAMETHROWER
+        31 TANGELA LEECH_SEED INFESTATION GIGA_DRAIN TOXIC
+        31 JOLTEON THUNDERBOLT THUNDER_WAVE DIG BITE
+        32 RAICHU THUNDERBOLT SURF EXTREMESPEED SUBMISSION
+    5
+        42 ELECTRODE TAKE_DOWN THUNDER_WAVE EXPLOSION THUNDERBOLT
+        42 MAGNEZONE REFLECT FLASH_CANNON SUBSTITUTE THUNDERBOLT
+        42 ELECTABUZZ ROCK_TOMB THUNDER FLAMETHROWER CLOSE_COMBAT
+        42 TANGROWTH LEECH_SEED INFESTATION GIGA_DRAIN SLEEP_POWDER
+        42 JOLTEON THUNDERBOLT DOUBLE_KICK PIN_MISSILE IRON_TAIL
+        43 RAICHU VOLT_TACKLE SURF PETAL_DANCE PSYCHIC_M
+    6
+        49 ELECTRODE HYPER_BEAM THUNDER_WAVE EXPLOSION THUNDERBOLT
+        49 MAGNEZONE TOXIC FLASH_CANNON SUBSTITUTE THUNDERBOLT
+        49 ELECTIVIRE ROCK_SLIDE THUNDERBOLT ICE_PUNCH PSYCHIC_M
+        49 TANGROWTH LEECH_SEED INFESTATION ENERGY_BALL SLEEP_POWDER
+        49 JOLTEON THUNDERBOLT DOUBLE_KICK PIN_MISSILE SHADOW_BALL
+        50 RAICHU VOLT_TACKLE SURF PLAY_ROUGH PSYCHIC_M
+    7
+        53 ELECTRODE HYPER_BEAM THUNDER_WAVE EXPLOSION THUNDERBOLT
+        53 MAGNEZONE THUNDER_WAVE FLASH_CANNON EXPLOSION THUNDERBOLT
+        53 ELECTIVIRE EARTHQUAKE THUNDERBOLT ICE_PUNCH PSYCHIC_M
+        53 TANGROWTH CURSE INFESTATION ENERGY_BALL SLEEP_POWDER
+        53 JOLTEON THUNDERBOLT DOUBLE_KICK HYPER_BEAM SHADOW_BALL
+        54 RAICHU VOLT_TACKLE SURF PLAY_ROUGH PSYCHIC_M
+    8
+        54 ELECTRODE HYPER_BEAM THUNDER_WAVE EXPLOSION THUNDER
+        54 MAGNEZONE THUNDER_WAVE FLASH_CANNON EXPLOSION THUNDER
+        54 ELECTIVIRE EARTHQUAKE THUNDER ICE_PUNCH CLOSE_COMBAT
+        54 TANGROWTH EARTHQUAKE HYPER_BEAM LEAF_STORM ROCK_SLIDE
+        54 JOLTEON THUNDER DOUBLE_KICK HYPER_BEAM SHADOW_BALL
+        55 RAICHU VOLT_TACKLE SURF MEGA_PUNCH PSYCHIC_M
+    9
+        70 ELECTRODE HYPER_BEAM THUNDER_WAVE EXPLOSION THUNDER
+        70 MAGNEZONE THUNDER_WAVE FLASH_CANNON EXPLOSION THUNDER
+        70 ELECTIVIRE EARTHQUAKE THUNDER ICE_PUNCH CLOSE_COMBAT
+        70 TANGROWTH EARTHQUAKE HYPER_BEAM LEAF_STORM ROCK_SLIDE
+        70 JOLTEON THUNDER DOUBLE_KICK HYPER_BEAM SHADOW_BALL
+        70 RAICHU VOLT_TACKLE SURF MEGA_PUNCH PSYCHIC_M
+ERIKA
+    1
+        1 DITTO None None None None
+    2
+        20 PARAS MEGA_DRAIN LEECH_SEED INFESTATION SPORE
+        20 GLOOM LEECH_SEED POISONPOWDER STUN_SPORE GIGA_DRAIN
+        20 EXEGGCUTE PSYWAVE LEECH_SEED LIGHT_SCREEN ENERGY_BALL
+        20 WEEPINBELL WRAP STUN_SPORE GIGA_DRAIN ACID
+        20 LEAFEON SAND_ATTACK QUICK_ATTACK FOCUS_ENERGY DOUBLE_KICK
+        21 TANGELA LEECH_SEED POISONPOWDER WRAP GIGA_DRAIN
+    3
+        27 PARASECT GIGA_DRAIN LEECH_SEED INFESTATION SPORE
+        27 VILEPLUME STUN_SPORE MOONBLAST SLUDGE_WAVE ENERGY_BALL
+        27 EXEGGUTOR CONFUSION LEECH_SEED BULLET_SEED STUN_SPORE
+        27 VICTREEBEL WRAP STUN_SPORE MAGICAL_LEAF LEECH_LIFE
+        27 LEAFEON DOUBLE_EDGE X_SCISSOR SHADOW_BALL RAZOR_LEAF
+        28 TANGELA LEECH_SEED LIGHT_SCREEN WRAP GIGA_DRAIN
+    4
+        31 PARASECT SPORE INFESTATION LEECH_LIFE SLASH
+        31 VILEPLUME STUN_SPORE MOONBLAST GUNK_SHOT PETAL_DANCE
+        31 BELLOSSOM STUN_SPORE MOONBLAST DRAIN_PUNCH PETAL_DANCE
+        31 VICTREEBEL WRAP HYPER_BEAM SLEEP_POWDER RAZOR_LEAF
+        31 LEAFEON SWORDS_DANCE HYPER_BEAM SAND_ATTACK LEAF_STORM
+        32 TANGROWTH LIGHT_SCREEN REFLECT LEECH_SEED ROCK_SLIDE
+    5
+        42 VILEPLUME STUN_SPORE MOONBLAST GUNK_SHOT PETAL_DANCE
+        42 BELLOSSOM STUN_SPORE MOONBLAST DRAIN_PUNCH PETAL_DANCE
+        42 VICTREEBEL WRAP HYPER_BEAM SLEEP_POWDER RAZOR_LEAF
+        42 LEAFEON SWORDS_DANCE HYPER_BEAM SHADOW_BALL RAZOR_LEAF
+        42 VENUSAUR GUNK_SHOT LEECH_SEED RAZOR_LEAF EARTHQUAKE
+        43 TANGROWTH AMNESIA CURSE GIGA_DRAIN ROCK_SLIDE
+    6
+        49 VILEPLUME STUN_SPORE MOONBLAST GUNK_SHOT PETAL_DANCE
+        49 EXEGGUTOR PSYCHIC_M SLEEP_POWDER OUTRAGE EXPLOSION
+        49 VICTREEBEL WRAP HYPER_BEAM LOVELY_KISS RAZOR_LEAF
+        49 LEAFEON SWORDS_DANCE HYPER_BEAM SHADOW_BALL X_SCISSOR
+        49 VENUSAUR GUNK_SHOT LEECH_SEED RAZOR_LEAF EARTHQUAKE
+        50 TANGROWTH AMNESIA CURSE GIGA_DRAIN REST
+    7
+        53 VILEPLUME STUN_SPORE MOONBLAST GUNK_SHOT PETAL_DANCE
+        53 EXEGGUTOR ZEN_HEADBUTT SLEEP_POWDER OUTRAGE EXPLOSION
+        53 VICTREEBEL WRAP GUNK_SHOT STUN_SPORE RAZOR_LEAF
+        53 LEAFEON LEAF_STORM HYPER_BEAM SHADOW_BALL X_SCISSOR
+        53 VENUSAUR GUNK_SHOT LEECH_SEED LEAF_STORM EARTHQUAKE
+        54 TANGROWTH AMNESIA CURSE GIGA_DRAIN REST
+    8
+        54 VILEPLUME STUN_SPORE MOONBLAST GUNK_SHOT ENERGY_BALL
+        54 EXEGGUTOR PSYCHO_CUT SLEEP_POWDER OUTRAGE EXPLOSION
+        54 VICTREEBEL WRAP GUNK_SHOT STUN_SPORE RAZOR_LEAF
+        54 LEAFEON LEAF_STORM HYPER_BEAM SHADOW_BALL X_SCISSOR
+        54 VENUSAUR GUNK_SHOT LEECH_SEED LEAF_STORM EARTHQUAKE
+        55 TANGROWTH AMNESIA CURSE GIGA_DRAIN REST
+    9
+        70 VICTREEBEL WRAP GUNK_SHOT STUN_SPORE RAZOR_LEAF
+        70 VILEPLUME STUN_SPORE MOONBLAST GUNK_SHOT ENERGY_BALL
+        70 EXEGGUTOR PSYCHO_CUT SLEEP_POWDER OUTRAGE EXPLOSION
+        70 LEAFEON LEAF_STORM HYPER_BEAM SHADOW_BALL X_SCISSOR
+        70 TANGROWTH AMNESIA CURSE GIGA_DRAIN REST
+        70 MVENUSAUR EARTHQUAKE AMNESIA GUNK_SHOT FRENZY_PLANT
+KOGA
+    1
+        1 DITTO None None None None
+    2
+        20 GRIMER TOXIC SLUDGE MINIMIZE LICK
+        20 BEEDRILL FURY_ATTACK FOCUS_ENERGY POISON_STING TWINEEDLE
+        20 VENONAT SUPERSONIC STUN_SPORE PSYBEAM FLASH
+        20 TENTACOOL REFLECT SUPERSONIC WRAP BUBBLEBEAM
+        20 GOLBAT LEECH_LIFE CONFUSE_RAY DOUBLE_TEAM MEGA_DRAIN
+        21 WEEZING SMOKESCREEN INFESTATION TOXIC SLUDGE_WAVE
+    3
+        27 MUK TOXIC SLUDGE MINIMIZE SHADOW_SNEAK
+        27 BEEDRILL AGILITY AERIAL_ACE SLUDGE_WAVE X_SCISSOR
+        27 VENOMOTH SUPERSONIC PSYBEAM GIGA_DRAIN SLEEP_POWDER
+        27 TENTACOOL REFLECT TOXIC GIGA_DRAIN WATER_PULSE
+        27 CROBAT CONFUSE_RAY AIR_CUTTER SUPER_FANG SLUDGE
+        28 WEEZING SHADOW_BALL SUBSTITUTE TOXIC SLUDGE
+    4
+        31 MUK TOXIC SLUDGE_WAVE MINIMIZE FIRE_BLAST
+        31 BEEDRILL SWORDS_DANCE X_SCISSOR AERIAL_ACE SLUDGE_WAVE
+        31 VENOMOTH SUPERSONIC ZEN_HEADBUTT GIGA_DRAIN SLEEP_POWDER
+        31 TENTACRUEL REFLECT TOXIC ICE_BEAM SURF
+        31 CROBAT CONFUSE_RAY ROOST SUPER_FANG LEECH_LIFE
+        32 WEEZING CURSE SUBSTITUTE TOXIC GYRO_BALL
+    5
+        42 MUK TOXIC MINIMIZE DIG GUNK_SHOT
+        42 ARBOK GLARE SLUDGE_WAVE EARTHQUAKE ROCK_SLIDE
+        42 VENOMOTH GIGA_DRAIN SLEEP_POWDER LEECH_LIFE PSYCHIC_M
+        42 TENTACRUEL TOXIC ICE_BEAM SURF SLUDGE_WAVE
+        42 CROBAT CONFUSE_RAY SUPER_FANG DOUBLE_TEAM LEECH_LIFE
+        43 WEEZING SLUDGE_WAVE SMOKESCREEN FLAMETHROWER EXPLOSION
+    6
+        49 MUK FIRE_BLAST MINIMIZE REST GUNK_SHOT
+        49 NIDOQUEEN SHADOW_BALL BLIZZARD THUNDERBOLT STONE_EDGE
+        49 VENOMOTH CONFUSE_RAY SLEEP_POWDER LEECH_LIFE PSYCHO_CUT
+        49 TENTACRUEL ACID_ARMOR BLIZZARD SCALD REST
+        49 CROBAT CONFUSE_RAY SUPER_FANG DOUBLE_TEAM BRAVE_BIRD
+        50 WEEZING GUNK_SHOT ZAP_CANNON FIRE_BLAST EXPLOSION
+    7
+        53 NIDOQUEEN SUPER_FANG TOXIC EARTHQUAKE REST
+        53 TENTACRUEL ACID_ARMOR BLIZZARD SCALD REST
+        53 NIDOKING EARTHQUAKE GUNK_SHOT MEGAHORN STONE_EDGE
+        53 CROBAT CONFUSE_RAY SUPER_FANG DOUBLE_TEAM BRAVE_BIRD
+        53 GENGAR CURSE HYPNOSIS DARK_PULSE ENERGY_BALL
+        54 WEEZING GUNK_SHOT SHADOW_BALL FIRE_BLAST EXPLOSION
+    8
+        54 NIDOQUEEN SUPER_FANG TOXIC EARTHQUAKE LOVELY_KISS
+        54 TENTACRUEL HYPER_BEAM BLIZZARD HYDRO_PUMP MIRROR_COAT
+        54 NIDOKING EARTHQUAKE GUNK_SHOT MEGAHORN STONE_EDGE
+        54 CROBAT CONFUSE_RAY SUPER_FANG DOUBLE_TEAM BRAVE_BIRD
+        54 GENGAR CURSE HYPNOSIS DARK_PULSE ENERGY_BALL
+        55 WEEZING GUNK_SHOT SHADOW_BALL FIRE_BLAST EXPLOSION
+    9
+        70 MUK SHADOW_SNEAK MINIMIZE REST GUNK_SHOT
+        70 GENGAR PSYCHIC_M HYPNOSIS DARK_PULSE ENERGY_BALL
+        70 TENTACRUEL HYPER_BEAM BLIZZARD HYDRO_PUMP TOXIC
+        70 CROBAT CONFUSE_RAY SUPER_FANG DOUBLE_TEAM BRAVE_BIRD
+        70 WEEZING GUNK_SHOT SHADOW_BALL FIRE_BLAST EXPLOSION
+        70 MBEEDRILL HYPER_BEAM MEGAHORN GUNK_SHOT STEEL_WING
+SABRINA
+    1
+        1 DITTO None None None None
+    2
+        20 MIME_JR CONFUSE_RAY INFESTATION PSYBEAM MIMIC
+        20 DROWZEE CONFUSION HEADBUTT POISON_GAS HYPNOSIS
+        20 SMOOCHUM WATER_PULSE PSYCHIC_M ICICLE_SPEAR LOVELY_KISS
+        20 SLOWPOKE WATER_PULSE BODY_SLAM ZEN_HEADBUTT SHADOW_BALL
+        20 HAUNTER HYPNOSIS NIGHT_SHADE CURSE CONFUSE_RAY
+        21 KADABRA PSYBEAM NIGHT_SHADE RECOVER REFLECT
+    3
+        27 MR_MIME SUBSTITUTE PLAY_ROUGH MIMIC PSYCHIC_M
+        27 DROWZEE TAKE_DOWN DREAM_EATER BARRIER HYPNOSIS
+        27 JYNX WATER_PULSE PSYCHIC_M ICICLE_SPEAR LOVELY_KISS
+        27 EXEGGCUTE LEECH_SEED PSYCHIC_M STUN_SPORE ENERGY_BALL
+        27 HAUNTER HYPNOSIS DARK_PULSE CURSE CONFUSE_RAY
+        28 KADABRA PSYCHIC_M THUNDER_WAVE RECOVER REFLECT
+    4
+        31 MR_MIME SUBSTITUTE PLAY_ROUGH MIMIC BARRIER
+        31 HYPNO REFLECT DREAM_EATER THUNDERPUNCH HYPNOSIS
+        31 ESPEON SAND_ATTACK MUD_SLAP FOCUS_ENERGY PSYCHIC_M
+        31 SLOWKING ZEN_HEADBUTT AMNESIA SCALD ICE_BEAM
+        31 HAUNTER HYPNOSIS DARK_PULSE CURSE CONFUSE_RAY
+        32 ALAKAZAM PSYCHIC_M THUNDER_WAVE RECOVER REFLECT
+    5
+        42 SLOWKING PSYCHO_CUT AMNESIA SCALD BLIZZARD
+        42 EXEGGUTOR LEECH_SEED SLEEP_POWDER PSYCHO_CUT EXPLOSION
+        42 ESPEON SAND_ATTACK ZAP_CANNON FOCUS_ENERGY PSYCHIC_M
+        42 STARMIE THUNDERBOLT RECOVER SCALD PSYCHIC_M
+        42 HAUNTER HYPNOSIS DARK_PULSE CURSE CONFUSE_RAY
+        43 ALAKAZAM PSYCHIC_M THUNDER_WAVE RECOVER REFLECT
+    6
+        49 MR_MIME SUBSTITUTE PLAY_ROUGH MIMIC METRONOME
+        49 JYNX BLIZZARD PSYCHIC_M LOVELY_KISS DRAININGKISS
+        49 ESPEON ZAP_CANNON PSYCHIC_M BITE FOCUS_ENERGY
+        49 EXEGGUTOR GIGA_DRAIN PSYCHIC_M SLEEP_POWDER EXPLOSION
+        49 HAUNTER ICE_PUNCH SHADOW_BALL DARK_PULSE CONFUSE_RAY
+        50 ALAKAZAM THUNDERPUNCH ICE_PUNCH FIRE_PUNCH PSYCHO_CUT
+    7
+        53 SLOWBRO AMNESIA PSYCHIC_M SCALD REST
+        53 JYNX BLIZZARD PSYCHO_CUT LOVELY_KISS DRAININGKISS
+        53 ESPEON ZAP_CANNON PSYCHO_CUT BITE HYPER_BEAM
+        53 EXEGGUTOR GIGA_DRAIN PSYCHO_CUT SLEEP_POWDER EXPLOSION
+        53 GENGAR THUNDERBOLT CURSE DARK_PULSE CONFUSE_RAY
+        54 ALAKAZAM REFLECT THUNDER_WAVE FIRE_PUNCH PSYCHO_CUT
+    8
+        54 JYNX BLIZZARD PSYCHO_CUT LOVELY_KISS DRAININGKISS
+        54 ESPEON ZAP_CANNON PSYCHO_CUT TOXIC HYPER_BEAM
+        54 EXEGGUTOR LEAF_STORM PSYCHO_CUT SLEEP_POWDER EXPLOSION
+        54 STARMIE PSYCHO_CUT HYDRO_PUMP BLIZZARD RECOVER
+        54 GENGAR THUNDER CURSE EXPLOSION CONFUSE_RAY
+        55 ALAKAZAM REFLECT THUNDER_WAVE FIRE_PUNCH PSYCHO_CUT
+    9
+        70 JYNX BLIZZARD PSYCHO_CUT LOVELY_KISS DRAININGKISS
+        70 ESPEON ZAP_CANNON PSYCHO_CUT SAND_ATTACK REFLECT
+        70 SLOWKING THUNDER_WAVE AMNESIA REST HYDRO_PUMP
+        70 EXEGGUTOR LEAF_STORM PSYCHO_CUT SLEEP_POWDER EXPLOSION
+        70 STARMIE PSYCHO_CUT HYDRO_PUMP BLIZZARD RECOVER
+        70 MALAKAZAM ICE_PUNCH THUNDERPUNCH FIRE_PUNCH PSYCHO_CUT
+BLAINE
+    1
+        1 DITTO None None None None
+    2
+        1 DITTO None None None None
+    3
+        27 VULPIX CONFUSE_RAY HYPNOSIS FLAMETHROWER ENERGY_BALL
+        27 PONYTA WILL_O_WISP STOMP IRON_TAIL FIRE_SPIN
+        27 MAGMAR ROCK_TOMB MACH_PUNCH FLARE_BLITZ BULLET_SEED
+        27 FLAREON DOUBLE_KICK SHADOW_BALL FIRE_SPIN IRON_TAIL
+        27 CHARMELEON DRAGONBREATH SLASH SMOKESCREEN FLAMETHROWER
+        28 ARCANINE BODY_SLAM DOUBLE_KICK CRUNCH AERIAL_ACE
+    4
+        31 NINETALES CONFUSE_RAY HYPNOSIS FLAMETHROWER ENERGY_BALL
+        31 RAPIDASH SWORDS_DANCE MEGAHORN IRON_TAIL HYPER_BEAM
+        31 MAGMAR THUNDERPUNCH KARATE_CHOP FLAMETHROWER BULLET_SEED
+        31 FLAREON DOUBLE_KICK SHADOW_BALL FLAMETHROWER IRON_TAIL
+        31 RHYDON MUD_SHOT ROCK_SLIDE BODY_PRESS BODY_SLAM
+        32 ARCANINE BODY_SLAM DOUBLE_KICK CRUNCH FLAMETHROWER
+    5
+        42 NINETALES CONFUSE_RAY HYPNOSIS FLAMETHROWER ENERGY_BALL
+        42 RAPIDASH WILL_O_WISP MEGAHORN IRON_TAIL FIRE_BLAST
+        42 MAGMORTAR THUNDERPUNCH KARATE_CHOP FLAMETHROWER BULLET_SEED
+        42 FLAREON DOUBLE_KICK SHADOW_BALL FLAMETHROWER IRON_TAIL
+        42 CHARIZARD AIR_SLASH STEEL_WING SHADOW_CLAW DRAGON_DANCE
+        43 ARCANINE EXTREMESPEED DRAGONBREATH FLARE_BLITZ SUPERPOWER
+    6
+        49 NINETALES CONFUSE_RAY HYPNOSIS FIRE_BLAST ENERGY_BALL
+        49 RAPIDASH WILL_O_WISP MEGAHORN IRON_TAIL FIRE_BLAST
+        49 MAGMORTAR THUNDERBOLT PSYCHIC_M FLAMETHROWER BULLET_SEED
+        49 FLAREON SUPERPOWER SHADOW_BALL FIRE_BLAST IRON_TAIL
+        49 RHYDON STONE_EDGE HYPER_BEAM EARTHQUAKE SUPERPOWER
+        50 ARCANINE EXTREMESPEED DRAGONBREATH FLARE_BLITZ SUPERPOWER
+    7
+        53 NINETALES CONFUSE_RAY ENERGY_BALL HYPNOSIS FIRE_BLAST
+        53 RAPIDASH WILL_O_WISP FIRE_SPIN MEGAHORN FLARE_BLITZ
+        53 MAGMORTAR THUNDERBOLT MACH_PUNCH FLAMETHROWER BULLET_SEED
+        53 FLAREON IRON_TAIL FLAMETHROWER SUPERPOWER SHADOW_BALL
+        53 RHYPERIOR STONE_EDGE MEGAHORN EARTHQUAKE SUPERPOWER
+        54 ARCANINE EXTREMESPEED FLARE_BLITZ CLOSE_COMBAT HYPER_BEAM
+    8
+        54 NINETALES CONFUSE_RAY ENERGY_BALL HYPNOSIS FIRE_BLAST
+        54 RAPIDASH WILL_O_WISP FIRE_SPIN MEGAHORN FLARE_BLITZ
+        54 MAGMORTAR THUNDERBOLT PSYCHIC_M FIRE_BLAST EARTHQUAKE
+        54 FLAREON IRON_TAIL FIRE_BLAST SUPERPOWER SHADOW_BALL
+        54 RHYPERIOR HEAD_SMASH MEGAHORN EARTHQUAKE SUPERPOWER
+        55 ARCANINE EXTREMESPEED FLARE_BLITZ CLOSE_COMBAT HYPER_BEAM
+    9
+        70 NINETALES CONFUSE_RAY ENERGY_BALL HYPNOSIS FIRE_BLAST
+        70 MAGMORTAR THUNDERBOLT PSYCHIC_M FIRE_BLAST EARTHQUAKE
+        70 RAPIDASH WILL_O_WISP FIRE_SPIN MEGAHORN FLARE_BLITZ
+        70 FLAREON IRON_TAIL FIRE_BLAST SUPERPOWER SHADOW_BALL
+        70 ARCANINE EXTREMESPEED FLARE_BLITZ CLOSE_COMBAT HYPER_BEAM
+        70 MCHARZARDY DRAGON_CLAW ROOST BLAST_BURN BRAVE_BIRD
+GIOVANNI
+    1 ; Rocket Hideout B4F
+        28 ONIX ROCK_SLIDE DIG WRAP TWISTER
+        28 RHYHORN FURY_ATTACK ROCK_TOMB MUD_SLAP IRON_TAIL
+        28 DUGTRIO DIG SLASH SCREECH SAND_ATTACK
+        28 KANGASKHAN THUNDERBOLT AERIAL_ACE DRAIN_PUNCH DIZZY_PUNCH
+        28 MAROWAK FURY_ATTACK WATER_GUN ROCK_TOMB BONEMERANG
+        29 PERSIAN SHADOW_BALL BUBBLEBEAM PAY_DAY SLASH
+    2 ; Silph Co. 11F
+        42 STEELIX IRON_TAIL EARTHQUAKE DRAGONBREATH HEADBUTT
+        42 NIDOKING ICE_PUNCH EARTHQUAKE THRASH TOXIC
+        42 RHYDON BODY_SLAM STONE_EDGE EARTHQUAKE IRON_TAIL
+        42 NIDOQUEEN THUNDERBOLT ICE_BEAM LOVELY_KISS SUPER_FANG
+        42 GOLEM SELFDESTRUCT EARTHQUAKE ROCK_TOMB SEISMIC_TOSS
+        43 PERSIAN SLASH PAY_DAY DREAM_EATER HYPNOSIS
+    3 ; Obsidian Warehouse
+        45 SANDSLASH ROCK_TOMB EARTHQUAKE SLASH SHADOW_CLAW
+        45 DUGTRIO EARTHQUAKE SLUDGE_WAVE FISSURE STONE_EDGE
+        45 NIDOKING THUNDERBOLT ICE_BEAM LOVELY_KISS SUPER_FANG
+        45 NIDOQUEEN EARTHQUAKE SHADOW_CLAW TOXIC FIRE_BLAST
+        45 KANGASKHAN DRAIN_PUNCH SHADOW_CLAW DIZZY_PUNCH AERIAL_ACE
+        46 PERSIAN SLASH HYPER_BEAM THUNDERBOLT PAY_DAY
+    4 ; Viridian Gym
+        54 DUGTRIO EARTHQUAKE SLUDGE_WAVE FISSURE STONE_EDGE
+        54 GOLEM SUPERPOWER EXPLOSION EARTHQUAKE STONE_EDGE
+        54 NIDOQUEEN THUNDER BLIZZARD LOVELY_KISS SUPER_FANG
+        54 NIDOKING MEGAHORN OUTRAGE EARTHQUAKE GUNK_SHOT
+        54 RHYPERIOR HEAD_SMASH MEGAHORN EARTHQUAKE FLASH_CANNON
+        55 PERSIAN HYPNOSIS AERIAL_ACE SHADOW_CLAW SLASH
+    5
+        70 MAROWAK None None None None
+        70 STEELIX None None None None
+        70 NIDOKING None None None None
+        70 NIDOQUEEN None None None None
+        70 MKANGASKAN None None None None
+        70 PERSIAN None None None None
+    6
+        75 MAROWAK None None None None
+        75 STEELIX None None None None
+        75 NIDOKING None None None None
+        75 RHYPERIOR None None None None
+        75 MKANGASKAN None None None None
+        75 PERSIAN None None None None
+LORELEI
+    1 ; None
+        59 DEWGONG AQUA_JET WATERFALL BLIZZARD REST
+        59 CLOYSTER EXPLOSION PIN_MISSILE SPIKE_CANNON ICICLE_SPEAR
+        59 JYNX BLIZZARD LOVELY_KISS DRAININGKISS PSYCHO_CUT
+        59 GLACEON BLIZZARD MIRROR_COAT WATER_PULSE BARRIER
+        59 LAPRAS PSYCHIC_M BLIZZARD HYDRO_PUMP REST
+        59 MSLOWBRO AMNESIA PSYCHIC_M REST SCALD
+    2
+        75 JYNX BLIZZARD LOVELY_KISS DRAININGKISS PSYCHO_CUT
+        75 DEWGONG AQUA_JET REST IRON_TAIL BLIZZARD
+        75 CLOYSTER EXPLOSION PIN_MISSILE HYDRO_PUMP ICICLE_SPEAR
+        75 GLACEON FREEZE_DRY CURSE WATER_PULSE REST
+        75 LAPRAS THUNDER BLIZZARD HYDRO_PUMP CONFUSE_RAY
+        75 MSLOWBRO AMNESIA PSYCHIC_M REST HYDRO_PUMP
+BRUNO
+    1
+        60 HITMONTOP FOCUS_ENERGY STONE_EDGE EARTHQUAKE HI_JUMP_KICK
+        60 HITMONCHAN DRAIN_PUNCH SHADOW_PUNCH DIZZY_PUNCH BULLET_PUNCH
+        60 HITMONLEE HI_JUMP_KICK CLOSE_COMBAT ROLLING_KICK STONE_EDGE
+        60 POLIWRATH ROCK_SLIDE CLOSE_COMBAT SCALD LOVELY_KISS
+        60 MACHAMP STONE_EDGE FISSURE CLOSE_COMBAT DRAIN_PUNCH
+        60 MSTEELIX METEOR_MASH EARTHQUAKE EXPLOSION DRAGON_DANCE
+    2
+        75 HITMONLEE HI_JUMP_KICK EARTHQUAKE BULLET_PUNCH STONE_EDGE
+        75 POLIWRATH ROCK_SLIDE CLOSE_COMBAT SCALD LOVELY_KISS
+        75 HITMONTOP FOCUS_ENERGY STONE_EDGE EARTHQUAKE HI_JUMP_KICK
+        75 ANNIHILAPE CLOSE_COMBAT SHADOW_SNEAK STONE_EDGE GUNK_SHOT
+        75 MACHAMP STONE_EDGE EARTHQUAKE BULLET_PUNCH DRAIN_PUNCH
+        75 MSTEELIX GYRO_BALL EARTHQUAKE BODY_PRESS STONE_EDGE
+AGATHA
+    1
+        61 GENGAR THUNDER_WAVE CONFUSE_RAY MINIMIZE DARK_PULSE
+        61 CROBAT AIR_SLASH ROOST GUNK_SHOT LEECH_LIFE
+        61 GENGAR PSYCHIC_M NIGHT_SLASH WILL_O_WISP CURSE
+        61 ANNIHILAPE CLOSE_COMBAT SHADOW_PUNCH STONE_EDGE GUNK_SHOT
+        61 UMBREON REST DARK_PULSE DOUBLE_TEAM TOXIC
+        61 MGENGAR DRAININGKISS NIGHT_SLASH THUNDERBOLT ENERGY_BALL
+    2
+        75 GENGAR THUNDERBOLT GIGA_DRAIN WILL_O_WISP CURSE
+        75 ANNIHILAPE CLOSE_COMBAT SHADOW_BALL STONE_EDGE GUNK_SHOT
+        75 CROBAT AIR_SLASH ROOST TOXIC LEECH_LIFE
+        75 GENGAR THUNDER_WAVE CONFUSE_RAY MINIMIZE DARK_PULSE
+        75 UMBREON REST DARK_PULSE DOUBLE_TEAM CONFUSE_RAY
+        75 MGENGAR DRAININGKISS NIGHT_SLASH THUNDERBOLT ENERGY_BALL
+LANCE
+    1
+        62 GYARADOS HURRICANE FIRE_BLAST OUTRAGE HYPER_BEAM
+        62 DRAGONITE DRAGON_DANCE AIR_SLASH STEEL_WING EARTHQUAKE
+        62 AERODACTYL AIR_CUTTER HEAD_SMASH EARTHQUAKE HYPER_BEAM
+        62 KINGDRA FLASH_CANNON OUTRAGE HYPER_BEAM HYDRO_PUMP
+        62 DRAGONITE ROOST THUNDER_WAVE WRAP OUTRAGE
+        62 MCHARZARDX HYPER_BEAM SHADOW_CLAW DRAGON_DANCE STEEL_WING
+    2
+        75 AERODACTYL AIR_CUTTER HEAD_SMASH EARTHQUAKE HYPER_BEAM
+        75 DRAGONITE FIRE_BLAST THUNDER BLIZZARD OUTRAGE
+        75 GYARADOS HURRICANE DRAGON_DANCE STONE_EDGE EARTHQUAKE
+        75 KINGDRA FLASH_CANNON DRAGONBREATH DOUBLE_TEAM HYDRO_PUMP
+        75 DRAGONITE AIR_CUTTER STONE_EDGE EXTREMESPEED SUPERPOWER
+        75 MCHARZARDX HYPER_BEAM SHADOW_CLAW DRAGON_DANCE ROCK_SLIDE
+RIVAL1
+    1 ; Oaks Lab (1)
+        5 EEVEE None None None None
+    2 ; Route 22 (2)
+        9 SPEAROW None None None None
+        9 RATTATA None None None None
+        9 PIDGEY None None None None
+        9 NIDORAN_M None None None None
+        9 MANKEY None None None None
+        9 EEVEE None None None None
+    3 ; Cerulean City (3)
+        19 PIDGEOTTO SAND_ATTACK QUICK_ATTACK TWISTER WING_ATTACK
+        19 NIDOKING DOUBLE_KICK MEGA_PUNCH BUBBLEBEAM MUD_SLAP
+        19 CLEFABLE SING MINIMIZE MUD_SLAP METRONOME
+        19 SANDSHREW SAND_ATTACK DEFENSE_CURL MUD_SLAP SLASH
+        19 MANKEY METRONOME MUD_SLAP SEISMIC_TOSS KARATE_CHOP
+        19 EEVEE SAND_ATTACK QUICK_ATTACK BIDE MUD_SLAP
+RIVAL2
+    1 ; SS Anne 2F (4)
+        22 NIDOKING DOUBLE_KICK DIG BUBBLEBEAM BODY_SLAM
+        22 PIDGEOTTO SAND_ATTACK QUICK_ATTACK TWISTER WING_ATTACK
+        22 CLEFABLE SING MUD_SLAP MINIMIZE METRONOME
+        22 SANDSLASH DEFENSE_CURL MUD_SLAP SLASH SAND_ATTACK
+        22 RATICATE BUBBLEBEAM HYPER_FANG FOCUS_ENERGY SUPER_FANG
+        22 EEVEE SAND_ATTACK QUICK_ATTACK BIDE BITE
+    2 ; Pokémon Tower 2F (5)
+        27 PINSIR SEISMIC_TOSS X_SCISSOR ROCK_SLIDE SWORDS_DANCE
+        27 PORYGONZ AMNESIA TRI_ATTACK DARK_PULSE PSYCHIC_M
+        27 KLEAVOR X_SCISSOR AIR_SLASH STONE_EDGE SWORDS_DANCE
+        27 CLOYSTER LIGHT_SCREEN CLAMP AURORA_BEAM MUD_SHOT
+        27 NINETALES FIRE_SPIN CONFUSE_RAY WILL_O_WISP HYPNOSIS
+        27 UMBREON DARK_PULSE DOUBLE_TEAM CONFUSE_RAY REST
+    3 ; Silph Co. 7F (7)
+        42 ANNIHILAPE CLOSE_COMBAT SHADOW_CLAW STONE_EDGE GUNK_SHOT
+        42 ELECTIVIRE ICE_PUNCH ROCK_TOMB THUNDERPUNCH KARATE_CHOP
+        42 JYNX ICE_BEAM DRAININGKISS LOVELY_KISS PSYCHIC_M
+        42 MAGMORTAR ROCK_SLIDE FIRE_BLAST KARATE_CHOP BULLET_SEED
+        42 SNORLAX BODY_SLAM SELFDESTRUCT SHADOW_BALL PLAY_ROUGH
+        42 UMBREON TOXIC DOUBLE_TEAM REST DARK_PULSE
+    4 ; Route 22 (10)
+        58 JOLTEON DOUBLE_KICK THUNDER_WAVE BITE ZAP_CANNON
+        58 VAPOREON TOXIC REST ACID_ARMOR SCALD
+        58 FLAREON IRON_TAIL WILL_O_WISP SUPERPOWER HEAT_WAVE
+        58 LEAFEON BODY_SLAM LEECH_SEED AERIAL_ACE LEAF_STORM
+        58 GLACEON SAND_ATTACK REST BLIZZARD SUBSTITUTE
+        58 UMBREON CONFUSE_RAY DARK_PULSE REST DOUBLE_TEAM
+    5 ; Snorlaxs (6)
+        34 AERODACTYL DRAGON_RAGE AERIAL_ACE ROCK_SLIDE IRON_TAIL
+        34 STARMIE PSYCHIC_M WATER_PULSE THUNDERBOLT RECOVER
+        34 TANGROWTH SLEEP_POWDER LEECH_SEED INFESTATION GIGA_DRAIN
+        34 MAGNEZONE THUNDER_WAVE THUNDERBOLT LIGHT_SCREEN FLASH_CANNON
+        34 KINGDRA DRAGONBREATH BUBBLEBEAM ICE_BEAM SMOKESCREEN
+        34 UMBREON DARK_PULSE DOUBLE_TEAM CONFUSE_RAY REST
+    6 ; Mt Moon Extension (8)
+        47 ALAKAZAM PSYCHIC_M RECOVER THUNDER_WAVE REFLECT
+        47 BLISSEY SOFTBOILED ICE_BEAM THUNDER_WAVE COUNTER
+        47 RHYPERIOR STONE_EDGE EARTHQUAKE SUBSTITUTE HYPER_BEAM
+        47 EXEGGUTOR EXPLOSION PSYCHIC_M SLEEP_POWDER GIGA_DRAIN
+        47 TAUROS HYPER_BEAM BODY_SLAM EARTHQUAKE BLIZZARD
+        47 UMBREON DARK_PULSE DOUBLE_TEAM CONFUSE_RAY REST
+    7 ; Pokemon Mansion (9)
+        53 LAPRAS HYDRO_PUMP BLIZZARD CONFUSE_RAY THUNDERBOLT
+        53 MACHAMP CLOSE_COMBAT STONE_EDGE BULLET_PUNCH EARTHQUAKE
+        53 GENGAR CONFUSE_RAY MINIMIZE NIGHT_SLASH WILL_O_WISP
+        53 DRAGONITE DRAGON_DANCE AIR_SLASH EARTHQUAKE OUTRAGE
+        53 GYARADOS DRAGON_DANCE HURRICANE HYPER_BEAM EARTHQUAKE
+        53 UMBREON DARK_PULSE DOUBLE_TEAM CONFUSE_RAY TOXIC
+RIVAL3
+    1 ; None
+        65 MPIDGEOT THUNDER BLIZZARD HEAT_WAVE HURRICANE
+        65 MALAKAZAM PSYCHIC_M DARK_PULSE MOONBLAST ZAP_CANNON
+        65 MSCIZOR METEOR_MASH STEEL_WING LEECH_LIFE CLOSE_COMBAT
+        65 MVENUSAUR DOUBLE_EDGE GUNK_SHOT EARTHQUAKE FRENZY_PLANT
+        65 MCHARZARDY HURRICANE DRAGON_CLAW CRUNCH BLAST_BURN
+        65 MBLASTOISE ZAP_CANNON OUTRAGE BLIZZARD HYDRO_CANNON
+    2
+        70 ARTICUNO ROOST BRAVE_BIRD BLIZZARD WATER_PULSE
+        70 ZAPDOS ROOST BRAVE_BIRD THUNDER HEAT_WAVE
+        70 MOLTRES ROOST BRAVE_BIRD FIRE_BLAST STEEL_WING
+    3 ; teams for League Rematch (pre rematch gym leaders)
+        65 MPIDGEOT THUNDER BLIZZARD HEAT_WAVE ROOST
+        65 MALAKAZAM PSYCHIC_M REFLECT MOONBLAST RECOVER
+        65 MVENUSAUR LEECH_SEED GUNK_SHOT EARTHQUAKE FRENZY_PLANT
+        65 MCHARZARDY ROOST DRAGON_CLAW CRUNCH BLAST_BURN
+        65 MBLASTOISE REST OUTRAGE BLIZZARD HYDRO_CANNON
+        65 UMBREON DARK_PULSE DOUBLE_TEAM CONFUSE_RAY REST
+    4
+        70 ARTICUNO ROOST BRAVE_BIRD ICE_BEAM WATER_PULSE
+        70 ZAPDOS ROOST BRAVE_BIRD THUNDERBOLT HEAT_WAVE
+        70 MOLTRES ROOST BRAVE_BIRD FLAMETHROWER STEEL_WING
+    5 ; teams for League Rematch (post rematch gym leaders)
+        80 MPINSIR AIR_SLASH MEGAHORN SWORDS_DANCE CLOSE_COMBAT
+        80 MPIDGEOT THUNDER BLIZZARD HEAT_WAVE ROOST
+        80 MALAKAZAM PSYCHIC_M REFLECT MOONBLAST RECOVER
+        80 MVENUSAUR LEECH_SEED GUNK_SHOT EARTHQUAKE FRENZY_PLANT
+        80 MCHARZARDY ROOST DRAGON_CLAW CRUNCH BLAST_BURN
+        80 MBLASTOISE REST OUTRAGE BLIZZARD HYDRO_CANNON
+    6
+        83 ARTICUNO ROOST BRAVE_BIRD BLIZZARD WATER_PULSE
+        83 ZAPDOS ROOST BRAVE_BIRD THUNDERBOLT HEAT_WAVE
+        83 MOLTRES ROOST BRAVE_BIRD FLAMETHROWER STEEL_WING
+        84 MEWTWO PSYSTRIKE RECOVER BLIZZARD FIRE_BLAST
+        84 MEW TRI_ATTACK CRABHAMMER VOLT_TACKLE SOFTBOILED
+        85 UMBREON DARK_PULSE DOUBLE_TEAM TOXIC REST
+    7 ; teams for the randomized rematches
+        80 JYNX None None None None
+        80 SANDSLASH None None None None
+        80 FEAROW None None None None
+        80 CHARIZARD None None None None
+        80 MPIDGEOT None None None None
+        85 UMBREON None None None None
+    8
+        80 STEELIX None None None None
+        80 ARCANINE None None None None
+        80 MUK None None None None
+        80 RHYPERIOR None None None None
+        80 MBEEDRILL None None None None
+        85 UMBREON None None None None
+    9
+        80 BLISSEY None None None None
+        80 HITMONLEE None None None None
+        80 MAROWAK None None None None
+        80 SYLVEON None None None None
+        80 MGYARADOS None None None None
+        85 UMBREON None None None None
+    10
+        80 ELECTIVIRE None None None None
+        80 SEAKING None None None None
+        80 SLOWKING None None None None
+        80 PERSIAN None None None None
+        80 MALAKAZAM None None None None
+        85 UMBREON None None None None
+    11
+        80 NINETALES None None None None
+        80 GOLDUCK None None None None
+        80 KANGASKHAN None None None None
+        80 JOLTEON None None None None
+        80 MSTEELIX None None None None
+        85 UMBREON None None None None
+    12
+        80 LAPRAS None None None None
+        80 CROBAT None None None None
+        80 AERODACTYL None None None None
+        80 GENGAR None None None None
+        80 MPINSIR None None None None
+        85 UMBREON None None None None
+    13
+        80 STARMIE None None None None
+        80 GOLEM None None None None
+        80 KINGLER None None None None
+        80 ANNIHILAPE None None None None
+        80 MARODACTYL None None None None
+        85 UMBREON None None None None
+    14
+        80 NIDOQUEEN None None None None
+        80 HITMONCHAN None None None None
+        80 BEEDRILL None None None None
+        80 LEAFEON None None None None
+        80 MCHARZARDX None None None None
+        85 UMBREON None None None None
+    15
+        80 KABUTOPS None None None None
+        80 DITTO None None None None
+        80 KLEAVOR None None None None
+        80 DUGTRIO None None None None
+        80 MCHARZARDY None None None None
+        85 UMBREON None None None None
+    16
+        80 VILEPLUME None None None None
+        80 BUTTERFREE None None None None
+        80 OMASTAR None None None None
+        80 SCIZOR None None None None
+        80 MGENGAR None None None None
+        85 UMBREON None None None None
+    17
+        80 MACHAMP None None None None
+        80 POLIWRATH None None None None
+        80 MAGMORTAR None None None None
+        80 GLACEON None None None None
+        80 MKANGASKAN None None None None
+        85 UMBREON None None None None
+    18
+        80 NIDOKING None None None None
+        80 RAPIDASH None None None None
+        80 WIGGLYTUFF None None None None
+        80 KINGDRA None None None None
+        80 MVENUSAUR None None None None
+        85 UMBREON None None None None
+    19
+        80 ALAKAZAM None None None None
+        80 CLOYSTER None None None None
+        80 PARASECT None None None None
+        80 SNORLAX None None None None
+        80 MSCIZOR None None None None
+        85 UMBREON None None None None
+    20
+        80 LICKILICKY None None None None
+        80 ELECTRODE None None None None
+        80 PINSIR None None None None
+        80 TAUROS None None None None
+        80 MSLOWBRO None None None None
+        85 UMBREON None None None None
+    21
+        80 PIDGEOT None None None None
+        80 CLEFABLE None None None None
+        80 RATICATE None None None None
+        80 BLASTOISE None None None None
+        80 MBLASTOISE None None None None
+        85 UMBREON None None None None
+    22
+        80 ESPEON None None None None
+        80 HITMONTOP None None None None
+        80 VICTREEBEL None None None None
+        80 DRAGONITE None None None None
+        80 MSTEELIX None None None None
+        85 UMBREON None None None None
+    23
+        80 VAPOREON None None None None
+        80 ARBOK None None None None
+        80 WEEZING None None None None
+        80 SLOWBRO None None None None
+        80 MSCIZOR None None None None
+        85 UMBREON None None None None
+    24
+        80 FLAREON None None None None
+        80 BELLOSSOM None None None None
+        80 HYPNO None None None None
+        80 GYARADOS None None None None
+        80 MSLOWBRO None None None None
+        85 UMBREON None None None None
+    25
+        80 RAICHU None None None None
+        80 DEWGONG None None None None
+        80 POLITOED None None None None
+        80 VENUSAUR None None None None
+        80 MPINSIR None None None None
+        85 UMBREON None None None None
+    26
+        80 MR_MIME None None None None
+        80 FARFETCHD None None None None
+        80 TANGROWTH None None None None
+        80 EXEGGUTOR None None None None
+        80 MCHARZARDX None None None None
+        85 UMBREON None None None None
+    27
+        80 MAGNEZONE None None None None
+        80 DODRIO None None None None
+        80 TENTACRUEL None None None None
+        80 PORYGONZ None None None None
+        80 MPIDGEOT None None None None
+        85 UMBREON None None None None
+    28
+        80 VENOMOTH None None None None
+        80 HYPNO None None None None
+        80 ARCANINE None None None None
+        80 SYLVEON None None None None
+        80 MGENGAR None None None None
+        85 UMBREON None None None None
+    29
+        80 MBLASTOISE None None None None
+        80 MARODACTYL None None None None
+        80 MBEEDRILL None None None None
+        80 MALAKAZAM None None None None
+        80 MMEWTWOY None None None None
+        85 UMBREON None None None None
+    30
+        80 MKANGASKAN None None None None
+        80 MGYARADOS None None None None
+        80 MBEEDRILL None None None None
+        80 MCHARZARDY None None None None
+        80 MMEWTWOX None None None None
+        85 UMBREON None None None None
+    31
+        80 MGYARADOS None None None None
+        80 MKANGASKAN None None None None
+        80 MARODACTYL None None None None
+        80 MVENUSAUR None None None None
+        80 MPINSIR None None None None
+        85 UMBREON None None None None
+PROF_OAK
+    1 ; None
+        83 TAUROS HYPER_BEAM BODY_SLAM EARTHQUAKE BLIZZARD
+        84 MGYARADOS NIGHT_SLASH HYDRO_PUMP HYPER_BEAM EARTHQUAKE
+        85 MEWTWO AMNESIA PSYSTRIKE RECOVER THUNDERBOLT
+        86 MMEWTWOX CLOSE_COMBAT STONE_EDGE LEECH_LIFE METEOR_MASH
+        87 MMEWTWOY BLIZZARD PSYCHO_CUT THUNDER MOONBLAST
+        88 VENUSTOISE HYDRO_CANNON FRENZY_PLANT GUNK_SHOT ZEN_HEADBUTT
+ORAGE
+    1
+        46 BLISSEY SOFTBOILED ICE_BEAM REFLECT THUNDER_WAVE
+        46 DODRIO BRAVE_BIRD SWORDS_DANCE ROOST STEEL_WING
+        46 PINSIR EARTHQUAKE STONE_EDGE SWORDS_DANCE X_SCISSOR
+        46 SCIZOR BULLET_PUNCH ROOST X_SCISSOR SWORDS_DANCE
+        46 UMBREON PSYCHIC_M CONFUSE_RAY DARK_PULSE REST
+        47 SYLVEON REFLECT DRAININGKISS MAGICAL_LEAF DIG
+    2
+        70 DODRIO AIR_CUTTER SWORDS_DANCE BODY_SLAM LOW_KICK
+        70 BLISSEY SOFTBOILED BLIZZARD REFLECT PSYCHIC_M
+        70 KLEAVOR AIR_CUTTER STONE_EDGE SWORDS_DANCE X_SCISSOR
+        70 MAGNEZONE EXPLOSION FLASH_CANNON THUNDER_WAVE THUNDERBOLT
+        70 SYLVEON REFLECT DRAININGKISS MAGICAL_LEAF SAND_ATTACK
+        70 MGYARADOS NIGHT_SLASH HYDRO_PUMP HYPER_BEAM EARTHQUAKE
+PIGEON
+    1
+        100 MPIDGEOT THUNDER BLIZZARD HEAT_WAVE METRONOME
+        100 DRAGONAIR OUTRAGE THUNDER_WAVE ZAP_CANNON METRONOME
+        100 HAUNTER CURSE HYPNOSIS CONFUSE_RAY METRONOME
+        100 PORYGON CONVERSION TRI_ATTACK PSYWAVE METRONOME
+        100 MMEWTWOY PSYCHO_CUT MOONBLAST FIRE_BLAST METRONOME
+        100 MAGIKARP ANCESTOR_PWR NO_MOVE NO_MOVE NO_MOVE
+TRAVELER
+    1
+        100 ZYGARDEC DRAGON_CLAW GLARE EXTREMESPEED THOUSANDARROWS
+        100 UNECROZMA FLASH_CANNON OUTRAGE EARTHQUAKE PHOTONGEYSER
+        100 MRAYQUAZA DRAGON_DANCE IRON_TAIL FIRE_BLAST DRAGONASCENT
+        100 EETERNATUS RECOVER GUNK_SHOT FLAMETHROWER ETERNABEAM
+        100 ARCEUS RECOVER SWORDS_DANCE WILL_O_WISP JUDGMENT
+    2
+        100 ZYGARDEC DRAGON_CLAW GLARE EXTREMESPEED THOUSANDARROWS
+        100 UNECROZMA FLASH_CANNON OUTRAGE EARTHQUAKE PHOTONGEYSER
+        100 MRAYQUAZA DRAGON_DANCE IRON_TAIL FIRE_BLAST DRAGONASCENT
+        100 EETERNATUS RECOVER GUNK_SHOT FLAMETHROWER ETERNABEAM
+        100 ARCEUS RECOVER SWORDS_DANCE WILL_O_WISP JUDGMENT
+        100 MMEWTWOX CLOSE_COMBAT STONE_EDGE LEECH_LIFE METEOR_MASH
+BF_TRAINER
+    1
+        1 MAGIKARP None None None None
+        1 MAGIKARP None None None None
+        1 MAGIKARP None None None None
+        1 MAGIKARP None None None None
+        1 MAGIKARP None None None None
+        1 MAGIKARP None None None None
+MISSINGNO_T
+    1
+        50 BLUESDAD None None None None
+        50 BLUESMOM None None None None
+        50 DAD None None None None
