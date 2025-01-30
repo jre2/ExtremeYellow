@@ -1,5 +1,8 @@
+import colorama
 from   pprint import pprint
 import re
+from   termcolor import colored, cprint
+colorama.just_fix_windows_console()
 
 # Data Layout
 # trainer_db :: TrainerClassID -> TrainerID -> { block_name:str, class:str, region:str, id:int, pkmn: [ (level, name, moves[4]) ] }
@@ -335,7 +338,39 @@ def generate_asm_from_human():
     save_parties_asm( 'data/trainers/parties_new.asm', db )
     save_special_moves_asm( 'data/trainers/special_moves_new.asm', db )
 
+def generate_diff():
+    def printmon( mon, columns_changed, color ):
+        # format like "  5 BULBASAUR TACKLE GROWL LEECHSEED None" but with fixed width spacing
+        DNE = '-'*35 + ' DNE ' + '-'*35
+        if mon is None:
+            return colored( DNE, color ) if any( columns_changed ) else DNE
+        values = [ f'{mon[0]:>3}', f'{mon[1]:<15}' ] + [ f'{str(mon[2][i]):<15}' for i in range(4) ]
+        colored_values = [ colored( val, color ) if columns_changed[i] else val for i, val in enumerate(values) ]
+        return ' '.join( val for val in colored_values )
+    asm = load_parties_asm( 'data/trainers/parties.asm' )
+    asm = load_special_moves_asm( 'data/trainers/special_moves.asm', asm )
+    hum = load_db_from_human( 'data/trainers/trainers.human' )
+
+    # We assume no changes to trainers themselves, so same classes and ids exist
+    for trainer_class in asm:
+        for trainer_id in asm[trainer_class]:
+            old = asm[trainer_class][trainer_id]
+            new = hum[trainer_class][trainer_id]
+            if old != new:
+                print( trainer_class, trainer_id )
+                if old['region'] != new['region']:
+                    cprint( f'  - {old["region"]}', 'red' )
+                    cprint( f'  + {new["region"]}', 'green' )
+                for pkmn_idx in range( 6 ):
+                    old_mon = old['pkmn'][ pkmn_idx ] if len(old['pkmn']) > pkmn_idx else None
+                    new_mon = new['pkmn'][ pkmn_idx ] if len(new['pkmn']) > pkmn_idx else None
+                    columns_changed = [ old_mon[i] != new_mon[i] for i in range(2) ] + [ old_mon[2][i] != new_mon[2][i] for i in range(4) ] if old_mon is not None and new_mon is not None else [True]*6
+                    if old_mon != new_mon:
+                        print( f'    - {printmon(old_mon, columns_changed, 'red')}' )
+                        print( f'    + {printmon(new_mon, columns_changed, 'green')}' )
+
 test_asm_serialization()
 test_human_serialization()
+generate_diff()
 #generate_human_from_asm()
 #pprint( load_db_from_human( 'data/trainers/trainers.human' )['YOUNGSTER'][1] )
