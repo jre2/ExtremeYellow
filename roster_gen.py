@@ -9,15 +9,14 @@ def load_constants_asm( path, def_keyword='const' ):
     enums = []
     for line in open( path ).read().split('\n'):
         active = line.split(';')[0].strip() # only look at uncommented part of the line
-        if active.startswith( def_keyword+' ' ): # only look at const definitions
-            enum = active.split()[1]
-            enums.append( enum )
-    return enums[1:] # first entry is always a sentinel for invalid value
+        m = re.match( fr'^{def_keyword}\s+(\w+)', active )
+        if m: enums.append( m.group(1).strip() )
+    return enums # first entry is always a sentinel for invalid value but we sometimes use it, so keep them in
 
 # Most enums we can parse from the code
 legal_move_ids = load_constants_asm( 'constants/move_constants.asm' )
-legal_pokemon_ids = load_constants_asm( 'constants/pokemon_constants.asm' )
-legal_trainer_class_ids = load_constants_asm( 'constants/trainer_constants.asm', 'trainer_const' )
+legal_pokemon_ids = load_constants_asm( 'constants/pokemon_constants.asm' )[1:]
+legal_trainer_class_ids = load_constants_asm( 'constants/trainer_constants.asm', 'trainer_const' )[1:]
 assert len(legal_move_ids) > 75, 'Too few moves'
 assert len(legal_pokemon_ids) > 150, 'Too few pokemon'
 assert len(legal_trainer_class_ids) > 30, 'Too few trainers'
@@ -192,8 +191,11 @@ def load_special_moves_asm( path, trainer_db ):
                 # Check that the optional pokemon id comment matches the pokemon id in the party data
                 assert cur_pokemon_id is None or cur_pokemon_id == db_pokemon_id, f'Move pokemon comment mismatch. {cur_pokemon_id} != {db_pokemon_id}. {entry_info}. DB {db_roster}'
                 
-                # Warn if the pokemon id comment is missing
+                # Require pokemon id comment
                 assert cur_pokemon_id is not None, f'Missing pokemon id comment. Lookup suggests {db_pokemon_id}. {entry_info}'
+
+                # Check that the move id is valid
+                assert move_id in legal_move_ids, f'Unknown move {move_id}. {entry_info}'
             
             # Actually update the trainer's database entry
             trainer_db[ cur_trainer_class ][ cur_trainer_id ]['pkmn'][pkmn_idx-1][2][move_idx-1] = move_id
@@ -257,8 +259,11 @@ def load_db_from_human( path ):
             pkmn_id = tpkmn.group(2)
             assert pkmn_id in legal_pokemon_ids, f'Unknown pokemon {pkmn_id}'
             pkmn_moves = [ tpkmn.group(i) for i in range(3,7) ]
-            pkmn_moves = [ move if move != 'None' else None for move in pkmn_moves ]
-            #TODO assert move ids
+            pkmn_moves = [ move if move != 'None' else None for move in pkmn_moves ] # unstringify 'None'
+            # Check that the moves are valid
+            for move_id in pkmn_moves:
+                if move_id is not None:
+                    assert move_id in legal_move_ids, f'Unknown move {move_id}'
             #print( 'PKMN', pkmn_lvl, pkmn_id, pkmn_moves )
             trainer_db[ trainer_class ][ trainer_id ]['pkmn'].append( [ pkmn_lvl, pkmn_id, pkmn_moves ] )
         else:
@@ -332,4 +337,5 @@ def generate_asm_from_human():
 
 test_asm_serialization()
 test_human_serialization()
-generate_human_from_asm()
+#generate_human_from_asm()
+#pprint( load_db_from_human( 'data/trainers/trainers.human' )['YOUNGSTER'][1] )
