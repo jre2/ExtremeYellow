@@ -141,7 +141,7 @@ def load_special_moves_asm( path, trainer_db ):
     cur_trainer_class = None
     cur_trainer_id = None
     cur_pokemon_id = None
-    for line in buf.split('\n'):
+    for lineno, line in enumerate( buf.split('\n') ):
         if line and line[0] == ';': continue # full line non-indented comments are disabled code
         line = line.strip()
         if not line: continue
@@ -203,7 +203,7 @@ def load_special_moves_asm( path, trainer_db ):
             # Actually update the trainer's database entry
             trainer_db[ cur_trainer_class ][ cur_trainer_id ]['pkmn'][pkmn_idx-1][2][move_idx-1] = move_id
         else:
-            raise ValueError( f'Bad line {line}' )
+            raise ValueError( f'Bad line #{lineno+1}: "{line}"' )
     return trainer_db
 
 def save_special_moves_asm( path, trainer_db ):
@@ -238,8 +238,8 @@ def load_db_from_human( path ):
     trainer_region = None
 
     buf = open( path ).read()
-    for line in buf.split('\n'):
-        if not line or line.startswith(';'): continue
+    for lineno, line in enumerate( buf.split('\n') ):
+        if not line.strip() or line.startswith(';'): continue
         tclass = re.match( r'^(\w+)$', line )
         tid = re.match( r'^\s*(\d+)\s*(?:;\s*(.*))?$', line )
         tpkmn = re.match( r'^\s*(\d+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)$', line ) # like "  5 BULBASAUR TACKLE GROWL LEECHSEED None"
@@ -270,7 +270,7 @@ def load_db_from_human( path ):
             #print( 'PKMN', pkmn_lvl, pkmn_id, pkmn_moves )
             trainer_db[ trainer_class ][ trainer_id ]['pkmn'].append( [ pkmn_lvl, pkmn_id, pkmn_moves ] )
         else:
-            raise ValueError( f'Bad line {line}' )
+            raise ValueError( f'Bad line #{lineno+1}: "{line}"' )
     return trainer_db
 
 def save_db_to_human( path, trainer_db, skip_repeat_region=True, indenter='    ' ):
@@ -335,8 +335,8 @@ def generate_human_from_asm():
 
 def generate_asm_from_human():
     db = load_db_from_human( 'data/trainers/trainers.human' )
-    save_parties_asm( 'data/trainers/parties_new.asm', db )
-    save_special_moves_asm( 'data/trainers/special_moves_new.asm', db )
+    save_parties_asm( 'data/trainers/parties.asm', db )
+    save_special_moves_asm( 'data/trainers/special_moves.asm', db )
 
 def generate_diff():
     def printmon( mon, columns_changed, color ):
