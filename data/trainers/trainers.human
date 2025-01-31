@@ -4,28 +4,28 @@
 
 YOUNGSTER
     1 ; Route 3
-        11 RATTATA HYPER_FANG QUICK_ATTACK BITE LEER
-        11 EKANS WRAP GLARE BITE POISON_STING
+        11 RATTATA HYPER_FANG None None None
+        11 EKANS WRAP GLARE None None
         11 CHARMANDER None None None None
     2
         12 SPEAROW None None None None
         12 MACHOP None None None None
-        15 PIDGEOTTO WING_ATTACK QUICK_ATTACK SAND_ATTACK None
+        15 PIDGEOTTO None None None None
     3 ; Mt. Moon 1F
-        10 ZUBAT None None None None
-        11 RATTATA HYPER_FANG QUICK_ATTACK BITE LEER
+        11 ZUBAT None None None None
+        11 RATTATA HYPER_FANG None None None
         11 CHARMANDER None None None None
-        11 RATTATA HYPER_FANG QUICK_ATTACK BITE LEER
+        11 RATTATA HYPER_FANG None None None
         11 DIGLETT None None None None
     4 ; Route 24
         16 CHARMANDER None None None None
         16 BULBASAUR None None None None
         16 SQUIRTLE None None None None
-        15 PIKACHU None None None None
-        15 NIDORAN_M None None None None
-        15 POLIWHIRL None None None None
+        16 PIKACHU None None None None
+        16 NIDORAN_M None None None None
+        16 POLIWHIRL None None None None
     5 ; Route 25
-        15 RATTATA HYPER_FANG QUICK_ATTACK BITE LEER
+        15 RATTATA HYPER_FANG None None None
         15 SPEAROW None None None None
         20 GROWLITHE None None None None
         21 POLIWAG HYPNOSIS BODY_SLAM BUBBLEBEAM None
@@ -34,21 +34,21 @@ YOUNGSTER
     7
         15 EKANS WRAP GLARE BITE POISON_STING
         16 SANDSHREW None None None None
-        19 MAGIKARP FLAIL TACKLE SPLASH None
+        19 MAGIKARP FLAIL None None None
         16 PIKACHU None None None None
         18 MEOWTH None None None None
         20 PIDGEOTTO None None None None
     8 ; SS Anne 1F Rooms
-        23 IVYSAUR None None None None
-        22 SEADRA None None None None
-        22 GEODUDE None None None None
-        22 GOLDEEN None None None None
-        27 LICKITUNG None None None None
+        24 IVYSAUR None None None None
+        24 SEADRA None None None None
+        24 GEODUDE None None None None
+        24 GOLDEEN None None None None
+        24 LICKITUNG None None None None
     9 ; Route 11
         21 EKANS WRAP GLARE ACID TOXIC
-        20 PIDGEOTTO None None None None
+        21 PIDGEOTTO None None None None
         21 GEODUDE None None None None
-        24 RATICATE HYPER_FANG BITE DIG HYPER_BEAM
+        21 RATICATE HYPER_FANG DIG HYPER_BEAM None
     10
         19 SANDSHREW None None None None
         24 SLOWPOKE None None None None
@@ -57,29 +57,28 @@ YOUNGSTER
         25 GOLBAT HYPNOSIS MEGA_DRAIN AIR_CUTTER SUBSTITUTE
         22 KRABBY METAL_CLAW BUBBLEBEAM SWORDS_DANCE DIG
     11
-        21 RATTATA HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
-        23 NIDOKING LOVELY_KISS EARTHQUAKE BLIZZARD THUNDERBOLT
-        24 HITMONCHAN None None None None
-        21 RATICATE HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
+        22 RATTATA HYPER_FANG TAKE_DOWN None None
+        22 NIDOKING LOVELY_KISS EARTHQUAKE BLIZZARD THUNDERBOLT
+        22 HITMONCHAN None None None None
+        22 RATTATA HYPER_FANG TAKE_DOWN None None
         22 JOLTEON None None None None
     12
-        21 FARFETCHD None None None None
-        21 RATICATE HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
-        24 HITMONLEE None None None None
-        23 NIDOKING LOVELY_KISS EARTHQUAKE BLIZZARD THUNDERBOLT
+        22 FARFETCHD None None None None
+        22 RATICATE HYPER_FANG TAKE_DOWN None None
+        22 HITMONLEE None None None None
+        22 NIDOKING LOVELY_KISS EARTHQUAKE BLIZZARD THUNDERBOLT
         22 UMBREON None None None None
     13 ; Unused
         17 SPEAROW None None None None
-        17 RATTATA HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
-        17 RATTATA HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
+        17 RATTATA None None None None
         17 SPEAROW None None None None
     14 ; Route 9
         19 RATTATA HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
         19 RATTATA HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
         19 RATTATA HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
-        20 BEEDRILL None None None None
-        20 BUTTERFREE None None None None
-        21 SANDSHREW SLASH DIG DEFENSE_CURL FISSURE
+        19 BEEDRILL None None None None
+        19 BUTTERFREE None None None None
+        19 SANDSHREW SLASH DIG DEFENSE_CURL FISSURE
     15 ; Obsidian Wood
         35 FEAROW None None None None
         35 RATICATE None None None None
@@ -89,9 +88,9 @@ YOUNGSTER
 BUG_CATCHER
     1 ; Viridian Forest
         7 WEEDLE None None None None
-        6 CATERPIE None None None None
-        7 PIDGEY PECK GUST SAND_ATTACK None
-        4 RATTATA None None None None
+        7 CATERPIE None None None None
+        7 PIDGEY PECK None None None
+        7 RATTATA None None None None
     2
         8 KAKUNA POISON_STING HARDEN None None
         8 VENONAT TOXIC PSYBEAM STUN_SPORE None
@@ -103,16 +102,16 @@ BUG_CATCHER
         12 VENONAT TOXIC PSYBEAM STUN_SPORE None
         12 PARAS LEECH_LIFE TOXIC MEGA_DRAIN STUN_SPORE
         12 GEODUDE ROCK_THROW MUD_SLAP None None
-        13 BEEDRILL TWINEEDLE None None None
-        13 BEEDRILL TWINEEDLE None None None
-        13 BUTTERFREE PSYBEAM SLEEP_POWDER STUN_SPORE HARDEN
+        12 BEEDRILL TWINEEDLE None None None
+        12 BEEDRILL TWINEEDLE None None None
+        12 BUTTERFREE PSYBEAM SLEEP_POWDER STUN_SPORE HARDEN
     5
-        11 VENONAT TOXIC PSYBEAM STUN_SPORE None
+        12 VENONAT TOXIC PSYBEAM STUN_SPORE None
         12 PINSIR None None None None
         12 PARAS LEECH_LIFE TOXIC MEGA_DRAIN STUN_SPORE
         12 PIKACHU None None None None
         12 BUTTERFREE PSYBEAM SLEEP_POWDER STUN_SPORE HARDEN
-        13 BEEDRILL TWINEEDLE None None None
+        12 BEEDRILL TWINEEDLE None None None
     6
         10 PIKACHU None None None None
         11 BULBASAUR None None None None
@@ -120,7 +119,7 @@ BUG_CATCHER
         15 BUTTERFREE PSYBEAM SLEEP_POWDER STUN_SPORE HARDEN
     7 ; Mt. Moon 1F
         16 VENONAT TOXIC PSYBEAM STUN_SPORE None
-        13 PIKACHU None None None None
+        16 PIKACHU None None None None
         16 BEEDRILL TWINEEDLE None None None
     8
         16 PARAS LEECH_LIFE TOXIC MEGA_DRAIN STUN_SPORE
@@ -128,18 +127,18 @@ BUG_CATCHER
         9 KAKUNA POISON_STING HARDEN None None
         16 BUTTERFREE PSYBEAM SLEEP_POWDER STUN_SPORE HARDEN
     9 ; Route 24 (Nugget Bridge)
-        14 BUTTERFREE None None None None
-        14 BEEDRILL None None None None
+        16 BUTTERFREE None None None None
+        16 BEEDRILL None None None None
         16 IVYSAUR None None None None
-        18 PINSIR None None None None
-        18 SCYTHER None None None None
+        16 PINSIR None None None None
+        16 SCYTHER None None None None
     10 ; Route 6
         20 BEEDRILL None None None None
         20 BUTTERFREE None None None None
-        19 GOLDEEN None None None None
-        22 PARASECT None None None None
+        20 GOLDEEN None None None None
+        20 PARASECT None None None None
         20 BEEDRILL None None None None
-        21 BELLSPROUT None None None None
+        20 BELLSPROUT None None None None
     11
         20 BUTTERFREE None None None None
         20 WEEDLE None None None None
@@ -160,7 +159,7 @@ BUG_CATCHER
     15 ; Viridian Forest
         7 METAPOD POISON_STING HARDEN TACKLE None
         7 PINSIR TACKLE WRAP FURY_ATTACK CUT
-        5 PIDGEY PECK None None None
+        7 PIDGEY PECK None None None
         7 METAPOD POISON_STING HARDEN TACKLE None
     16 ; Ochre Gym ; new
         43 SCIZOR None None None None
@@ -178,17 +177,17 @@ BUG_CATCHER
         55 BEEDRILL None None None None
 LASS
     1 ; Route 3
-        9 PIDGEY None None None None
-        9 PIDGEY None None None None
-        9 SPEAROW None None None None
+        10 PIDGEY None None None None
+        10 PIDGEY None None None None
+        10 SPEAROW None None None None
         10 PIKACHU None None None None
         10 NIDORAN_F DOUBLE_KICK BITE TOXIC None
     2
-        10 VULPIX None None None None
-        12 SQUIRTLE None None None None
+        13 VULPIX None None None None
+        13 SQUIRTLE None None None None
         13 GROWLITHE None None None None
         13 NIDORAN_M TOXIC DIG HORN_ATTACK DOUBLE_KICK
-        14 SPEAROW PECK FURY_ATTACK LEER GROWL
+        13 SPEAROW PECK FURY_ATTACK None None
     3
         17 JIGGLYPUFF SING DOUBLE_EDGE REST WATER_GUN
     4 ; Route 4 ; unused
@@ -201,11 +200,11 @@ LASS
         14 GOLDEEN PECK WATERFALL SUPERSONIC None
         16 HORSEA TOXIC BUBBLEBEAM SMOKESCREEN None
     6
-        15 CLEFAIRY SING METRONOME MINIMIZE None
-        17 CLEFAIRY SING METRONOME None None
+        16 CLEFAIRY SING METRONOME MINIMIZE None
+        16 CLEFAIRY SING METRONOME None None
     7 ; Route 24
-        16 PIDGEY None None None None
-        16 NIDORAN_F None None None None
+        18 PIDGEY None None None None
+        18 NIDORAN_F None None None None
         18 ODDISH SLEEP_POWDER RAZOR_LEAF MEGA_DRAIN STUN_SPORE
         18 NIDORINO TOXIC HORN_ATTACK DIG DOUBLE_KICK
     8
@@ -215,28 +214,28 @@ LASS
         18 NIDORINA TOXIC DIG BITE DOUBLE_KICK
         18 STARYU WATER_GUN BUBBLEBEAM LIGHT_SCREEN DOUBLE_EDGE
     9 ; Route 25
-        15 PIKACHU None None None None
-        18 VULPIX None None None None
-        15 NIDORAN_M None None None None
-        18 BELLSPROUT SLEEP_POWDER MEGA_DRAIN DOUBLE_EDGE BODY_SLAM
-        15 NIDORAN_F None None None None
-        18 WARTORTLE None None None None
+        17 PIKACHU None None None None
+        17 VULPIX None None None None
+        17 NIDORAN_M None None None None
+        17 BELLSPROUT SLEEP_POWDER MEGA_DRAIN DOUBLE_EDGE BODY_SLAM
+        17 NIDORAN_F None None None None
+        17 WARTORTLE None None None None
     10
-        16 ODDISH None None None None
-        20 WARTORTLE SURF DIG BODY_SLAM HAZE
+        20 ODDISH None None None None
+        20 WARTORTLE SURF DIG BODY_SLAM None
         20 CHARMELEON None None None None
-        22 RAICHU SLAM THUNDER_WAVE THUNDERSHOCK DOUBLE_TEAM
-        17 FARFETCHD None None None None
+        20 RAICHU SLAM THUNDER_WAVE THUNDERSHOCK DOUBLE_TEAM
+        20 FARFETCHD None None None None
         20 IVYSAUR None None None None
     11 ; SS Anne 1F Rooms
         24 PIDGEOTTO None None None None
         24 NIDORAN_F None None None None
-        26 FLAREON None None None None
-        25 KABUTO None None None None
+        24 FLAREON None None None None
+        24 KABUTO None None None None
     12 ; SS Anne 2F Rooms
         25 JIGGLYPUFF None None None None
-        24 VULPIX None None None None
-        24 PIKACHU THUNDERBOLT THUNDER_WAVE HEADBUTT SURF
+        25 VULPIX None None None None
+        25 PIKACHU THUNDERBOLT THUNDER_WAVE SURF None
         25 SEEL None None None None
     13 ; Route 8
         23 NIDORAN_F None None None None
@@ -247,7 +246,7 @@ LASS
         24 MEOWTH None None None None
     15
         19 PIDGEOTTO None None None None
-        19 RATTATA HYPER_FANG QUICK_ATTACK BITE TAKE_DOWN
+        19 RATTATA None None None None
         19 NIDORAN_F None None None None
         19 MEOWTH None None None None
         19 NIDORAN_M None None None None
@@ -264,10 +263,10 @@ LASS
         26 VILEPLUME None None None None
         26 BELLOSSOM None None None None
     19 ; Viridian Forest
-        6 SQUIRTLE BUBBLE BITE LEER BIDE
+        7 SQUIRTLE BUBBLE None None None
         7 VULPIX EMBER CONFUSE_RAY QUICK_ATTACK DISABLE
-        6 NIDORAN_F TOXIC SCRATCH FURY_SWIPES None
-        6 PICHU THUNDERSHOCK CHARM THUNDER_WAVE None
+        7 NIDORAN_F TOXIC FURY_SWIPES None None
+        7 PICHU THUNDERSHOCK CHARM THUNDER_WAVE None
         7 NIDORAN_M TOXIC DOUBLE_KICK BITE DIG
         
 SAILOR
@@ -275,62 +274,62 @@ SAILOR
         23 MACHOP None None None None
         23 SHELLDER None None None None
         23 SPEAROW None None None None
-        22 TENTACOOL None None None None
-    2
-        22 MACHOP None None None None
-        25 GYARADOS BITE THUNDERBOLT BUBBLEBEAM WRAP
-        27 DRAGONAIR None None None None
-    3 ; SS Anne B1F Rooms
-        21 SHELLDER None None None None
-        21 JYNX None None None None
-        24 TANGELA None None None None
-        27 DRATINI None None None None
-    4
-        22 HORSEA None None None None
-        23 SHELLDER None None None None
-        24 TANGELA None None None None
         23 TENTACOOL None None None None
-        24 SEEL AURORA_BEAM BUBBLEBEAM REST HEADBUTT
+    2
+        25 MACHOP None None None None
+        25 GYARADOS BITE THUNDERBOLT BUBBLEBEAM None
+        25 DRAGONAIR None None None None
+    3 ; SS Anne B1F Rooms
+        23 SHELLDER None None None None
+        23 JYNX None None None None
+        23 TANGELA None None None None
+        23 DRATINI None None None None
+    4
+        23 HORSEA None None None None
+        23 SHELLDER None None None None
+        23 TANGELA None None None None
+        23 TENTACOOL None None None None
+        23 SEEL AURORA_BEAM BUBBLEBEAM REST HEADBUTT
     5
         24 WARTORTLE DIG BUBBLEBEAM None None
-        23 TENTACOOL None None None None
+        24 TENTACOOL None None None None
         24 STARYU None None None None
-        27 DRAGONAIR None None None None
+        24 DRAGONAIR None None None None
     6
         24 HORSEA None None None None
         24 CLOYSTER None None None None
         24 TENTACOOL None None None None
         24 TANGELA None None None None
         24 WARTORTLE DIG BUBBLEBEAM None None
-        26 DEWGONG ICE_BEAM SURF HORN_DRILL BODY_SLAM
+        24 DEWGONG ICE_BEAM SURF HORN_DRILL None
     7
-        23 DRATINI None None None None
+        26 DRATINI None None None None
         26 MACHOKE KARATE_CHOP SUBMISSION LOW_KICK None
         26 SEEL AURORA_BEAM BUBBLEBEAM REST HEADBUTT
     8 ; Vermilion Gym
         26 ELEKID None None None None
         26 PIKACHU None None None None
-        27 POLIWRATH LOVELY_KISS EARTHQUAKE ICE_BEAM BLIZZARD
+        26 POLIWRATH LOVELY_KISS EARTHQUAKE ICE_BEAM BLIZZARD
         26 PIKACHU THUNDERBOLT THUNDER_WAVE THUNDERPUNCH HEADBUTT
         26 RAICHU None None None None
 JR_TRAINER
     1 ; Cerulean Gym
         19 GOLDEEN None None None None
-        19 KRABBY CRABHAMMER GUILLOTINE METAL_CLAW BUBBLEBEAM
+        19 KRABBY CRABHAMMER GUILLOTINE METAL_CLAW None
         19 PSYDUCK None None None None
-        24 SEADRA TOXIC DRAGON_RAGE None None
+        19 SEADRA TOXIC DRAGON_RAGE None None
     2 ; Route 6
         21 ODDISH None None None None
         21 CUBONE None None None None
         21 BELLSPROUT None None None None
         21 VAPOREON None None None None
-        23 FLAREON None None None None
-        20 ZUBAT None None None None
+        21 FLAREON None None None None
+        21 ZUBAT None None None None
     3
-        19 PIDGEOTTO None None None None
-        23 RATICATE HYPER_BEAM SUPER_FANG DIG BODY_SLAM
+        21 PIDGEOTTO None None None None
+        21 RATICATE HYPER_BEAM DIG None None
         21 TANGELA None None None None
-        23 NIDOKING LOVELY_KISS EARTHQUAKE BLIZZARD THUNDERBOLT
+        21 NIDOKING LOVELY_KISS EARTHQUAKE BLIZZARD THUNDERBOLT
     4 ; Unused
         22 BULBASAUR None None None None
     5 ; Route 9
@@ -361,7 +360,7 @@ JR_TRAINER
     12 ; Route 13
         24 PIDGEOTTO None None None None
         24 MEOWTH None None None None
-        24 RATTATA HYPER_FANG QUICK_ATTACK BITE SUPER_FANG
+        24 RATTATA None None None None
         24 PIDGEOTTO None None None None
         24 MEOWTH None None None None
     13
@@ -388,7 +387,7 @@ JR_TRAINER
         20 PIDGEOTTO None None None None
     19
         19 PIDGEOTTO None None None None
-        19 RATTATA HYPER_FANG QUICK_ATTACK BITE SUPER_FANG
+        19 RATTATA None None None None
         19 RATICATE None None None None
         19 BELLSPROUT None None None None
     20 ; Route 15
@@ -409,35 +408,35 @@ JR_TRAINER
         40 SEADRA None None None None
         40 DEWGONG None None None None
     25 ; Route 6
-        21 WIGGLYTUFF None None None None
-        25 CHARMELEON None None None None
-        21 GOLDUCK HYPNOSIS PSYCHIC_M BODY_SLAM WATERFALL
+        22 WIGGLYTUFF None None None None
+        22 CHARMELEON None None None None
+        22 GOLDUCK HYPNOSIS PSYCHIC_M BODY_SLAM SURF
         22 PONYTA None None None None
         22 SEEL None None None None
     26 ; Pewter Gym
-        8 DIGLETT SCRATCH GROWL BIDE None
-        8 GEODUDE TACKLE BIDE DEFENSE_CURL None
-        8 ONIX TACKLE BIDE DEFENSE_CURL None
+        8 DIGLETT SCRATCH BIDE None None
+        8 GEODUDE TACKLE BIDE None None
+        8 ONIX TACKLE BIDE None None
     27 ; Route 24/Route 25
-        14 RATTATA HYPER_FANG QUICK_ATTACK BITE LEER
+        14 RATTATA HYPER_FANG QUICK_ATTACK BITE None
         14 EKANS WRAP GLARE ACID BITE
-        20 GOLDUCK HYPNOSIS PSYCHIC_M BODY_SLAM WATERFALL
+        20 GOLDUCK HYPNOSIS PSYCHIC_M BODY_SLAM SURF
     28 ; Route 24
-        18 MACHOP None None None None
-        18 ELECTRODE None None None None
-        22 MANKEY None None None None
+        19 MACHOP None None None None
+        19 ELECTRODE None None None None
+        19 MANKEY None None None None
         19 CUBONE None None None None
     29 ; Route 6
-        21 MEOWTH None None None None
-        25 WARTORTLE None None None None
-        22 PIKACHU None None None None
-        21 JIGGLYPUFF None None None None
-        25 ELEKID None None None None
+        23 MEOWTH None None None None
+        23 WARTORTLE None None None None
+        23 PIKACHU None None None None
+        23 JIGGLYPUFF None None None None
+        23 ELEKID None None None None
     30
         23 SPEAROW None None None None
-        24 DITTO None None None None
-        21 MEOWTH None None None None
-        26 RATICATE None None None None
+        23 DITTO None None None None
+        23 MEOWTH None None None None
+        23 RATICATE None None None None
     31 ; Unused
         18 DIGLETT None None None None
         18 DIGLETT None None None None
@@ -446,7 +445,7 @@ JR_TRAINER
         21 GROWLITHE None None None None
         21 CHARMANDER None None None None
     33
-        19 RATTATA HYPER_FANG QUICK_ATTACK BITE SUPER_FANG
+        19 RATTATA HYPER_FANG None None None
         19 DIGLETT None None None None
         19 EKANS WRAP GLARE ACID TOXIC
         19 SANDSHREW None None None None
@@ -502,47 +501,47 @@ POKEMANIAC
         33 DITTO None None None None
 SUPER_NERD
     1 ; Mt. Moon 1F
-        11 MAGNEMITE None None None None
-        11 VOLTORB None None None None
+        14 MAGNEMITE None None None None
+        14 VOLTORB None None None None
         14 DITTO None None None None
-        15 GEODUDE SELFDESTRUCT None None None
-        17 KOFFING EXPLOSION SLUDGE TOXIC SMOKESCREEN
+        14 GEODUDE SELFDESTRUCT None None None
+        14 KOFFING EXPLOSION SLUDGE TOXIC SMOKESCREEN
     2 ; Mt. Moon B2F
-        15 GRIMER None None None None
-        15 KOFFING None None None None
-        15 DITTO None None None None
-        18 VOLTORB EXPLOSION SELFDESTRUCT THUNDER_WAVE SONICBOOM
-        18 SHELLDER EXPLOSION CLAMP AURORA_BEAM SUPERSONIC
-        18 EXEGGCUTE EXPLOSION HYPNOSIS PSYBEAM STUN_SPORE
+        16 GRIMER None None None None
+        16 KOFFING None None None None
+        16 DITTO None None None None
+        16 VOLTORB EXPLOSION THUNDER_WAVE None None
+        16 SHELLDER EXPLOSION CLAMP AURORA_BEAM SUPERSONIC
+        16 EXEGGCUTE EXPLOSION HYPNOSIS PSYBEAM None
     3 ; Route 8
         20 VOLTORB None None None None
         20 KOFFING None None None None
-        21 DITTO None None None None
+        20 DITTO None None None None
         20 VOLTORB None None None None
         20 MAGNEMITE None None None None
     4
         22 GRIMER None None None None
         22 MUK None None None None
-        23 DITTO None None None None
+        22 DITTO None None None None
         22 GRIMER None None None None
     5
-        27 DITTO None None None None
+        26 DITTO None None None None
         26 KOFFING None None None None
     6 ; Unused
         22 KOFFING None None None None
-        23 DITTO None None None None
+        22 DITTO None None None None
         22 MAGNEMITE None None None None
         22 WEEZING None None None None
     7
-        22 DITTO None None None None
+        20 DITTO None None None None
         20 MAGNEMITE None None None None
         20 MAGNEMITE None None None None
-        22 DITTO None None None None
+        20 DITTO None None None None
         20 KOFFING None None None None
         20 MAGNEMITE None None None None
     8
         24 MAGNEMITE None None None None
-        26 DITTO None None None None
+        24 DITTO None None None None
         24 VOLTORB None None None None
     9 ; Cinnabar Gym
         47 RAPIDASH None None None None
@@ -574,22 +573,22 @@ HIKER
         43 MACHAMP None None None None
         43 DUGTRIO None None None None
     2 ; Route 25
-        15 MACHOP None None None None
-        15 GEODUDE None None None None
-        19 RHYHORN None None None None
-        19 WIGGLYTUFF THUNDER_WAVE PSYCHIC_M BLIZZARD DOUBLE_EDGE
+        17 MACHOP None None None None
+        17 GEODUDE None None None None
+        17 RHYHORN None None None None
+        17 WIGGLYTUFF THUNDER_WAVE PSYCHIC_M BLIZZARD DOUBLE_EDGE
     3
-        15 GEODUDE EXPLOSION SELFDESTRUCT ROCK_THROW DIG
-        16 GEODUDE EXPLOSION SELFDESTRUCT ROCK_THROW DIG
-        21 SEEL AURORA_BEAM HEADBUTT REST BUBBLEBEAM
-        18 MACHOP None None None None
-        17 GEODUDE EXPLOSION SELFDESTRUCT ROCK_THROW DIG
+        17 GEODUDE SELFDESTRUCT ROCK_THROW DIG None
+        17 GEODUDE EXPLOSION ROCK_THROW DIG None
+        17 SEEL AURORA_BEAM HEADBUTT REST BUBBLEBEAM
+        17 MACHOP None None None None
+        17 GEODUDE EXPLOSION ROCK_THROW DIG None
     4
-        18 GEODUDE EXPLOSION SELFDESTRUCT ROCK_THROW DIG
+        19 GEODUDE EXPLOSION ROCK_THROW DIG None
         19 FARFETCHD None None None None
-        20 MAGNEMITE THUNDER_WAVE THUNDERSHOCK LIGHT_SCREEN EXPLOSION
-        20 SANDSHREW SLASH DIG SAND_ATTACK None
-        23 ONIX EARTHQUAKE ROCK_SLIDE DIG None
+        19 MAGNEMITE THUNDER_WAVE THUNDERSHOCK LIGHT_SCREEN EXPLOSION
+        19 SANDSHREW SLASH DIG None None
+        19 ONIX EARTHQUAKE ROCK_SLIDE DIG None
     5 ; Route 9
         21 GEODUDE None None None None
         21 ONIX None None None None
@@ -739,11 +738,11 @@ FISHER
         23 GOLDEEN None None None None
         23 TENTACOOL None None None None
         23 GOLDEEN None None None None
-        24 DRAGONAIR None None None None
+        23 DRAGONAIR None None None None
     2 ; SS Anne B1F Rooms
         24 TENTACOOL None None None None
         24 STARYU None None None None
-        25 CLEFABLE None None None None
+        24 CLEFABLE None None None None
         24 SHELLDER None None None None
     3 ; Route 12
         22 GOLDEEN None None None None
@@ -789,11 +788,11 @@ FISHER
         43 GYARADOS None None None None
 SWIMMER
     1 ; Cerulean Gym
-        16 HORSEA None None None None
-        23 SEAKING HORN_ATTACK BUBBLEBEAM None None
-        16 SHELLDER None None None None
-        23 KINGLER CRABHAMMER GUILLOTINE METAL_CLAW BUBBLEBEAM
-        16 SEEL None None None None
+        19 HORSEA None None None None
+        19 SEAKING HORN_ATTACK BUBBLEBEAM None None
+        19 SHELLDER None None None None
+        19 KINGLER CRABHAMMER GUILLOTINE METAL_CLAW BUBBLEBEAM
+        19 SEEL None None None None
     2 ; Route 19 ; updated
         42 TENTACRUEL None None None None
         42 CLOYSTER None None None None
@@ -892,24 +891,24 @@ CUE_BALL
         40 TENTACRUEL None None None None
 GAMBLER
     1 ; Route 11
-        21 POLIWAG None None None None
-        21 HORSEA None None None None
-        24 DEWGONG HORN_DRILL ICE_BEAM SURF BODY_SLAM
-        25 RAPIDASH HORN_ATTACK FIRE_BLAST None None
+        23 POLIWAG None None None None
+        23 HORSEA None None None None
+        23 DEWGONG HORN_DRILL ICE_BEAM SURF None
+        23 RAPIDASH HORN_ATTACK FIRE_BLAST None None
     2
-        21 GEODUDE EXPLOSION SELFDESTRUCT ROCK_THROW DIG
+        24 GEODUDE EXPLOSION ROCK_THROW DIG None
         24 ARBOK FISSURE WRAP GLARE None
-        25 RAPIDASH HORN_ATTACK FIRE_BLAST None None
+        24 RAPIDASH HORN_ATTACK FIRE_BLAST None None
         24 SEAKING HORN_ATTACK BUBBLEBEAM None None
-        25 PINSIR GUILLOTINE WRAP BODY_SLAM None
+        24 PINSIR GUILLOTINE WRAP BODY_SLAM None
     3
         24 VOLTORB EXPLOSION THUNDERBOLT THUNDER_WAVE None
         24 MAGNEMITE EXPLOSION THUNDERBOLT THUNDER_WAVE HEADBUTT
-        25 DIGLETT None None None None
-        25 RAPIDASH HORN_ATTACK FIRE_BLAST None None
+        24 DIGLETT None None None None
+        24 RAPIDASH HORN_ATTACK FIRE_BLAST None None
     4
         25 GROWLITHE None None None None
-        26 DITTO None None None None
+        25 DITTO None None None None
         25 VULPIX None None None None
     5 ; Route 8
         22 POLIWAG None None None None
@@ -1012,7 +1011,7 @@ ROCKER
         23 ELEKID None None None None
         23 VOLTORB None None None None
         23 VOLTORB None None None None
-        23 VOLTORB EXPLOSION SELFDESTRUCT THUNDERSHOCK THUNDER_WAVE
+        23 VOLTORB EXPLOSION THUNDERSHOCK THUNDER_WAVE None
         23 ELECTRODE None None None None
     2 ; Route 12
         29 VOLTORB None None None None
@@ -1029,17 +1028,17 @@ ENGINEER
         45 MAGNEZONE None None None None
         45 STEELIX None None None None
         45 SCIZOR None None None None
-        46 PORYGON CONVERSION RECOVER PSYBEAM BLIZZARD
+        45 PORYGON CONVERSION RECOVER PSYBEAM BLIZZARD
     2 ; Route 11
-        24 ELECTRODE EXPLOSION THUNDERBOLT THUNDER_WAVE None
-        26 PORYGON CONVERSION RECOVER PSYBEAM BLIZZARD
+        25 ELECTRODE EXPLOSION THUNDERBOLT THUNDER_WAVE None
+        25 PORYGON CONVERSION RECOVER PSYBEAM BLIZZARD
         25 MAGNEMITE THUNDERBOLT THUNDER_WAVE DOUBLE_TEAM DOUBLE_EDGE
-        24 SLOWBRO AMNESIA PSYBEAM REST SURF
+        25 SLOWBRO AMNESIA PSYBEAM REST SURF
     3
-        24 VOLTORB EXPLOSION THUNDERBOLT THUNDER_WAVE SELFDESTRUCT
-        23 MAGNEMITE None None None None
-        26 PORYGON CONVERSION RECOVER PSYBEAM BLIZZARD
-        28 MAGNETON THUNDERBOLT THUNDER_WAVE DOUBLE_TEAM DOUBLE_EDGE
+        24 VOLTORB EXPLOSION THUNDERBOLT THUNDER_WAVE None
+        24 MAGNEMITE None None None None
+        24 PORYGON CONVERSION RECOVER PSYBEAM BLIZZARD
+        24 MAGNETON THUNDERBOLT THUNDER_WAVE DOUBLE_TEAM DOUBLE_EDGE
     4 ; Route 27 ; new
         43 MAGNEZONE None None None None
         43 SCIZOR None None None None
@@ -1413,12 +1412,12 @@ ROCKET
         13 ZUBAT None None None None
         15 ABRA CONFUSION REFLECT None None
         15 DRATINI WRAP THUNDER_WAVE DRAGON_RAGE None
-        13 RATTATA HYPER_FANG QUICK_ATTACK BITE LEER
+        13 RATTATA HYPER_FANG QUICK_ATTACK BITE None
         16 ARBOK WRAP GLARE None None
     2
         17 DROWZEE HYPNOSIS TOXIC THUNDER_WAVE CONFUSION
         13 SANDSHREW None None None None
-        14 RATTATA HYPER_FANG QUICK_ATTACK BITE LEER
+        14 RATTATA HYPER_FANG QUICK_ATTACK BITE None
         17 GOLBAT HYPNOSIS MEGA_DRAIN CONFUSE_RAY WING_ATTACK
     3
         12 ZUBAT None None None None
@@ -1591,7 +1590,7 @@ ROCKET
     46 ; Jessie & James ; updated
         14 EKANS WRAP POISON_STING BITE GLARE
         14 KOFFING TACKLE SMOG SMOKESCREEN INFESTATION
-        14 MEOWTH SCRATCH LEER DEFENSE_CURL BITE
+        14 MEOWTH None None None None
     47
         25 ARBOK GLARE SCREECH ACID WRAP
         25 WEEZING SMOKESCREEN HEADBUTT SLUDGE INFESTATION
