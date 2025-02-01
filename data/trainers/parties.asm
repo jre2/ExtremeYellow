@@ -1012,4 +1012,3 @@ BFTrainerData:
 MissingNoTData:
 	db 50, BLUESDAD, BLUESMOM, DAD, 0 ; new
 ;	db 1, DAD, 0 ; for testing
-:q!
