@@ -1,49 +1,5 @@
 #!/bin/bash
 
-naive_rule() {
-    find . -type f -path "./$1" -exec sh -c 'diff -u "$0" <(sed -E "$1" "$0")' {} "$2" \;
-}
-debug_rule() {
-    echo "🔍Searching $1"
-    found_files=$(find . -type f -path "./$1")
-
-    if [[ -z "$found_files" ]]; then
-        echo "⚠️ No files found for pattern: $1"
-        return
-    fi
-
-    echo "📄Found"
-    echo "$found_files"
-
-    for file in $found_files; do
-        echo "✏️Matching in $file"
-
-        # Extract move name or match pattern from sed substitution
-        if [[ "$2" =~ ^s/ ]]; then
-            match_word=$(echo "$2" | sed -E 's/^s\/\(([^,]+),.*\).*$/\1/')
-        elif [[ "$2" =~ ^/ ]]; then
-            match_word=$(echo "$2" | sed -E 's/^\/([^\/]+)\/.*/\1/')
-        else
-            match_word=$2
-        fi
-
-        if [[ -z "$match_word" || "$match_word" == "$2" ]]; then
-            echo "⚠️ Could not extract a valid match pattern from: $2"
-            continue
-        fi
-
-        match_count=$(grep -Ec "$match_word" "$file")
-
-        if [[ "$match_count" -eq 0 ]]; then
-            echo "❌ No matching lines found for move: $match_word in $file"
-            continue
-        fi
-
-        echo "✅Matched $match_count lines for $match_word"
-        diff -u "$file" <(sed -E "$2" "$file")
-    done
-}
-
 DRY_RUN=true
 [[ "$1" == "--not-dry" ]] && DRY_RUN=false
 
@@ -52,26 +8,64 @@ apply() {
     for file in "${!RULES[@]}"; do
         [[ -f "$file" ]] || { echo "⚠️ File not found: $file"; continue; }
         if $DRY_RUN; then
-            diff -u "$file" <(echo -e "${RULES[$file]}" | sed -E -f - "$file")
+            diff --color=auto -u "$file" <(echo -e "${RULES[$file]}" | sed -E -f - "$file")
         else
             echo "not dry run logic here"
             #echo -e "${RULES[$file]}" | sed -E -f - -i "$file"
         fi
     done
 }
-rule() { RULES["$1"]+="$2"$'\n'; }
+rule() {
+    #a. simple system with no wildcard support
+    #RULES["$1"]+="$2"$'\n';
+    #b. wildcard version with blacklist for preExcel dir
+    local files
+    mapfile -t files < <(find . -type f -path "./$1" 2>/dev/null | grep -v "preExcel")
+    for file in "${files[@]}"; do
+        RULES["$file"]+="$2"$'\n';
+    done
+}
+rule_move() { rule "moves/moves.asm" "$1"; }
+rule_mon() { rule "pokemon/base_stats/$1.asm" "$2"; }
 
-# ✅ Use `/MATCH/s/OLD/NEW/g` when it's safe to replace all occurrences in the line
-rule "moves/moves.asm" "/STRUGGLE/s/TYPELESS/NO_TYPE/g"
+# Usage: run with --not-dry to actually execute instead of geting a unified diff
+    # ✅ Use `/MATCH/s/OLD/NEW/g` when it's safe to replace all occurrences in the line
+    #rule "moves/moves.asm" "/STRUGGLE/s/TYPELESS/NO_TYPE/g"
+    # ✅ Use direct substitution otherwise (eg. move name includes type to change)
+    #rule_move "s/(STEEL_WING,.*)STEEL/\1FLYING/"
 
-# ✅ Use direct substitution for unique type changes
-rule "moves/moves.asm" "s/(PAY_DAY,.*)NORMAL/\1POISON/"
-rule "moves/moves.asm" "s/(BITE,.*)DARK/\1NORMAL/"
+if true; then
+# FAIRY
+rule_move "/DRAININGKISS/s/FAIRY/GHOST/g"
+rule_move "/PLAY_ROUGH/s/FAIRY/DRAGON/g"
+rule_move "/MOONBLAST/s/FAIRY/PSYCHIC_TYPE/g"
+rule_move "/CHARM/s/FAIRY/NORMAL/g"
+# DARK
+rule_move "/BITE|CRUNCH/s/DARK/NORMAL/g"
+rule_move "/FEINT_ATTACK/s/DARK/BUG/g"
+rule_move "/NIGHT_SLASH/s/DARK/GHOST/g"
+#rule_move "/DARK_PULSE/s/DARK/GHOST/g"
+rule_move "s/(DARK_PULSE,.*)DARK/\1GHOST/"
+# STEEL
+rule_move "/IRON_TAIL/s/STEEL/NORMAL/g"
+rule_move "/METAL_CLAW|METEOR_MASH/s/STEEL/ROCK/g"
+rule_move "/BULLET_PUNCH/s/STEEL/ELECTRIC/g"
+rule_move "s/(STEEL_WING,.*)STEEL/\1FLYING/"
+rule_move "/GYRO_BALL/s/STEEL/ROCK/g"
+rule_move "/FLASH_CANNON/s/STEEL/NORMAL/g"
+
+# FAIRY
+rule_mon "clef*" "s/FAIRY, FAIRY/NORMAL, NORMAL/g"
+rule_mon "*iggly*uff" "s/NORMAL, FAIRY/NORMAL, NORMAL/g"
+rule_mon "*mime*" "s/PSYCHIC_TYPE, FAIRY/PSYCHIC_TYPE, PSYCHIC_TYPE/g"
+rule_mon "sylveon" "s/FAIRY, FAIRY/DRAGON, DRAGON/g"
+# DARK
+rule_mon "mgyarados" "s/WATER, DARK/WATER, DRAGON/g"
+rule_mon "umbreon" "s/DARK, DARK/POSION, POISON/g"
+# STEEL
+rule_mon "magne*" "s/ELECTRIC, STEEL/ELECTRIC, ELECTRIC/g"
+rule_mon "*scizor" "s/BUG, STEEL/BUG, BUG/g"
+rule_mon "*steelix" "s/STEEL, GROUND/ROCK, GROUND/g"
+fi
 
 apply
-
-#s/db FAIRY, FAIRY/db NORMAL, NORMAL/g
-#s/db NORMAL, FAIRY/db NORMAL, NORMAL/g
-#s/db FAIRY, NORMAL/db NORMAL, NORMAL/g
-#s/db DARK, DARK/db POISON, POISON/g
-#s/db WATER, DARK/db WATER, DRAGON/g
