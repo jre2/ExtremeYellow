@@ -366,11 +366,12 @@ def generate_diff():
                     new_mon = new['pkmn'][ pkmn_idx ] if len(new['pkmn']) > pkmn_idx else None
                     columns_changed = [ old_mon[i] != new_mon[i] for i in range(2) ] + [ old_mon[2][i] != new_mon[2][i] for i in range(4) ] if old_mon is not None and new_mon is not None else [True]*6
                     if old_mon != new_mon:
-                        print( f'    - {printmon(old_mon, columns_changed, 'red')}' )
-                        print( f'    + {printmon(new_mon, columns_changed, 'green')}' )
+                        print( f"    - {printmon(old_mon, columns_changed, 'red')}" )
+                        print( f"    + {printmon(new_mon, columns_changed, 'green')}" )
 
 test_asm_serialization()
 test_human_serialization()
 generate_diff()
 #generate_human_from_asm()
-#pprint( load_db_from_human( 'data/trainers/trainers.human' )['YOUNGSTER'][1] )
+#generate_asm_from_human()
+#pprint( load_db_from_human( 'data/trainers/trainers.human' )['YOUNGSTER'][1] ) #for debug
