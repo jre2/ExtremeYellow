@@ -371,14 +371,14 @@ def generate_diff():
                         print( f"    + {printmon(new_mon, columns_changed, 'green')}" )
 
 # Perform tasks based on arguments
-options = ['--help','--diff','--generate-human','--generate-asm','--no-tests','--debug']
+options = ['--help','--diff','--generate-human','--generate-asm','--tests','--debug']
 def print_usage():
     print( f"Usage: {' '.join(options)}" )
 
 if '--help' in sys.argv or any( arg not in options for arg in sys.argv[1:] ):
     print_usage()
     sys.exit(0)
-if '--no-tests' not in sys.argv:
+if '--tests' in sys.argv:
     test_asm_serialization()
     test_human_serialization()
 if '--diff' in sys.argv:
