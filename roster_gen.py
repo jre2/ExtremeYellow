@@ -1,6 +1,7 @@
 import colorama
 from   pprint import pprint
 import re
+import sys
 from   termcolor import colored, cprint
 colorama.just_fix_windows_console()
 
@@ -369,9 +370,27 @@ def generate_diff():
                         print( f"    - {printmon(old_mon, columns_changed, 'red')}" )
                         print( f"    + {printmon(new_mon, columns_changed, 'green')}" )
 
-test_asm_serialization()
-test_human_serialization()
-generate_diff()
-#generate_human_from_asm()
-#generate_asm_from_human()
-#pprint( load_db_from_human( 'data/trainers/trainers.human' )['YOUNGSTER'][1] ) #for debug
+# Perform tasks based on arguments
+options = ['--help','--diff','--generate-human','--generate-asm','--no-tests','--debug']
+def print_usage():
+    print( f"Usage: {' '.join(options)}" )
+
+if '--help' in sys.argv or any( arg not in options for arg in sys.argv[1:] ):
+    print_usage()
+    sys.exit(0)
+if '--no-tests' not in sys.argv:
+    test_asm_serialization()
+    test_human_serialization()
+if '--diff' in sys.argv:
+    print( 'Diff...' )
+    generate_diff()
+elif '--generate-human' in sys.argv:
+    print( 'Generating trainers.human...' )
+    generate_human_from_asm()
+elif '--generate-asm' in sys.argv:
+    print( 'Generating parties.asm and special_moves.asm...' )
+    generate_asm_from_human()
+elif '--debug' in sys.argv:
+    pprint( load_db_from_human( 'data/trainers/trainers.human' )['YOUNGSTER'][1] ) #for debug
+else:
+    print_usage()
