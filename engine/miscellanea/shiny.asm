@@ -127,135 +127,92 @@ RollForShiny::
 	ld [wOpponentMonShiny], a
     ret
 
-CountHowManyBadges:: ; returns in d the number of badges we own
+PopCount:: ; return in d the number of bits set in a
+    ; d=0; while a { if LSB(a) { d++ }; SHIFT_RIGHT(a) }
     ld d, 0
-    ld hl, wObtainedBadges
-	bit BIT_EARTHBADGE, [hl]
-	jr z, .next1
+.PopCountLoop
+    bit 0, a ; a = LSB(a)
+    jr z, .PopCountNoInc
     inc d
-.next1
-	bit BIT_VOLCANOBADGE, [hl]
-	jr z, .next2
-    inc d
-.next2
-	bit BIT_MARSHBADGE, [hl]
-	jr z, .next3
-    inc d
-.next3
-	bit BIT_SOULBADGE, [hl]
-	jr z, .next4
-    inc d
-.next4
-	bit BIT_RAINBOWBADGE, [hl]
-	jr z, .next5
-    inc d
-.next5
-	bit BIT_THUNDERBADGE, [hl]
-	jr z, .next6
-    inc d
-.next6
-	bit BIT_CASCADEBADGE, [hl]
-	jr z, .next7
-    inc d
-.next7
-	bit BIT_BOULDERBADGE, [hl]
-	jr z, .next8
-    inc d
-.next8
+.PopCountNoInc
+    srl a ; a = SHIFT_RIGHT(a)
+    jr nz, .PopCountLoop
+    ; return d
     ret
 
-ConvertNumberOfBadgesIntoCapLoose: ; returns in d the loose level/obedience cap
-    call CountHowManyBadges ; d holds the number of badges
-    ld a, d ; a holds the number of badges
-    cp 0
-    jr z, .badges0
-    cp 1
-    jr z, .badges1
-    cp 2
-    jr z, .badges2
-    cp 3
-    jr z, .badges3
-    cp 4
-    jr z, .badges4
-    cp 5
-    jr z, .badges5
-    cp 6
-    jr z, .badges6
-    cp 7
-    jr z, .badges7
-; badges8
-    ld d, 70
-    ret
-.badges7
-    ld d, 65
-    ret
-.badges6
-    ld d, 60
-    ret
-.badges5
-    ld d, 55
-    ret
-.badges4
-    ld d, 45
-    ret
-.badges3
-    ld d, 35
-    ret
-.badges2
-    ld d, 30
-    ret
-.badges1
-    ld d, 25
-    ret
-.badges0
-    ld d, 15
+LevelCapTightTable:
+    db 11, 21, 28, 32, 43, 50, 54, 55, 65
+LevelCapLooseTable:
+    db 15, 25, 30, 35, 45, 55, 60, 65, 70
+
+CountHowManyBadges:: ; returns in d the number of badges we own; clobbers a
+    ld a, [wObtainedBadges]
+    call PopCount
     ret
 
-ConvertNumberOfBadgesIntoCapTight: ; returns in d the tight level/obedience cap
-    call CountHowManyBadges ; d holds the number of badges
-    ld a, d ; a holds the number of badges
-    cp 0
-    jr z, .badges0
-    cp 1
-    jr z, .badges1
+CalcBadgeLevelCap:: ; clobbers a, d, de, hl, returns level in d
+    ; if IsChampion() { return MAX_LEVEL }
+    ; switch wLevelCapOption
+        ; case 2: level_cap_by_badges = LevelCapLooseTable; break
+        ; case 3: level_cap_by_badges = LevelCapTightTable; break
+        ; default: return MAX_LEVEL
+
+    ; if IsChampion() { return MAX_LEVEL }
+    CheckEvent EVENT_BEAT_LEAGUE_AT_LEAST_ONCE
+    jr nz, .NoLevelLimit
+
+    ; if wLevelCapOption in [2,3] { hl = level_cap_by_badges } else {return MAX_LEVEL}
+    ld a, [wLevelCapOption] ; 0 obed loose, 1 obed tight, 2 level loose, 3 level tight, 4 none
     cp 2
-    jr z, .badges2
+    jr z, .UseLoose
     cp 3
-    jr z, .badges3
-    cp 4
-    jr z, .badges4
-    cp 5
-    jr z, .badges5
-    cp 6
-    jr z, .badges6
-    cp 7
-    jr z, .badges7
-; badges8
-    ld d, 65
+    jr z, .UseTight
+    jr .NoLevelLimit
+.UseLoose
+    ld hl, LevelCapLooseTable
+    jr .SomeLimit
+.UseTight
+    ld hl, LevelCapTightTable
+.SomeLimit
+    ; de = (int16) CountHowManyBadges()
+    call CountHowManyBadges
+    ld e, d
+    ld d, 0
+
+    ; d = level_cap_by_badges[ num_badges ]
+    ; arr[ index ]
+    ; arr + index*size_of_elem
+    add hl, de
+    ld d, [hl]
+    ret ; return d
+.NoLevelLimit
+    ld d, MAX_LEVEL ; 100 by default
+    ret ; return d
+
+ArrayIndex: ; input hl array addr, d index; output d value
+    push bc
+    ld c, d
+    ld b, 0
+    add hl, bc
+    ld d, [hl]
+    pop bc
     ret
-.badges7
-    ld d, 55
+
+; Helpers for d = LevelCapTable[ CountHowManyBadges() ]
+ConvertNumberOfBadgesIntoCapLoose: ; clobbers a d hl de
+    push hl
+    call CountHowManyBadges ; d holds the number of badges
+    ld hl, LevelCapLooseTable
+    call ArrayIndex
+    pop hl
     ret
-.badges6
-    ld d, 54
-    ret
-.badges5
-    ld d, 50
-    ret
-.badges4
-    ld d, 43
-    ret
-.badges3
-    ld d, 32
-    ret
-.badges2
-    ld d, 28
-    ret
-.badges1
-    ld d, 21
-    ret
-.badges0
-    ld d, 11
+
+ConvertNumberOfBadgesIntoCapTight: ; return LevelCapTable[ CountHowManyBadges() ]
+    push hl
+    call CountHowManyBadges ; d holds the number of badges
+    ld hl, LevelCapTightTable
+    call ArrayIndex
+    pop hl
     ret
 
 ConvertNumberOfBadgesIntoUpperLimit: ; returns in a the upper limit for the second random number; used for shiny probabilities

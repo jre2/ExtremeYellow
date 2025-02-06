@@ -1326,8 +1326,6 @@ ItemUseMedicine:
 	ld a, [wcf91]
 
 	; new, custom ugly code cause i don't feel like reordering items
-	cp LEGEND_CANDY
-	jp z, .useVitamin
 	cp CHEAT_CANDY
 	jp z, .useVitamin
 	cp PERFECTER
@@ -1775,17 +1773,13 @@ ItemUseMedicine:
 	ld a, [wcf91]
 	cp RARE_CANDY
 	jp z, .useRareCandy
-	cp LEGEND_CANDY     ; new
-	jp z, .useRareCandy ; new
 	cp CHEAT_CANDY      ; new
 	jp z, .useRareCandy ; new
 	push hl
 
 ; PERFECTER code, beginning ----------------------------------------------------
-
 	cp PERFECTER
 	jr nz, .notPerfecterCode
-
 ; check if everything has already been maxed out
 	push hl
 	ld bc, wPartyMon1HPExp - wPartyMon1
@@ -1975,34 +1969,47 @@ ItemUseMedicine:
 	ld b, 1
 	jp CalcStats ; recalculate stats
 .useRareCandy
-	push hl
-	ld bc, wPartyMon1Level - wPartyMon1
-	add hl, bc ; hl now points to level
-	ld a, [hl] ; a = level
-	cp MAX_LEVEL
-	jr z, .vitaminNoEffect ; can't raise level above 100
-	cp MAX_LEVEL_2 ; new
-	jr z, .vitaminNoEffect ; new
+    ; save de hl; in/out hl = mon.data addr; out a = new level
+    push hl ; popped externally by .vitaminNoEffect or .continueVanillaCandy branches
+    push de ; popped as we exit, before various jumps
+    push hl ; popped internally, optimization to avoid multiple pushpops of mon data addr
 
-	; new code for LEGEND_CANDY
-	ld a, [wcf91] ; a contains the item ID, and if we are here, should be only a RARE or a LEGEND or a CHEAT candy
-	cp LEGEND_CANDY
-	jr z, .legendaryCandyCode
-	ld a, [hl] ; a = level
-	inc a
-	jr .continueVanillaCandy
-.legendaryCandyCode
-	ld a, MAX_LEVEL
+    ; improve DVs (13 for all but 15 for HP)
+    ld bc, wPartyMon1DVs - wPartyMon1 ; offset for .dvs field
+    add hl, bc ; hl = mon.data.dvs addr
+    ld a, $DD
+    ld [hli], a
+    ld [hl], a
+
+    ; determine level cap
+    callfar CalcBadgeLevelCap ; d = max level allowed by current badges
+    pop hl ; mon.data addr
+    ld bc, wPartyMon1Level - wPartyMon1 ; offset for .level field
+    add hl, bc ; hl = mon.data.level addr
+    ld a, [hl] ; a = current level and later new level
+
+    ; new_level is +/- 1 from previous (a) based on relation to cap (d)
+    cp d
+    pop de ; unknown what these were before but it's critical they're restored before we exit
+    jr z, .level_no_change
+    jr c, .level_increase
+    dec a
+    jr .continueVanillaCandy
+.level_no_change
+    jr .continueVanillaCandy ; we could run .vitaminNoEffect but DV changes would require boxing
+.level_increase
+    inc a
 .continueVanillaCandy
-
 	ld [hl], a ; store incremented level
 	ld [wCurEnemyLVL], a
+
 	push hl
 	push de
 	ld d, a
 	callfar CalcExperience ; calculate experience for next level and store it at hExperience
 	pop de
 	pop hl
+
 	ld bc, wPartyMon1Exp - wPartyMon1Level
 	add hl, bc ; hl now points to MSB of experience
 ; update experience to minimum for new level
