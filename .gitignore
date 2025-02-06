@@ -44,3 +44,6 @@ gfx/tilesets_debug.o
 
 # logs
 *.log
+
+# scratch
+bak/
