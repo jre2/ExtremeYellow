@@ -41,3 +41,6 @@ gfx/tilesets_debug.o
 *.sn*
 *.sa*
 *.sg1
+
+# logs
+*.log
