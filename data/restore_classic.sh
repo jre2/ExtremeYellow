@@ -10,8 +10,7 @@ apply() {
         if $DRY_RUN; then
             diff --color=auto -u "$file" <(echo -e "${RULES[$file]}" | sed -E -f - "$file")
         else
-            echo "not dry run logic here"
-            #echo -e "${RULES[$file]}" | sed -E -f - -i "$file"
+            echo -e "${RULES[$file]}" | sed -E -f - -i "$file"
         fi
     done
 }
@@ -61,10 +60,10 @@ rule_mon "*mime*" "s/PSYCHIC_TYPE, FAIRY/PSYCHIC_TYPE, PSYCHIC_TYPE/g"
 rule_mon "sylveon" "s/FAIRY, FAIRY/DRAGON, DRAGON/g"
 # DARK
 rule_mon "mgyarados" "s/WATER, DARK/WATER, DRAGON/g"
-rule_mon "umbreon" "s/DARK, DARK/POSION, POISON/g"
+rule_mon "umbreon" "s/DARK, DARK/POISON, POISON/g"
 # STEEL
 rule_mon "magne*" "s/ELECTRIC, STEEL/ELECTRIC, ELECTRIC/g"
-rule_mon "*scizor" "s/BUG, STEEL/BUG, BUG/g"
+rule_mon "*scizor" "s/BUG, STEEL/BUG, ROCK/g"
 rule_mon "*steelix" "s/STEEL, GROUND/ROCK, GROUND/g"
 fi
 
