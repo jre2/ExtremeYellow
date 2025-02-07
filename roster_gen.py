@@ -66,7 +66,11 @@ def load_parties_asm( path ):
         # comment at start of line denotes trainer region
         if line[0] == ';':
             cur_trainer_region = line[1:].strip()
-        
+
+        # Skip banked data pointer and section info
+        if line.startswith( 'SECTION' ): continue
+        if line[:3] == 'dba': continue
+
         # db at start of line denotes trainer data
         if line[:2] == 'db':
             line = line.split(';')[0] # remove comments
