@@ -7,6 +7,7 @@ colorama.just_fix_windows_console()
 
 # Data Layout
 # trainer_db :: TrainerClassID -> TrainerID -> { block_name:str, class:str, region:str, id:int, pkmn: [ (level, name, moves[4]) ] }
+USE_BANKED_DATA = True
 
 # Constants
 def load_constants_asm( path, def_keyword='const' ):
@@ -102,11 +103,21 @@ def save_parties_asm( path, trainer_db ):
     buf = ''
     # Preamble
     buf += 'TrainerDataPointers:\n'
+    if USE_BANKED_DATA:
+        buf += '\ttable_width 3\n'
+    else:
+        buf += '\ttable_width 2\n'
     for block_data_label in trainer_data_label_to_class:
-        buf += f'\tdw {block_data_label}\n'
+        if USE_BANKED_DATA:
+            buf += f'\tdba {block_data_label}\n'
+        else:
+            buf += f'\tdw {block_data_label}\n'
+    buf += '\tassert_table_length NUM_TRAINERS\n\n'
     
     # Trainer blocks
-    for block_data_label in trainer_data_label_to_class:
+    for block_num, block_data_label in enumerate( trainer_data_label_to_class ):
+        if USE_BANKED_DATA:
+            buf += f'SECTION "TrainerData{block_num}", ROMX\n'
         buf += f'{block_data_label}:\n'
 
         block_trainer_class = trainer_data_label_to_class[block_data_label]
@@ -371,17 +382,19 @@ def generate_diff():
                         print( f"    + {printmon(new_mon, columns_changed, 'green')}" )
 
 # Perform tasks based on arguments
-options = ['--help','--diff','--generate-human','--generate-asm','--tests','--debug']
+options = ['--help','--diff','--generate-human','--generate-asm','--tests','--debug','--no-banks']
 def print_usage():
     print( f"Usage: {' '.join(options)}" )
 
 if '--help' in sys.argv or any( arg not in options for arg in sys.argv[1:] ):
     print_usage()
     sys.exit(0)
+if '--no-banks' in sys.argv:
+    USE_BANKED_DATA = False
 if '--tests' in sys.argv:
     test_asm_serialization()
     test_human_serialization()
-if '--diff' in sys.argv:
+elif '--diff' in sys.argv:
     print( 'Diff...' )
     generate_diff()
 elif '--generate-human' in sys.argv:

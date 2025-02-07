@@ -1,5 +1,10 @@
-ReadTrainer:
+LoadTrainerDataByteInc:: ; load wTrainerDataBank:hl into a and advance hl
+	ld a, [wTrainerDataBank]
+	call GetFarByte
+	inc hl
+	ret
 
+ReadTrainer::
 ; don't change any moves in a link battle
 	ld a, [wLinkState]
 	and a
@@ -24,29 +29,37 @@ ReadTrainer:
 	ld a, [wTrainerClass] ; get trainer class
 .continueLoadTrainer
 ; back to vanilla
-	dec a
-	add a
+	; basic array access; TrainerDataPointers[ trainer_class-1 ] -> TrainerDataPointers + (trainer_class-1) * 3 bytes per entry
 	ld hl, TrainerDataPointers
+	dec a ; trainer_class is 1-indexed
 	ld c, a
 	ld b, 0
-	add hl, bc ; hl points to trainer class
+	add hl, bc
+	add hl, bc
+	add hl, bc
+
+	; Load bank number
+	ld a, [hli]
+	ld [wTrainerDataBank], a
+
+	; Load trainer class data pointer
 	ld a, [hli]
 	ld h, [hl]
-	ld l, a
+	ld l, a ; now hl holds address for start of trainer class's data
 	call LoadTrainerNumber ; edited, was simply "ld a, [wTrainerNo]"
 	ld b, a
-; At this point b contains the trainer number,
-; and hl points to the trainer class.
+; At this point b contains the (adjusted) trainer number,
+; and hl points to the trainer class data.
 ; Our next task is to iterate through the trainers,
 ; decrementing b each time, until we get to the right one.
-.outer
+.skip_N_trainers
 	dec b
 	jr z, .IterateTrainer
 .inner
-	ld a, [hli]
+	call LoadTrainerDataByteInc
 	and a
 	jr nz, .inner
-	jr .outer
+	jr .skip_N_trainers
 
 ; if the first byte of trainer data is FF,
 ; - each pokemon has a specific level
@@ -93,9 +106,9 @@ ReadTrainer:
 	ld [wCurEnemyLVL], a
 .afterHandlingLevelScaling
 
-	ld a, [hli]
+	call LoadTrainerDataByteInc
 	cp $FF ; is the trainer special?
-	jr z, .SpecialTrainer ; if so, check for special moves
+	jr z, .SpecialTrainer ; if so, check for special moves ;JMR this is a bad comment
 
 ; new, prolly suboptimal code for level scaling
 	ld b, a ; temporarily store a in b, contains vanilla hard-coded level
@@ -138,7 +151,8 @@ ReadTrainer:
 .notFluctuatingLevelScaling
 ; back to vanilla code
 
-	ld a, [hli]
+	; Load next pokemon's species (or end of list sentinel)
+	call LoadTrainerDataByteInc
 	and a ; have we reached the end of the trainer data?
 	jp z, .AddAdditionalMoveData
 	ld [wcf91], a ; write species somewhere (XXX why?) -> for AddPartyMon
@@ -153,7 +167,8 @@ ReadTrainer:
 ; - each pokemon has a specific level
 ;      (as opposed to the whole team being of the same level)
 ; - if [wLoneAttackNo] != 0, one pokemon on the team has a special move
-	ld a, [hli]
+	; Load next pokemon's level (or end of list sentinel)
+	call LoadTrainerDataByteInc
 	and a ; have we reached the end of the trainer data?
 	jr z, .AddAdditionalMoveData
 
@@ -197,7 +212,8 @@ ReadTrainer:
 .notFluctuatingLevelScaling2
 	; back to vanilla code
 
-	ld a, [hli]
+	; Load next pokemon's species
+	call LoadTrainerDataByteInc
 	ld [wcf91], a
 	ld a, ENEMY_PARTY_DATA
 	ld [wMonDataLocation], a
@@ -217,6 +233,7 @@ ReadTrainer:
 	call LoadTrainerNumber ; edited, was simply "ld a, [wTrainerNo]"
 	ld c, a
 	ld hl, SpecialTrainerMoves
+	; b = trainer_class, c = trainer_id, hl = base addr of move data array, de = cursor
 .loopAdditionalMoveData
 	ld a, [hli]
 	cp $ff
@@ -229,11 +246,11 @@ ReadTrainer:
 	ld d, h
 	ld e, l
 .writeAdditionalMoveDataLoop
-	ld a, [de]
+	ld a, [de] ; pokemon slot number (1-indexed)
 	inc de
 	cp $FE ; edited, it was "and a", to avoid bugs with NO_MOVE in the special_moves file
 	jp z, .FinishUp
-	dec a
+	dec a ; switch to 0-index
 	ld hl, wEnemyMon1Moves
 	ld bc, wEnemyMon2 - wEnemyMon1
 	call AddNTimes

@@ -1383,6 +1383,7 @@ wEnemyMonBaseExp:: db
 wBattleMonNick:: ds NAME_LENGTH
 wBattleMon:: battle_struct wBattleMon
 
+wTrainerDataBank:: db ; new
 
 wTrainerClass:: db
 
