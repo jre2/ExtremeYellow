@@ -258,7 +258,7 @@ def load_db_from_human( path ):
         if not line.strip() or line.startswith(';'): continue
         tclass = re.match( r'^(\w+)$', line )
         tid = re.match( r'^\s*(\d+)\s*(?:;\s*(.*))?$', line )
-        tpkmn = re.match( r'^\s*(\d+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)$', line ) # like "  5 BULBASAUR TACKLE GROWL LEECHSEED None"
+        tpkmn = re.match( r'\s*(\d+)\s+(\w+)\s*([\w\s]*)', line ) # like "  5 BULBASAUR TACKLE GROWL LEECHSEED None"
         if tclass:
             trainer_class = tclass.group(1)
             assert trainer_class in legal_trainer_class_ids, f'Unknown trainer class {trainer_class}'
@@ -276,14 +276,17 @@ def load_db_from_human( path ):
         elif tpkmn:
             pkmn_lvl = int(tpkmn.group(1))
             pkmn_id = tpkmn.group(2)
+            pkmn_moves = tpkmn.group(3).split()
+            #print( f'  {pkmn_lvl} {pkmn_id} {pkmn_moves}. Line: {line}' )
+            assert 0 < pkmn_lvl <= 250, f'Invalid level {pkmn_lvl}'
             assert pkmn_id in legal_pokemon_ids, f'Unknown pokemon {pkmn_id}'
-            pkmn_moves = [ tpkmn.group(i) for i in range(3,7) ]
-            pkmn_moves = [ move if move != 'None' else None for move in pkmn_moves ] # unstringify 'None'
-            # Check that the moves are valid
-            for move_id in pkmn_moves:
-                if move_id is not None:
-                    assert move_id in legal_move_ids, f'Unknown move {move_id}'
-            #print( 'PKMN', pkmn_lvl, pkmn_id, pkmn_moves )
+            assert len(pkmn_moves) <= 4, f'Too many moves {pkmn_moves}'
+            # take the 0-4 moves in pkmn_moves and convert to fixed length (4) list with None for missing moves, also unstringify "None"
+            pkmn_moves = [ move if move != 'None' else None for move in pkmn_moves ] + [None]*(4-len(pkmn_moves))
+            # verify moves are legal
+            for move in pkmn_moves:
+                if move is not None:
+                    assert move in legal_move_ids, f'Unknown move {move}'
             trainer_db[ trainer_class ][ trainer_id ]['pkmn'].append( [ pkmn_lvl, pkmn_id, pkmn_moves ] )
         else:
             raise ValueError( f'Bad line #{lineno+1}: "{line}"' )
@@ -314,8 +317,12 @@ def save_db_to_human( path, trainer_db, skip_repeat_region=True, indenter='    '
             buf += '\n'
             for lvl, pkmn_id, moves in trainer['pkmn']:
                 depth = 2
+                # remove Nones at the end of the move list, but preserve any that occur before a non-None entry
+                while moves and moves[-1] is None: moves.pop()
                 smoves = ' '.join( str(move) for move in moves )
-                buf += f'{indenter*depth}{lvl} {pkmn_id} {smoves}\n'
+                # have a space between pokemon id and moves but only if there are moves
+                if moves: smoves = ' ' + smoves
+                buf += f'{indenter*depth}{lvl} {pkmn_id}{smoves}\n'
                 pass
     with open( path, 'w' ) as f: f.write( buf )
     return buf
