@@ -1,3 +1,5 @@
+#!/bin/python
+
 import colorama
 from   pprint import pprint
 import re
