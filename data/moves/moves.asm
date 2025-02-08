@@ -57,7 +57,7 @@ Moves:
 	move TWINEEDLE,    TWINEEDLE_EFFECT,            25, BUG,          100, 20
 	move PIN_MISSILE,  TWO_TO_FIVE_ATTACKS_EFFECT,  25, BUG,           95, 20 ; power 14->25, accuracy 85->95
 	move LEER,         DEFENSE_DOWN1_EFFECT,         0, NORMAL,       100, 30
-	move BITE,         FLINCH_SIDE_EFFECT3,         60, DARK,         100, 25 ; TYPE CHANGED, 10%->30% flinch chance
+	move BITE,         FLINCH_SIDE_EFFECT3,         60, NORMAL,         100, 25 ; TYPE CHANGED, 10%->30% flinch chance
 	move GROWL,        ATTACK_DOWN1_EFFECT,          0, NORMAL,       100, 40
 ;	move ROAR,         SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,       100, 20 ; - REMOVED
 	move SING,         SLEEP_EFFECT,                 0, NORMAL,        55, 15
@@ -183,10 +183,10 @@ Moves:
 	move X_SCISSOR,	   NO_ADDITIONAL_EFFECT,	    80,	BUG,	      100, 15 ; [TM44] done
 	move INFESTATION,  TRAPPING_EFFECT,	            20,	BUG,	       80, 20 ; done
 
-	move FEINT_ATTACK, SWIFT_EFFECT,	            60,	DARK,	      100, 20 ; [TM20] done
-	move CRUNCH,	   SPECIAL_DOWN_SIDE_EFFECT2,   80,	DARK,	      100, 15 ; done, to be further tested
-	move NIGHT_SLASH,  NO_ADDITIONAL_EFFECT,	    70,	DARK,	      100, 15 ; high crit rate ; done
-	move DARK_PULSE,   FLINCH_SIDE_EFFECT2,	        80,	DARK,	      100, 15 ; [TM07] done
+	move FEINT_ATTACK, SWIFT_EFFECT,	            60,	BUG,	      100, 20 ; [TM20] done
+	move CRUNCH,	   SPECIAL_DOWN_SIDE_EFFECT2,   80,	NORMAL,	      100, 15 ; done, to be further tested
+	move NIGHT_SLASH,  NO_ADDITIONAL_EFFECT,	    70,	GHOST,	      100, 15 ; high crit rate ; done
+	move DARK_PULSE,   FLINCH_SIDE_EFFECT2,	        80,	GHOST,	      100, 15 ; [TM07] done
 
 	move TWISTER,	   FLINCH_SIDE_EFFECT2,	        40,	DRAGON,	      100, 20 ; done
 	move DRAGONBREATH, PARALYZE_SIDE_EFFECT2,	    60,	DRAGON,	      100, 20 ; done
@@ -198,10 +198,10 @@ Moves:
 	move SHOCK_WAVE,   SWIFT_EFFECT,	            60,	ELECTRIC,	  100, 20 ; done
 	move VOLT_TACKLE,  RECOIL_EFFECT,	           120,	ELECTRIC,	  100, 15 ; done
 
-	move CHARM,	       ATTACK_DOWN2_EFFECT,	         0,	FAIRY,	      100, 20 ; done
-	move DRAININGKISS, DRAIN_HP_EFFECT,	            50,	FAIRY,	      100, 10 ; [TM17] done!
-	move PLAY_ROUGH,   ATTACK_DOWN_SIDE_EFFECT1,    90,	FAIRY,	       90, 10 ; done, to be further tested
-	move MOONBLAST,	   SPECIAL_DOWN_SIDE_EFFECT3,	95,	FAIRY,	      100, 15 ; [TM30] done (it should be 30% and it's 33%, doesn't matter)
+	move CHARM,	       ATTACK_DOWN2_EFFECT,	         0,	NORMAL,	      100, 20 ; done
+	move DRAININGKISS, DRAIN_HP_EFFECT,	            50,	GHOST,	      100, 10 ; [TM17] done!
+	move PLAY_ROUGH,   ATTACK_DOWN_SIDE_EFFECT1,    90,	DRAGON,	       90, 10 ; done, to be further tested
+	move MOONBLAST,	   SPECIAL_DOWN_SIDE_EFFECT3,	95,	PSYCHIC_TYPE,	      100, 15 ; [TM30] done (it should be 30% and it's 33%, doesn't matter)
 
 	move MACH_PUNCH,   NO_ADDITIONAL_EFFECT,	    40,	FIGHTING,	  100, 30 ; prio +1 ; done
 	move SUPERPOWER,   ATTACK_DEFENSE_SELFDOWN1,   120,	FIGHTING,	  100, 5  ; done, to be further tested
@@ -252,12 +252,12 @@ Moves:
 	move STONE_EDGE,   NO_ADDITIONAL_EFFECT,	   100,	ROCK,	       80, 5  ; [TM22] high crit rate ; done
 ;	move ACCELEROCK,   NO_ADDITIONAL_EFFECT,	    40,	ROCK,	      100, 20 ; prio +1 ; done
 
-	move IRON_TAIL,    DEFENSE_DOWN_SIDE_EFFECT3,  100, STEEL,	       75, 15 ; done - it should be 30% chance rather than 33% but doesn't matter
-	move STEEL_WING,   DEFENSE_UP_SIDE_EFF1,	    70,	STEEL,	       90, 25 ; done, to be further tested - self-buff, 10% def
-	move METAL_CLAW,   ATTACK_UP_SIDE_EFF1,	    	50,	STEEL,	       95, 35 ; done, to be further tested - self-buff, 10% atk
-	move METEOR_MASH,  ATTACK_UP_SIDE_EFF2, 	   100,	STEEL,	       85, 10 ; done, to be further tested - self-buff, 20% atk [TM09] - DOING!?
-	move BULLET_PUNCH, NO_ADDITIONAL_EFFECT,	    40,	STEEL,	      100, 30 ; prio +1 ; done
-	move FLASH_CANNON, SPECIAL_DOWN_SIDE_EFFECT1,	80, STEEL, 		  100, 10 ; [TM18]
+	move IRON_TAIL,    DEFENSE_DOWN_SIDE_EFFECT3,  100, NORMAL,	       75, 15 ; done - it should be 30% chance rather than 33% but doesn't matter
+	move STEEL_WING,   DEFENSE_UP_SIDE_EFF1,	    70,	FLYING,	       90, 25 ; done, to be further tested - self-buff, 10% def
+	move METAL_CLAW,   ATTACK_UP_SIDE_EFF1,	    	50,	ROCK,	       95, 35 ; done, to be further tested - self-buff, 10% atk
+	move METEOR_MASH,  ATTACK_UP_SIDE_EFF2, 	   100,	ROCK,	       85, 10 ; done, to be further tested - self-buff, 20% atk [TM09] - DOING!?
+	move BULLET_PUNCH, NO_ADDITIONAL_EFFECT,	    40,	ELECTRIC,	      100, 30 ; prio +1 ; done
+	move FLASH_CANNON, SPECIAL_DOWN_SIDE_EFFECT1,	80, NORMAL, 		  100, 10 ; [TM18]
 
 	move WATER_PULSE,  CONFUSION_SIDE_EFFECT2,	    60,	WATER,	      100, 20 ; done
 	move AQUA_JET,     NO_ADDITIONAL_EFFECT,	    40,	WATER,	      100, 20 ; prio +1 ; done
@@ -266,7 +266,7 @@ Moves:
 
 	; peculiar new moves
 	move FREEZE_DRY,   FREEZE_SIDE_EFFECT,          70,	ICE2,	      100, 20 ; testing
-	move GYRO_BALL,    NO_ADDITIONAL_EFFECT,         1,	STEEL,	      100,  5 ; testing
+	move GYRO_BALL,    NO_ADDITIONAL_EFFECT,         1,	ROCK,	      100,  5 ; testing
 	move PSYSTRIKE,    NO_ADDITIONAL_EFFECT,       100,	PSYCHIC_TYPE, 100, 10 ; testing
 	move BODY_PRESS,   NO_ADDITIONAL_EFFECT,        80,	FIGHTING,     100, 10 ; testing
 	move FLAIL,        NO_ADDITIONAL_EFFECT,         1,	NORMAL,       100, 15 ; testing

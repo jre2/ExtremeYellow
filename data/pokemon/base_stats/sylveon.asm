@@ -3,7 +3,7 @@
 	db  95,  65,  65,  60, 130
 	;   hp  atk  def  spd  spc
 
-	db FAIRY, FAIRY ; type
+	db DRAGON, DRAGON ; type
 	db 45 ; catch rate
 	db 184 ; base exp
 
