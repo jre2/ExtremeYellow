@@ -6,7 +6,7 @@ from   termcolor import colored, cprint
 colorama.just_fix_windows_console()
 
 # Data Layout
-# trainer_db :: TrainerClassID -> TrainerID -> { block_name:str, class:str, region:str, id:int, pkmn: [ (level, name, moves[4]) ] }
+# trainer_db :: TrainerClassID -> TrainerID -> { block_name:str, class:str, region:str, comment:str, id:int, pkmn: [ (level, name, moves[4]) ] }
 USE_BANKED_DATA = True
 
 # Constants
@@ -269,10 +269,17 @@ def load_db_from_human( path ):
         elif tid:
             trainer_id = int(tid.group(1))
             trainer_region = (tid.group(2) if tid.group(2) != 'None' else None) or trainer_region
+            trainer_comment = None
+            if trainer_region is not None:
+                parts = trainer_region.split(';')
+                trainer_region = parts[0].strip()
+                trainer_comment = parts[1].strip() if len(parts) > 1 else None
             #print( 'ID', trainer_id, trainer_region )
             trainer_data_block = trainer_class_to_data_label[ trainer_class ]
             assert trainer_data_block in trainer_data_label_to_class, f'Unknown trainer data block {trainer_data_block}'
-            trainer_db[ trainer_class ][ trainer_id ] = { 'block_name':trainer_data_block, 'class':trainer_class, 'region':trainer_region, 'id':trainer_id, 'pkmn':[] }
+            assert trainer_region is not None, f'Missing region for {trainer_class} {trainer_id}'
+            #if trainer_region is None: print( f'Missing region for {trainer_class} {trainer_id}' )
+            trainer_db[ trainer_class ][ trainer_id ] = { 'block_name':trainer_data_block, 'class':trainer_class, 'region':trainer_region, 'comment':trainer_comment, 'id':trainer_id, 'pkmn':[] }
         elif tpkmn:
             pkmn_lvl = int(tpkmn.group(1))
             pkmn_id = tpkmn.group(2)
@@ -314,6 +321,9 @@ def save_db_to_human( path, trainer_db, skip_repeat_region=True, indenter='    '
             if last_region != trainer['region'] or not skip_repeat_region:
                 last_region = trainer['region']
                 buf += f' ; {trainer["region"]}'
+            # Comment
+            if trainer['comment']:
+                buf += f' ; {trainer["comment"]}'
             buf += '\n'
             for lvl, pkmn_id, moves in trainer['pkmn']:
                 depth = 2
@@ -323,7 +333,6 @@ def save_db_to_human( path, trainer_db, skip_repeat_region=True, indenter='    '
                 # have a space between pokemon id and moves but only if there are moves
                 if moves: smoves = ' ' + smoves
                 buf += f'{indenter*depth}{lvl} {pkmn_id}{smoves}\n'
-                pass
     with open( path, 'w' ) as f: f.write( buf )
     return buf
 
@@ -379,6 +388,7 @@ def generate_diff():
         for trainer_id in asm[trainer_class]:
             old = asm[trainer_class][trainer_id]
             new = hum[trainer_class][trainer_id]
+            new.pop( 'comment' ) # asm doesn't have comments
             if old != new:
                 print( trainer_class, trainer_id )
                 if old['region'] != new['region']:
@@ -392,8 +402,135 @@ def generate_diff():
                         print( f"    - {printmon(old_mon, columns_changed, 'red')}" )
                         print( f"    + {printmon(new_mon, columns_changed, 'green')}" )
 
+import json
+import matplotlib.pyplot as plt
+import numpy as np
+import scipy.signal
+from   sklearn.cluster import KMeans
+
+def save_json( path, db ):
+    with open( path, 'w' ) as f: json.dump( db, f )
+
+def kmeans_level_clusters(levels, num_clusters=5):
+    """Use K-Means to cluster trainer levels into difficulty tiers."""
+    levels_reshaped = np.array(levels).reshape(-1, 1)
+    kmeans = KMeans(n_clusters=num_clusters, n_init=10, random_state=42)
+    clusters = kmeans.fit_predict(levels_reshaped)
+    cluster_centers = sorted(kmeans.cluster_centers_.flatten())
+    return clusters, cluster_centers
+
+def dev():
+    db = load_db_from_human( 'data/trainers/trainers.human' )
+    #save_json( 'data/trainers/trainers.json', db )
+    trainers = sum( [ list(tclass.values()) for tclass in db.values() ], [] )
+    #comments = sorted(set( [ t['comment'] or 'None' for t in trainers ] ))
+    #regions = sorted(set( [ t['region'] for t in trainers ] ))
+
+    # For level calculation analysis, we ignore "Boss" type characters
+    elite_four = [ 'LORELEI', 'BRUNO', 'AGATHA', 'LANCE' ]
+    gym_leaders = [ 'BROCK', 'MISTY', 'LT_SURGE', 'ERIKA', 'KOGA', 'BLAINE', 'SABRINA', 'GIOVANNI' ]
+    other_bosses = [ 'RIVAL1', 'RIVAL2', 'RIVAL3', 'PROF_OAK', 'GIOVANNI', 'ROCKET', 'ORAGE', 'PIGEON', 'TRAVELER', 'BF_TRAINER', 'MISSINGNO_T' ]
+    blacklisted_trainers = elite_four + gym_leaders + other_bosses
+
+    # We also ignore certain regions
+    blacklisted_regions = [ 'Post-game', 'Unused' ]
+
+    # Generate a list of non-blacklisted trainers and track their region and average pokemon level
+    non_blacklisted_trainer_data = [
+        t for t in trainers
+        if t['region'] not in blacklisted_regions
+        #and 'Gym' not in t['region'] #HACK extra blacklist
+        and t['class'] not in blacklisted_trainers
+    ]
+
+    # Reorganize data
+    region_to_trainers = {} # :: Region -> [ Trainer{ class, id, lvl } ]
+    region_full_stats = {} # :: Region -> { num_trainers, min_level, max_level, avg_level, std_dev }
+    region_level = {} # :: Region -> AvgLevel
+
+    for trainer in non_blacklisted_trainer_data:
+        # remove outlier pokemon
+        pokemon = trainer['pkmn']
+        pokemon = [ p for p in pokemon if 6 <= p[0] <= 60 ]
+        if not pokemon: continue
+        # calculate average level
+        pokemon_levels = [ p[0] for p in pokemon ]
+        average_level = sum(pokemon_levels) / len(pokemon_levels)
+        # add to region
+        region = trainer['region']
+        if region not in region_to_trainers: region_to_trainers[region] = []
+        region_to_trainers[region].append( { 'class':trainer['class'], 'id':trainer['id'], 'lvl':average_level } )
+    #pprint( region_to_trainers )
+
+    # Calculate region stats
+    for region, trainers in region_to_trainers.items():
+        levels = [trainer['lvl'] for trainer in trainers]
+        region_full_stats[region] = {
+            'len': len(trainers),
+            'min': min(levels),
+            'max': max(levels),
+            'mean': np.mean(levels),
+            'std': np.std(levels)
+        }
+    #pprint(region_full_stats)
+
+    # Cull anything with std dev worse than 7
+    region_full_stats = { region:stats for region, stats in region_full_stats.items() if stats['std'] < 5 }
+
+    # Calculate average level for each region
+    for region, stats in region_full_stats.items():
+        region_level[region] = stats['mean']
+    #pprint(region_level)
+
+    # Print LVL (stddev) + Region pairs, sorted by average level
+    for region, stats in sorted( region_full_stats.items(), key=lambda x: x[1]['mean'] ):
+        pass
+        #print( f'{stats["mean"]:5.1f} ({stats["std"]:5.1f}) {region}' )
+    
+    # Analysis
+    levels = [ stats['mean'] for stats in region_full_stats.values() ]
+    #levels.sort()
+    #print( levels )
+    peaks = scipy.signal.find_peaks( levels, prominence=4 )
+    #print( peaks )
+    clusters, cluster_centers = kmeans_level_clusters( levels, num_clusters=8 )
+    #print( clusters )
+    #print( cluster_centers )
+
+    # Assign estimated caps based on the nearest cluster center
+    badge_based_caps = [ 11, 21, 28, 32, 43, 50, 54, 55, 65 ]
+    region_expected_caps = {}
+    for region, avg_level in region_level.items():
+        closest_cluster = min(cluster_centers, key=lambda x: abs(x - avg_level))
+        closest_cap = min(badge_based_caps, key=lambda x: abs(x - avg_level))
+        badge = badge_based_caps.index( closest_cap )
+        region_expected_caps[region] = {'cluster':closest_cluster, 'badge_cap':closest_cap, 'badge':badge }
+    pprint(region_expected_caps)
+
+    # Print regions by badge
+    for badge in range(9):
+        print( f'Badge {badge}' )
+        for region, stats in sorted( region_expected_caps.items(), key=lambda x: x[1]['badge'] ):
+            if stats['badge'] == badge:
+                print( f'  {stats["badge_cap"]:2} {region}' )
+
+    plt.figure( figsize=(10, 5) )
+    # make the y axis more detailed
+    #plt.yticks( np.arange(5, 60, 1) )
+    plt.yticks( cluster_centers )
+    plt.plot( levels, label='Trainer Levels', marker='o' )
+    #plt.scatter([p for p in peaks if p < len(levels)], [levels[p] for p in peaks if p < len(levels)], color='red', label='Peaks')
+    plt.scatter([p for p in peaks if isinstance(p, int) and p < len(levels)], [levels[p] for p in peaks if isinstance(p, int) and p < len(levels)], color='red', label='Peaks')
+    #plt.scatter(peaks, [levels[p] for p in peaks], color='red', label='Peaks')
+    for c in cluster_centers:
+        plt.axhline( y=c, linestyle='--', color='gray', alpha=0.7, label=f'Cluster {c:.1f}' )
+    plt.xlabel( 'Region index' )
+    plt.ylabel( 'Average Trainer Level' )
+    plt.legend()
+    plt.show()
+
 # Perform tasks based on arguments
-options = ['--help','--diff','--generate-human','--generate-asm','--tests','--debug','--no-banks']
+options = ['--help','--diff','--dev', '--generate-human','--generate-asm','--tests','--debug','--no-banks']
 def print_usage():
     print( f"Usage: {' '.join(options)}" )
 
@@ -405,6 +542,8 @@ if '--no-banks' in sys.argv:
 if '--tests' in sys.argv:
     test_asm_serialization()
     test_human_serialization()
+elif '--dev' in sys.argv:
+    dev()
 elif '--diff' in sys.argv:
     print( 'Diff...' )
     generate_diff()
