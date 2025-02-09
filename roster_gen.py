@@ -407,28 +407,32 @@ def generate_diff():
 import json
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import scipy.signal
 from   sklearn.cluster import KMeans
+
+badge_based_caps = [ 11, 21, 28, 32, 43, 50, 54, 55, 65 ]
 
 def save_json( path, db ):
     with open( path, 'w' ) as f: json.dump( db, f )
 
-def kmeans_level_clusters(levels, num_clusters=5):
+def kmeans_level_clusters( levels, num_clusters ):
     """Use K-Means to cluster trainer levels into difficulty tiers."""
-    levels_reshaped = np.array(levels).reshape(-1, 1)
-    kmeans = KMeans(n_clusters=num_clusters, n_init=10, random_state=42)
-    clusters = kmeans.fit_predict(levels_reshaped)
-    cluster_centers = sorted(kmeans.cluster_centers_.flatten())
-    return clusters, cluster_centers
+    levels_reshaped = np.array( levels ).reshape( -1, 1 ) # KMeans expects 2D array
+    kmeans = KMeans( n_clusters=num_clusters, n_init=10, random_state=42 )
+    clusters = kmeans.fit_predict( levels_reshaped )
+    cluster_centers = kmeans.cluster_centers_.flatten()
 
-def dev():
+    # We also want a way to go from cluster index to a sorted index based on cluster center value
+    sorted_centers = sorted( cluster_centers )
+    cluster_mapping = { np.where( cluster_centers == center )[0][0]: new_idx for new_idx, center in enumerate( sorted_centers ) }
+    return sorted_centers, kmeans, cluster_mapping
+
+def dev( cur_badges=5, std_dev_threshold=5 ):
     db = load_db_from_human( 'data/trainers/trainers.human' )
-    #save_json( 'data/trainers/trainers.json', db )
     trainers = sum( [ list(tclass.values()) for tclass in db.values() ], [] )
-    #comments = sorted(set( [ t['comment'] or 'None' for t in trainers ] ))
-    #regions = sorted(set( [ t['region'] for t in trainers ] ))
 
-    # For level calculation analysis, we ignore "Boss" type characters
+    # For level calculation analysis, we ignore "Boss" type characters as they usually have scalable entries, are at cap edges, or exceed caps
     elite_four = [ 'LORELEI', 'BRUNO', 'AGATHA', 'LANCE' ]
     gym_leaders = [ 'BROCK', 'MISTY', 'LT_SURGE', 'ERIKA', 'KOGA', 'BLAINE', 'SABRINA', 'GIOVANNI' ]
     other_bosses = [ 'RIVAL1', 'RIVAL2', 'RIVAL3', 'PROF_OAK', 'GIOVANNI', 'ROCKET', 'ORAGE', 'PIGEON', 'TRAVELER', 'BF_TRAINER', 'MISSINGNO_T' ]
@@ -438,7 +442,7 @@ def dev():
     blacklisted_regions = [ 'Post-game', 'Unused' ]
 
     # Generate a list of non-blacklisted trainers and track their region and average pokemon level
-    non_blacklisted_trainer_data = [
+    non_blacklisted_trainers = [
         t for t in trainers
         if t['region'] not in blacklisted_regions
         #and 'Gym' not in t['region'] #HACK extra blacklist
@@ -447,10 +451,12 @@ def dev():
 
     # Reorganize data
     region_to_trainers = {} # :: Region -> [ Trainer{ class, id, lvl } ]
-    region_full_stats = {} # :: Region -> { num_trainers, min_level, max_level, avg_level, std_dev }
-    region_level = {} # :: Region -> AvgLevel
+    region_to_stats = {} # :: Region -> { num_trainers, min_level, max_level, avg_level, std_dev }
+    region_to_level = {} # :: Region -> AvgLevel
+    region_levels = [] # :: [ AvgLevel ]
+    trainer_levels = [] # :: [ AvgLevel ]
 
-    for trainer in non_blacklisted_trainer_data:
+    for trainer in non_blacklisted_trainers:
         # remove outlier pokemon
         pokemon = trainer['pkmn']
         pokemon = [ p for p in pokemon if 6 <= p[0] <= 60 ]
@@ -458,16 +464,17 @@ def dev():
         # calculate average level
         pokemon_levels = [ p[0] for p in pokemon ]
         average_level = sum(pokemon_levels) / len(pokemon_levels)
+        trainer_levels.append( average_level )
         # add to region
         region = trainer['region']
         if region not in region_to_trainers: region_to_trainers[region] = []
-        region_to_trainers[region].append( { 'class':trainer['class'], 'id':trainer['id'], 'lvl':average_level } )
+        region_to_trainers[region].append( { 'class':trainer['class'], 'id':trainer['id'], 'lvl':average_level, 'region':region } )
     #pprint( region_to_trainers )
 
     # Calculate region stats
     for region, trainers in region_to_trainers.items():
         levels = [trainer['lvl'] for trainer in trainers]
-        region_full_stats[region] = {
+        region_to_stats[region] = {
             'len': len(trainers),
             'min': min(levels),
             'max': max(levels),
@@ -476,86 +483,175 @@ def dev():
         }
     #pprint(region_full_stats)
 
-    # Cull anything with std dev worse than 7
-    region_full_stats = { region:stats for region, stats in region_full_stats.items() if stats['std'] < 5 }
+    # Cull anything with std dev worse than threshold
+    region_to_stats = { region:stats for region, stats in region_to_stats.items() if stats['std'] < std_dev_threshold }
 
     # Calculate average level for each region
-    for region, stats in region_full_stats.items():
-        region_level[region] = stats['mean']
+    region_to_level = { region:stats['mean'] for region, stats in region_to_stats.items() }
     #pprint(region_level)
 
     # Print LVL (stddev) + Region pairs, sorted by average level
-    for region, stats in sorted( region_full_stats.items(), key=lambda x: x[1]['mean'] ):
+    for region, stats in sorted( region_to_stats.items(), key=lambda x: x[1]['mean'] ):
         pass
         #print( f'{stats["mean"]:5.1f} ({stats["std"]:5.1f}) {region}' )
-    
+
     # Analysis
-    levels = [ stats['mean'] for stats in region_full_stats.values() ]
-    #levels.sort()
+    region_levels = [ stats['mean'] for stats in region_to_stats.values() ]
+    levels = trainer_levels
+    levels.sort()
     #print( levels )
-    peaks = scipy.signal.find_peaks( levels, prominence=4 )
+
+    peaks = scipy.signal.find_peaks( levels, prominence=2 )
     #print( peaks )
-    clusters, cluster_centers = kmeans_level_clusters( levels, num_clusters=8 )
-    #print( clusters )
-    #print( cluster_centers )
+
+    sorted_centers, kmeans, cluster_idx_mapping = kmeans_level_clusters( levels, num_clusters=len(badge_based_caps)-0 )
+
+    # Prev and Next level cap
+    prev_cap = badge_based_caps[ cur_badges-1 ] if cur_badges > 0 else 0
+    next_cap = badge_based_caps[ cur_badges ] if cur_badges < len(badge_based_caps) else 100
+    print( f'Badge {cur_badges} lvls {prev_cap}..{next_cap}' )
+
+    # Estimation based on analysis
+    data = []
+    for trainer in non_blacklisted_trainers:
+        pokemon_levels = [ p[0] for p in trainer['pkmn'] ]
+        avg_level = np.mean( pokemon_levels )
+        if avg_level > 60 or avg_level < 6: continue
+        unsorted_cluster_idx = kmeans.predict( [[avg_level]] )[0]
+        cluster_idx = cluster_idx_mapping[ unsorted_cluster_idx ]
+
+        # Estimate original intended badge for content based on cluster information via 3 methods
+        # 1. Directly map Nth cluster to Nth badge
+        # 2. Weighted mapping based on proximity
+        # 3. Based on gaps between cluster centers
+
+        # 1. Direct mapping
+        original_cap_1 = badge_based_caps[ min( cluster_idx, len(badge_based_caps)-1 ) ]
+        # 2. Weighted mapping
+        original_cap_2 = badge_based_caps[ min( cluster_idx, len(badge_based_caps)-1 ) ]
+        next_cluster_cap = badge_based_caps[ min( cluster_idx+1, len(badge_based_caps)-1 ) ]
+        if abs( avg_level - next_cluster_cap ) < abs( avg_level - original_cap_2 ):
+            original_cap_2 = next_cluster_cap
+        assert original_cap_1 == original_cap_2, f'Method 2 actually different {original_cap_1} != {original_cap_2}'
+        # 3. Gap based mapping
+        original_cap_3 = badge_based_caps[-1] # default to highest cap
+        for i in range( len(sorted_centers)-1 ):
+            if avg_level < sorted_centers[i+1]:
+                original_cap_3 = badge_based_caps[i]
+                break
+
+        # Like above but instead of calculating cap, just get the index into the badge based cap list
+        # This is useful for calculating alpha
+        orig_idx_1 = badge_based_caps.index( original_cap_1 )
+        orig_idx_3 = badge_based_caps.index( original_cap_3 )
+
+        # Calculate alpha (scaling factor within a tier)
+        # This is the ratio of the distance from the lower bound of the current tier to the distance between the lower bounds of the current and next tier
+        # This is useful for scaling the difficulty within a tier
+        def calc_alpha( level, orig_badge ):
+            cur_cap = badge_based_caps[ orig_badge ]
+            next_cap = badge_based_caps[ orig_badge+1 ] if orig_badge+1 < len(badge_based_caps) else 100
+            prev_cap = badge_based_caps[ orig_badge-1 ] if orig_badge > 0 else 0
+            alpha = ( level - prev_cap ) / ( cur_cap - prev_cap ) if cur_cap > prev_cap else 0
+            return alpha
+
+        alpha_1 = calc_alpha( avg_level, orig_idx_1 )
+        alpha_3 = calc_alpha( avg_level, orig_idx_3 )
+
+        def scaling( num_badges, alpha ):
+            hi = badge_based_caps[ num_badges ]
+            lo = badge_based_caps[ num_badges-1 ] if num_badges > 0 else 0
+            delta = hi - lo
+            return lo + delta * alpha
+
+        data.append({
+            'region': trainer['region'],
+            'class': trainer['class'],
+            'id': trainer['id'],
+            'avg': avg_level,
+            'cluster': cluster_idx,
+            'badges1': orig_idx_1,
+            'badges3': orig_idx_3,
+            'ocap1': original_cap_1,
+            'ocap3': original_cap_3,
+            'alpha1': alpha_1,
+            'alpha3': alpha_3,
+            'scale1': scaling( cur_badges, alpha_1 ),
+            'scale3': scaling( cur_badges, alpha_3 ),
+            })
+    df = pd.DataFrame( data )
+    pd.set_option( 'display.max_rows', None )
+    pd.set_option( 'display.max_columns', None )
+    pd.set_option( 'display.width', 320 )
+    #df = df.sort_values( by=['avg','region','class','id'] )
+    df = df.sort_values( by=['region','class','id','avg'] )
+    print( df )
+
 
     # Assign estimated caps based on the nearest cluster center
-    badge_based_caps = [ 11, 21, 28, 32, 43, 50, 54, 55, 65 ]
-    region_expected_caps = {}
-    for region, avg_level in region_level.items():
-        closest_cluster = min(cluster_centers, key=lambda x: abs(x - avg_level))
-        closest_cap = min(badge_based_caps, key=lambda x: abs(x - avg_level))
-        badge = badge_based_caps.index( closest_cap )
-        region_expected_caps[region] = {'cluster':closest_cluster, 'badge_cap':closest_cap, 'badge':badge }
-    pprint(region_expected_caps)
+    if 0:
+        region_expected_caps = {}
+        for region, avg_level in region_to_level.items():
+            closest_cluster = min(cluster_centers, key=lambda x: abs(x - avg_level))
+            closest_cap = min(badge_based_caps, key=lambda x: abs(x - avg_level))
+            badge = badge_based_caps.index( closest_cap )
+            region_expected_caps[region] = {'cluster':closest_cluster, 'badge_cap':closest_cap, 'badge':badge }
+        #pprint(region_expected_caps)
 
     # Print regions by badge
-    for badge in range(9):
-        print( f'Badge {badge}' )
-        for region, stats in sorted( region_expected_caps.items(), key=lambda x: x[1]['badge'] ):
-            if stats['badge'] == badge:
-                print( f'  {stats["badge_cap"]:2} {region}' )
+    if 0:
+        for badge in range( len(badge_based_caps) ):
+            print( f'Badge {badge}' )
+            for region, stats in sorted( region_expected_caps.items(), key=lambda x: x[1]['badge'] ):
+                if stats['badge'] == badge:
+                    print( f'  {stats["badge_cap"]:2} {region}' )
 
-    plt.figure( figsize=(10, 5) )
-    # make the y axis more detailed
-    #plt.yticks( np.arange(5, 60, 1) )
-    plt.yticks( cluster_centers )
-    plt.plot( levels, label='Trainer Levels', marker='o' )
-    #plt.scatter([p for p in peaks if p < len(levels)], [levels[p] for p in peaks if p < len(levels)], color='red', label='Peaks')
-    plt.scatter([p for p in peaks if isinstance(p, int) and p < len(levels)], [levels[p] for p in peaks if isinstance(p, int) and p < len(levels)], color='red', label='Peaks')
-    #plt.scatter(peaks, [levels[p] for p in peaks], color='red', label='Peaks')
-    for c in cluster_centers:
-        plt.axhline( y=c, linestyle='--', color='gray', alpha=0.7, label=f'Cluster {c:.1f}' )
-    plt.xlabel( 'Region index' )
-    plt.ylabel( 'Average Trainer Level' )
-    plt.legend()
-    plt.show()
+    print( f'Badge Caps: {badge_based_caps}' )
+    if 0:
+        plt.figure( figsize=(10, 5) )
+        # make the y axis more detailed
+        #plt.yticks( np.arange(5, 60, 1) )
+        plt.yticks( cluster_centers )
+        plt.plot( levels, label='Trainer Levels', marker='o' )
+        #plt.scatter([p for p in peaks if p < len(levels)], [levels[p] for p in peaks if p < len(levels)], color='red', label='Peaks')
+        plt.scatter([p for p in peaks if isinstance(p, int) and p < len(levels)], [levels[p] for p in peaks if isinstance(p, int) and p < len(levels)], color='red', label='Peaks')
+        #plt.scatter(peaks, [levels[p] for p in peaks], color='red', label='Peaks')
+        for c in cluster_centers:
+            plt.axhline( y=c, linestyle='--', color='gray', alpha=0.7, label=f'Cluster {c:.1f}' )
+        plt.xlabel( 'Region index' )
+        plt.ylabel( 'Average Trainer Level' )
+        plt.legend()
+        plt.show()
 
 # Perform tasks based on arguments
-options = ['--help','--diff','--dev', '--generate-human','--generate-asm','--tests','--debug','--no-banks']
-def print_usage():
-    print( f"Usage: {' '.join(options)}" )
+def main():
+    global USE_BANKED_DATA
+    options = ['--help','--diff','--dev', '--generate-human','--generate-asm','--tests','--debug','--no-banks']
+    def print_usage():
+        print( f"Usage: {' '.join(options)}" )
 
-if '--help' in sys.argv or any( arg not in options for arg in sys.argv[1:] ):
-    print_usage()
-    sys.exit(0)
-if '--no-banks' in sys.argv:
-    USE_BANKED_DATA = False
-if '--tests' in sys.argv:
-    test_asm_serialization()
-    test_human_serialization()
-elif '--dev' in sys.argv:
-    dev()
-elif '--diff' in sys.argv:
-    print( 'Diff...' )
-    generate_diff()
-elif '--generate-human' in sys.argv:
-    print( 'Generating trainers.human...' )
-    generate_human_from_asm()
-elif '--generate-asm' in sys.argv:
-    print( 'Generating parties.asm and special_moves.asm...' )
-    generate_asm_from_human()
-elif '--debug' in sys.argv:
-    pprint( load_db_from_human( 'data/trainers/trainers.human' )['YOUNGSTER'][1] ) #for debug
-else:
-    print_usage()
+    if '--help' in sys.argv or any( arg not in options for arg in sys.argv[1:] ):
+        print_usage()
+        sys.exit(0)
+    if '--no-banks' in sys.argv:
+        USE_BANKED_DATA = False
+    if '--tests' in sys.argv:
+        test_asm_serialization()
+        test_human_serialization()
+    elif '--dev' in sys.argv:
+        dev()
+    elif '--diff' in sys.argv:
+        print( 'Diff...' )
+        generate_diff()
+    elif '--generate-human' in sys.argv:
+        print( 'Generating trainers.human...' )
+        generate_human_from_asm()
+    elif '--generate-asm' in sys.argv:
+        print( 'Generating parties.asm and special_moves.asm...' )
+        generate_asm_from_human()
+    elif '--debug' in sys.argv:
+        pprint( load_db_from_human( 'data/trainers/trainers.human' )['YOUNGSTER'][1] ) #for debug
+    else:
+        print_usage()
+
+if __name__ == '__main__': main()
